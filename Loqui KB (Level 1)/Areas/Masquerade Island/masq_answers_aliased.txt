@@ -1,0 +1,80 @@
+<aliases>
+  <alias
+   match="answers"
+   enabled="y"
+   group="masq_goal_answers"
+   send_to="12"
+   sequence="100"
+  >
+  <send>require "wait"
+wait.make(function () -- Start of Coroutine
+
+Send("say weapon")
+wait.time(1)
+Send("say yes")
+wait.time(1)
+Send("give dagger nassah")
+wait.time(1)
+Send("say no")
+wait.time(1)
+Send("say travys")
+wait.time(1)
+Send("say equipment")
+wait.time(1)
+Send("say yes")
+wait.time(1)
+Send("give cap nassah")
+wait.time(1)
+Send("say yes")
+wait.time(1)
+Send("give chain nassah")
+wait.time(1)
+Send("say no")
+wait.time(1)
+Send("say garret")
+wait.time(1)
+Send("say magic")
+wait.time(1)
+Send("say yes")
+wait.time(1)
+Send("give scroll nassah")
+wait.time(1)
+Send("say yes")
+wait.time(1)
+Send("give potion nassah")
+wait.time(1)
+Send("say no")
+wait.time(1)
+Send("say marcus")
+wait.time(1)
+Send("say antiques")
+wait.time(1)
+Send("say no")
+wait.time(1)
+Send("give statue nassah")
+wait.time(1)
+Send("say margaret")
+wait.time(1)
+Send("say fruit")
+wait.time(1)
+Send("say yes")
+wait.time(1)
+Send("give strawb nassah")
+wait.time(1)
+Send("say yes")
+wait.time(1)
+Send("give melon nassah")
+wait.time(1)
+Send("say yes")
+wait.time(1)
+Send("give apple nassah")
+wait.time(1)
+Send("say no")
+wait.time(1)
+Send("say iryl")
+
+end) -- of coroutine
+
+</send>
+  </alias>
+</aliases>

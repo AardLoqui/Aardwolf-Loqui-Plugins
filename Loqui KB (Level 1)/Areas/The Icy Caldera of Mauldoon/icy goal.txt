@@ -1,0 +1,76 @@
+go to room - a turn in the mountain
+type accept
+** Goal Added : Bring peace to the Icy Caldera
+   Type 'goals Caldera' for full details on this quest.
+
+** Task Added : Discover why innocents are being sacrificed.
+--------
+find - a grisly looking thug
+(R) A particularly grisly thug is here, shouting at the sacrifices.
+
+say 'why innocents are being sacrificed.
+
+** Task Done  : Discover why innocents are being sacrificed.
+** Task Added : Learn more from the powers that be.
+----------
+
+go to At the Edge of the Caldera of Mauldoon 
+listen priest
+** Task Done  : Learn more from the powers that be.
+** Task Added : Learn the other side of the story.
+----------
+find a wrathful flame
+listen wrathful
+
+((aid or flee))
+i chose aid
+
+say aid
+
+** Task Done  : Learn the other side of the story.
+** Task Added : Does ice agree?
+
+--------
+go to the Ice Lord
+'do you agree with flame?
+
+'you cannot win this war
+
+** Task Done  : Does ice agree?
+** Task Added : Does ice understand the price being paid?
+--------
+go back to wrathful flame
+'ice said you will not win
+
+go back to ice lord
+(        )
+
+go back to flame
+'ice lord will not change his mind
+
+** Task Done  : Does ice understand the price being paid?
+** Task Added : Does fire understand the meaning of oblivion?
+----------
+go back to ice lord
+'do you know how many have died?
+
+** Task Done  : Does fire understand the meaning of oblivion?
+** Task Added : There must be a settlement.
+
+-----------
+go back to flame
+'is flames loss not worth my survival?
+
+** Task Done  : There must be a settlement.
+** Task Added : A Summit
+
+----------
+go back to ice lord
+'flame wants to meet
+
+** Goal Completed: Bring peace to the Icy Caldera
+INFO: LordSation has learned a valuable lesson about the enduring nature of enmity in the Icy Caldera of Mauldoon.
+You receive 10 quest points.
+
+
+

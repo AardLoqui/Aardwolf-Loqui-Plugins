@@ -1,0 +1,476 @@
+From the Keeper at [The Monolith] - 15866 
+
+[The Monolith] - 15866 
+A strange man wearing a goat fur robe stands here scanning the area.
+The Keeper of Stories asks, "Will you help me make the world safe from
+ Typhos?"
+The Keeper of Stories says, "Nod to me if you will help make the world
+ safe."
+
+>nod keeper
+You nod at The Keeper of Stories.
+The Keeper of Stories says, "Long ago, Hera, in her anger with Zeus,
+--SNIP--
+ you be willing to help us keep Typhos from returning? Say Yes if you are
+ willing to accept the challenge."
+
+>say yes
+You say 'yes'
+The Keeper of Stories says, "Excellent! Your first task is to seek out
+ Aphrodite and ask for her help with Typhos. She will tell you more,and
+ tell you how to proceed."
+
+** Goal Added : Make the world safe by weakening Typhos
+   Type 'goals Zodiac' for full details on this goal.
+   
+[Edge of the pond] - 15917 
+run nw;enter ameth
+>say help with typhos
+
+You say 'help with typhos'
+Aphrodite demands, "Can you believe that Hera actually had Gaia and
+ Tartarus create Typhos to kill us because she was upset with Zeus??"
+--SNIP--
+Aphrodite says, "The only way to prevent his return is to defeat his
+ incarnations. My son Eros can tell you how to proceed. He's around here
+ somewhere."
+
+** Task Done  : Ask Aphrodite for help with Typhos.
+** Task Added : Talk to Eros about Typhos.
+
+[Eros' Sanctuary] - 19858 
+run nw;enter ameth;run 2nws;dive;run 2eu
+>say help with typhos
+
+You say 'help with typhos'
+Eros says, "You won't be able to kill him, but destroying his 4 lesser
+ incarnations, plus the stronger one will greatly weaken him and prevent
+ his return to this world. To defeat the toughest incarnation you will need
+ to collect all 4 sword fragments from the lesser incarnations, then give
+ all of them to the Keeper."
+
+Eros says, "Are you ready to continue this adventure? (Nod to me if
+ yes.)"
+
+>nod eros
+You nod at Eros.
+
+** Task Done  : Talk to Eros about Typhos.
+** Task Added : Talk to Crios.
+** Task Added : Retrieve all 4 sword fragments to the Keeper.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+Eros smiles happily.
+Eros exclaims, "This is fantastic news!"
+Eros says, "Crios the crab will be able to tell you how to proceed. Ask
+ him about the first fragment, and he will tell you how to gain entry to
+ there."
+Eros exclaims, "Good luck!"
+
+[No Visibility] - 10380 -- Crios moves about in this area.
+run e;enter emerald;run 2es;enter pool;swim;abyss;run s
+>say first fragment
+
+You say 'first fragment'
+Crios demands, "Can you believe that that stupid goddess Hera expected me
+--SNIP--
+Crios says, "She's around here somewhere, so get the key from her, which
+ goes to a prison room near Aphrodite."
+
+** Task Done  : Talk to Crios.
+** Task Added : Get the key from Vamari.
+
+[At the bottom of the lake] - 36897 
+run nw;enter bloodsto;swim;dive
+>k vam
+
+** Task Done  : Get the key from Vamari.
+** Task Added : Kill the Pisces incarnation.
+You get An ornate prison key from the corpse of Vamari.
+
+[A Dazzling Cage] - 19860 
+run nw;enter ameth;run 2nws;dive;run 2es;open down;down
+>k inc
+
+** Task Added : Return the pommel fragment to the Keeper of Stories.
+** Task Done  : Kill the Pisces incarnation.
+
+[The Monolith] - 15866
+>give pomm keeper
+You give The pommel from the Sword of Zeus to The Keeper of Stories.
+The Keeper of Stories exclaims, "You brought back the pommel! That's
+ amazing!"
+The Keeper of Stories says, "Your next task is to find out how to get the
+ second fragment. The white bull will know how to proceed."
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+** Task Done  : Return the pommel fragment to the Keeper of Stories.
+** Task Added : Ask the white bull about the second fragment.
+
+[Taurus the Bull] - 10386 
+run en;enter sapphire;run ne2d2e;open east;east
+>say second fragment
+
+You say 'second fragment'
+Taurus asks, "I don't know where it is, but I do know who knows where it
+--SNIP--
+Taurus says, "Just say token if you lose yours."
+You receive A token of Taurus' love from Taurus.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+[Ringside Stands] - 15889 
+run en;enter sapphire;run ne
+
+Europa asks, "What is that you are carrying? Is that for me?"
+Europa reaches over and grabs the token from you!
+--SNIP--
+Europa says, "Please give him this note for me."
+You receive A note from Europa to Taurus from Europa.
+Europa says, "Just say note if you need another one."
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+[Taurus the Bull] - 10386
+run en;enter sapphire;run ne2d2e;open east;east
+
+A very large white bull snorts and stares at you.
+Taurus exclaims, "She gave you a note for me??  GIMME!"
+Taurus grabs the note from your hands.
+--SNIP--
+Taurus exclaims, "Who would think that a lady like Europa knew how to
+ describe those kinds of things!"
+Taurus exclaims, "The one known as the Maiden knows where to find your
+ fragment. Good luck on your quest!"
+
+** Task Done  : Ask the white bull about the second fragment.
+** Task Added : Ask the Maiden about the second fragment.
+
+[The Maiden's Chambers] - 15906
+run es;enter jade;run 2se
+>say second fragment
+
+You say 'second fragment'
+Virgo, the maiden says, "So you're looking for the second fragment? I know
+ where to find it..Or used to..I seem to forget things..like my name.."
+--SNIP--
+Virgo, the maiden says, "Libra probably knows what my name is, so help me
+ remember my name and I will tell you where to find the second fragment."
+
+** Task Done  : Ask the Maiden about the second fragment.
+** Task Added : Ask Libra what the Maiden's name is.
+
+[The Bench] [**> PK <**] - 15908 
+run s;enter perid;run s
+>say what what is maiden's name
+
+You say 'what what is maiden's name'
+Libra says, "She forgot her name again?? I've already told her what it is
+ before, so I guess she forgets because everyone keeps calling her
+ Virgo."
+Libra snorts.
+Libra says, "Like she was ever a virgin.."
+Libra sighs.
+Libra says, "Anyway, her real name translates to Astrea, but she has also
+ been called by many other names.  Tell her that, and I'm sure she will be
+ happy...until she forgets again.."
+
+** Task Done  : Ask Libra what the Maiden's name is.
+** Task Added : Tell the Maiden her name.
+
+[The Maiden's Chambers] - 15906
+run es;enter jade;run 2se
+>say astrea
+
+You say 'astrea'
+Virgo, the maiden smiles happily.
+Virgo, the maiden exclaims, "I remember now!  Wow, that is my real
+ name!"
+--SNIP--
+ prisoner has the key to the second fragment and incarnarnation. You should
+ also know that the prison you are looking for is beyond where the people
+ watch the trials."
+
+** Task Done  : Tell the Maiden her name.
+** Task Added : Kill the Libra incarnation.
+
+[Prison Cage] - [**> PK <**] 15928 
+run s;enter perid;run 2s;op cage;u
+>k prison
+
+You get A bejeweled prison key from the corpse of a prisoner.
+
+[Null Prison] - 10387
+run s;enter perid;run 2s;open s;s
+>k typ
+
+The second incarnation of Typhos is DEAD!!
+** Task Added : Return the grip fragment to the Keeper of Stories.
+
+** Task Done  : Kill the Libra incarnation.
+You get 1 gold coin from the corpse of The second incarnation of Typhos.
+You get The grip from the Sword of Zeus from the corpse of The second incarnation of Typhos.
+
+[The Monolith] - 15866
+>give grip keep
+
+You give The grip from the Sword of Zeus to The Keeper of Stories.
+--SNIP-- 
+ The satyr known at Crotus can help you, but you might have trouble talking
+ to him."
+The Keeper of Stories chuckles politely.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+** Task Done  : Return the grip fragment to the Keeper of Stories.
+** Task Added : Talk to Crotus about the third fragment.
+
+[Cacophonous Disturbance] - 10388
+run ws;enter turq;run 2sw
+>say third fragment
+
+You say 'third fragment'
+Crotus says, "What?  Did you say something about the third fragment?  The
+--SNIP--
+ Castor will be more likely to help you if you give him this."
+Crotus says, "Just say snowball if you need another snowball."
+You receive snowball from Crotus.
+
+** Task Done  : Talk to Crotus about the third fragment.
+** Task Added : Ask the twins about earplugs.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+[The Pits of Hades] - 15926
+run en;enter pearl;right;run nd
+>give snowbal castor
+
+You give snowball to Castor, brother of Polydeuces.
+Castor, brother of Polydeuces exclaims, "A snowball! I've always wanted a
+ snowball in Hades!"
+
+>say earplugs
+You say 'earplugs'
+
+Castor, brother of Polydeuces asks, "So Crotus is still having trouble
+ getting the muses to sing in key?"
+Castor, brother of Polydeuces says, "Here are the earplugs."
+Castor, brother of Polydeuces says, "Say newplugs to get another set of
+ earplugs."
+You receive earplugs from Castor, brother of Polydeuces.
+
+** Task Done  : Ask the twins about earplugs.
+** Task Added : Give the earplugs to Crotus
+
+[Cacophonous Disturbance] - 10388
+run ws;enter turq;run 2sw
+>give earplugs crotus
+
+You give earplugs to Crotus.
+Crotus  puts in the earplugs then sighs in relief.
+Crotus exclaims, "I can finally hear and not have to hear the catarwalling
+--SNIP--
+ lion you can imagine, and then Hera put the Nemian lion in Zeus' temple so
+ that no one could worship there. You will find the key on that lion, and
+ the prison somewhere around his domain."
+
+** Task Done  : Give the earplugs to Crotus.
+** Task Added : Kill the Nemian Lion and get the key.
+
+[Temple of Zeus] - 10389
+run es;enter onyx;run wu
+>k lion
+
+** Task Added : Kill the Leo incarnation and get the cross-guard fragment.
+
+** Task Done  : Kill the Nemian Lion and get the key.
+You get 1 gold coin from the corpse of Nemian Lion.
+You get golden key from the corpse of Nemian Lion.
+
+[Muffled Room] - 10390
+run es;enter onyx;run s;open down;down
+>k inc
+
+** Task Added : Return the cross-guard to the Keeper of Stories.
+
+[The Monolith] - 15866
+>give cross keep
+
+You give The cross-guard from the Sword of Zeus to The Keeper of Stories.
+The Keeper of Stories demands, "You brought back the cross-guard??"
+--SNIP--
+The Keeper of Stories chuckles politely.
+** Task Added : Ask Pricus about the fourth fragment.
+
+** Task Done  : Return the cross-guard to the Keeper of Stories.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+[Ocean Beach] - 10391
+run w;enter garnet;run n;beach
+>say fourth fragment
+
+You say 'fourth fragment'
+Pricus asks, "So you're looking for the fourth fragment?"
+--SNIP--
+Pricus says, "When you come back and say that the goats are dead then I
+ will help you."
+
+** Task Done  : Ask Pricus about the fourth fragment.
+** Task Added : Kill a billy goat.
+** Task Added : Kill a domestic goat.
+** Task Added : Kill a mountain goat.
+** Task Added : Kill a pygmy goat.
+
+-- kill the goats until tasks clear
+
+[Ocean Beach] - 10391
+run w;enter garnet;run n;beach
+>say that the goats are dead
+
+You say 'that the goats are dead'
+Pricus throws back his head and cackles with insane glee!
+Pricus exclaims, "That should teach those damn goats to change from sea
+ goats to land goats!"
+Pricus says, "Orion knows where the fourth fragment is."
+** Task Added : Ask Orion about the fourth fragment.
+
+[Dim Cave] - 10392
+run n;enter ruby;run 2u;cave
+>say fourth fragment
+
+You say 'fourth fragment'
+Orion demands, "You want me to help you with the fourth fragment when that
+ huge scorpion is still trying to kill me??"
+--SNIP--
+ you killed her, and I will tell you where the fourth fragment is."
+
+** Task Done  : Ask Orion about the fourth fragment.
+** Task Added : Kill Scorpio and get the key.
+
+[Climbing the Mountain] - 15869
+run ws;enter topaz;run dw
+>k queen
+
+** Task Done  : Kill Scorpio and get the key.
+** Task Added : Tell Orion that Scorpio is dead.
+
+[Dim Cave] - 10392
+run w;enter garnet;run n;beach
+>say scorpio is dead
+
+You say 'scorpio is dead'
+Orion demands, "You killed her??"
+--SNIP--
+Orion says, "You remember where all those scorpions are at? Well that's
+ where you will find the fourth fragment."
+
+** Task Done  : Tell Orion that Scorpio is dead.
+** Task Added : Kill the fourth incarnation and get the blade fragment.
+
+[Electrified Prison] - 10393 -- 2W of Queen Scorpio.
+run ws;enter topaz;run d2w;open west;west
+>k inc
+
+The fourth incarnation of Typhos is DEAD!!
+** Task Added : Return the blade fragment to the Keeper of Stories.
+** Task Done  : Kill the fourth incarnation and get the blade fragment.
+You get The blade from the Sword of Zeus from the corpse of The fourth incarnation of Typhos.
+
+[The Monolith] - 15866
+>give blade keep
+
+You give The blade from the Sword of Zeus to The Keeper of Stories.
+The Keeper of Stories exclaims, "You brought back the final fragment!"
+
+** Task Done  : Retrieve all 4 sword fragments to the Keeper.
+The Keeper of Stories exclaims, "Your final task will be to kill his
+ largest and most fearsome incarnation!"
+The Keeper of Stories says, "You will need this key to gain entrance. I am
+ the only person I could trust with a key this important."
+You receive a key made of bone from The Keeper of Stories.
+The Keeper of Stories says, "You will need this too."
+The Keeper of Stories focuses his energy, and the Sword of Zeus appears!
+You receive The Sword of Zeus from The Keeper of Stories.
+The Keeper of Stories says, "The last prison is up twice from here, but
+ you need to hurry because the energy contained in the sword won't last
+ very long."
+The Keeper of Stories says, "You can say 'sword' to me if you need another
+ sword and key."
+The Keeper of Stories exclaims, "Good luck!"
+** Task Added : Kill the last incarnation and return the Sword of Zeus.
+
+** Task Done  : Return the blade fragment to the Keeper of Stories.
+
+Task 31 : Kill the last incarnation and return the Sword of Zeus.
+
+The Keeper of Stories says, "The last prison is up twice from here, but you need to hurry because the energy contained in the sword won't last very long."
+You can also say "sword" to get another sword and key.
+
+-- go up 2x
+
+[Not a prison anymore] - 10394
+run u;open up;up
+
+  You notice two things when you enter: The first is that it looks like all the
+security precautions have been disabled, and the second is that it looks like
+something has been pounding on the ceiling, walls and floor. What is in here 
+must want out badly.
+
+[ Exits: down ]
+(R) The god monster Typhos stands here ready to kill anything in its path!
+Typhos boggles, "FOOLISH MORTAL! I bet you thought you were going to see
+ another puny incarnation of myself, didn't you!?!"
+Typhos exclaims, "The truth is that I have been waiting a long time for
+ someone to kill those incarnations so I could gain energy from their
+ deaths!"
+Typhos laughs diabolically...Muhahahaha!
+Typhos exclaims, "And not only did you do that, but you also opened the
+ door and brought Zeus' sword with you!"
+Typhos exclaims, "I will be free again after I kill you and get the sword
+ and key from your lifeless corpse!"
+Typhos exclaims, "DIE!"
+
+[1] Your light does UNBELIEVABLE things to Typhos! 
+Typhos is DEAD!!
+
+** Task Done  : Kill the last incarnation and return the Sword of Zeus.
+** Task Added : Return the Sword of Zeus to the Keeper for your reward.
+You get 61 gold coins from the corpse of Typhos.
+
+[The Monolith] - 15866
+>give sword keep
+You give The Sword of Zeus to The Keeper of Stories.
+The Keeper of Stories exclaims, "YOU DID IT!!"
+The Keeper of Stories exclaims, "You made the world safe by defeating
+ Typhos!"
+The Keeper of Stories says, "I apologize for not warning you about what
+ was past that last door, but I am still proud of you."
+The Keeper of Stories exclaims, "For your outstanding effort in protecting
+ the world, I give you this magnificent gift!"
+You receive The Zodiac Puttees from The Keeper of Stories.
+INFO: Negader has protected us all by preventing Typhos from returning.
+
+** Task Done  : Return the Sword of Zeus to the Keeper for your reward.
+
+** Goal Completed: Make the world safe by weakening Typhos
+
++-----------------------------------------------------------------+
+| Keywords   : puttee zodiac                                      |
+| Name       : The Zodiac Puttees                                 |
+| Id         : 1888147471                                         |
+| Type       : Armor                     Level  :    30           |
+| Worth      : 5,000                     Weight :     3           |
+| Wearable   : legs                                               |
+| Score      : 30                                                 |
+| Material   : energy                                             |
+| Flags      : glow, hum, magic, held, V3                         |
++-----------------------------------------------------------------+
+| Stat Mods  : Hit points   : +10      Mana         : +10         |
+|              Strength     : +1       Damage roll  : +2          |
+|              Dexterity    : +1                                  |
++-----------------------------------------------------------------+
+| Resist Mods: All physical : +2       All magic    : +1          |
++-----------------------------------------------------------------+
+

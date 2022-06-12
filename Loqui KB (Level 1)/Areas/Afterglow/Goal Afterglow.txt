@@ -1,0 +1,685 @@
+
+Note: You must have completed the goal for Dusk Valley before you can
+start this goal.
+
+
+Afterglow
+
+The Peak
+
+k servant
+You get a servant's face from the electrified corpse of a cleaning servant.
+(keep face, must be worn if you wish to enter The Deadman)
+
+
+
+The Grand Foyer
+
+Adorra says, "I know some interesting facts about Afterglow."
+Adorra says, "Just let me know if you want to hear more."
+
+
+say yes
+Adorra says, "Kiden the chef keeps pretty busy most of the time."
+Adorra says, "He might be able to use you, just tell him you want to
+ help."
+
+** Goal Added : Have your name scribed into the Tome of the Relyks
+   Type 'goals afterglow' for full details on this quest.
+
+** Task Added : Have your name scribed into the Tome of the Relyks
+** Task Added : Speak to Kiden the chef
+
+
+The Master Kitchen
+
+say help
+Kiden perks up in reaction to your offer to help.
+ 
+Kiden says, 'Hello Landion.  You may have not heard yet, but I'm quite
+the prankster.  I could really use your help in my next prank on
+Grandmaster Mage Nystaulyk.  You should forge a funny letter with his
+handwriting.  I'm sure there is an example of handwriting in his quarters,
+but getting there is an different issue.  You will have to get through the
+upstairs deadman and into the vault's safe first.  Visit the master
+craftsman in the workshop and maybe he can get you started.  I offer you a
+warning though:  the guards only allow servants to pass through the
+deadman.'
+ 
+
+** Task Done  : Speak to Kiden the chef
+** Task Added : Help Kiden play a prank on master Nystaulyk
+
+The Workshop
+
+A master craftsman says, "I am officially retired but I still makes keys. 
+ All you need is a key mold and the proper pieces."
+
+
+open workbench
+
+You open a large mahogany workbench.
+
+get all work
+
+You get a key mold from a large mahogany workbench.
+
+
+Collect random drop items from mobs and put in mold
+(Move fast, items expire)
+
+
+eagle    - eagle talon 
+wolf     - wolf fang
+snake    - snake fang
+boar     - boar tusk
+wasp     - mud wasp stinger
+bear     - bear claw
+crow     - a crow's beak
+scorpion - scorpion stinger
+
+The Workshop
+
+
+You give a key mold to a master craftsman.
+A master craftsman says, "It looks like you have the necessary pieces to
+ make a segmented key."
+
+
+The master craftsman sets the key mold on the workbench and makes a key.
+
+You receive a segmented key from a master craftsman.
+
++-----------------------------------------------------------------+
+| Keywords   : segmented key                                      |
+| Name       : a segmented key                                    |
+| Id         : 1615395481                                         |
+| Type       : Key                       Level  :   201           |
+| Worth      : 100                       Weight :     5           |
+| Wearable   : hold                                               |
+| Score      : 0                                                  |
+| Material   : bone                                               |
+| Flags      : magic, held, V3                                    |
++-----------------------------------------------------------------+
+
+
+The dome
+
+wear face
+say yes
+
+The Deadman
+
+say west
+
+Tooth and Nail
+
+You get the vault key from the electrified corpse of the sentry chief.
+
+
+Upper vault
+
+open safe
+You unlock a heavy safe using a segmented key.
+You open a heavy safe.
+
+get all safe
+You get a painting of Grandmaster Mage Nystaulyk from a heavy safe.
+You get a <>signet ring from a heavy safe.
+
++-----------------------------------------------------------------+
+| Keywords   : signet ring                                        |
+| Name       : a <>signet ring                                    |
+| Id         : 1611273742                                         |
+| Type       : Treasure                  Level  :   201           |
+| Worth      : 1,050                     Weight :     1           |
+| Wearable   : finger                                             |
+| Score      : 0                                                  |
+| Material   : silver                                             |
+| Flags      : magic, nosell, burn-proof, melt-drop, V3, iskey    |
++-----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+| Keywords   : painting grandmaster mage nystaulyk                |
+| Name       : a painting of Grandmaster Mage Nystaulyk           |
+| Id         : 1611273743                                         |
+| Type       : Treasure                  Level  :   201           |
+| Worth      : 1,200                     Weight :     2           |
+| Score      : 0                                                  |
+| Material   : canvas                                             |
+| Flags      : magic, V3                                          |
++-----------------------------------------------------------------+
+
+
+keep signet ring
+
+
+The Lower Vault
+
+open safe
+You unlock a heavy safe using a segmented key.
+You open a heavy safe.
+
+get all safe
+You get a painting of a bear mating with a scorpion from a heavy safe.
+You get a painting of Afterglow's landscape from a heavy safe.
+
+
++-----------------------------------------------------------------+
+| Keywords   : landscape painting afterglow                       |
+| Name       : a painting of Afterglow's landscape                |
+| Id         : 1611273724                                         |
+| Type       : Trash                     Level  :   201           |
+| Worth      : 300                       Weight :     2           |
+| Score      : 0                                                  |
+| Material   : canvas                                             |
+| Flags      : magic, V3                                          |
++-----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+| Keywords   : painting bear mating scorpion                      |
+| Name       : a painting of a bear mating with a scorpion        |
+| Id         : 1611273725                                         |
+| Type       : Treasure                  Level  :   201           |
+| Worth      : 1,175                     Weight :     2           |
+| Score      : 0                                                  |
+| Material   : canvas                                             |
+| Flags      : magic, V3                                          |
++-----------------------------------------------------------------+
+
+
+
+The Audience Chamber
+
+The Master's Study
+
+o s
+You unlock the door with a <>signet keyhole with a <>signet ring.
+You open the door with a <>signet keyhole.
+
+The Master's Quarters
+
+read diary
+You attempt to read Nystaulyk's diary.
+The entire book is written in the Relyk language.  It would be impossible
+to write a letter without first understanding the language.  It is best to
+report this back to Kiden.
+ 
+** Task Added : Return to Kiden to talk about the diary
+
+
+
+open desk
+You unlock a writing desk using a <>signet ring.
+You open a writing desk.
+
+You get a gold feather with an ink stain from a writing desk.
+
+
++-----------------------------------------------------------------+
+| Keywords   : gold feather ink stain                             |
+| Name       : a gold feather with an ink stain                   |
+| Id         : 1611273727                                         |
+| Type       : Treasure                  Level  :   201           |
+| Worth      : 1,200                     Weight :     1           |
+| Score      : 0                                                  |
+| Material   : feather                                            |
+| Flags      : magic, V3                                          |
++-----------------------------------------------------------------+
+
+
+
+
+
+The Master Kitchen
+
+say diary
+Kiden perks up as you mention the diary.
+ 
+Kiden says, 'Of course the diary is in the Relyk language!  Why didn't I
+think of that before?  Not only did the blast in Dusk Valley change the
+atmosphere and leave a strange glow in the sky, but everything underground
+became energized.  Strange things happen underground during different
+times of the day.  I'm not a Relyk, but when I came here as a child
+there was a nursery rhyme they used to tell us before going to sleep:
+ 
+Into the dark and and into the deep,
+where the dragon lurks and creeps.
+To read the wall and gain clear sight,
+you need not black, or grey, but white.'
+
+** Task Done  : Return to Kiden to talk about the diary
+** Task Added : Investigate Kiden's nursery rhyme further
+
+
+The Showcase
+
+open show
+You unlock a showcase using a <>signet ring.
+
+
+get all show
+You get a <>Relyk<> medallion from a showcase.
+You get a chunk of amber from a showcase.
+
+
+
++-----------------------------------------------------------------+
+| Keywords   : chunk amber                                        |
+| Name       : a chunk of amber                                   |
+| Id         : 1611280901                                         |
+| Type       : Treasure                  Level  :   201           |
+| Worth      : 300                       Weight :     1           |
+| Score      : 0                                                  |
+| Material   : gem                                                |
+| Flags      : magic, melt-drop, V3                               |
++-----------------------------------------------------------------+
+
+needed to read wall
++-----------------------------------------------------------------+
+| Keywords   : relyk medallion                                    |
+| Name       : a <>Relyk<> medallion                              |
+| Id         : 1611280902                                         |
+| Type       : Treasure                  Level  :   201           |
+| Worth      : 1,150                     Weight :    80           |
+| Score      : 0                                                  |
+| Material   : silver                                             |
+| Flags      : magic, V3                                          |
++-----------------------------------------------------------------+
+
+
+
+The Cave
+
+read wall
+lands destroyed and victory lost
+everything we fought for is now gone
+surrounded by tyrants with no means to escape
+and something went horribly wrong
+an unimaginable force enveloped us all
+our numbers dwindle and we take flight
+visions of future when we will return
+and reign under the moon of white
+
+** Task Done  : Investigate Kiden's nursery rhyme further
+ 
+You now understand the Relyk language!
+You should return to the master's quarters.
+ 
+** Task Added : Return to the master's quarters to read the diary
+
+The Master's Quarters
+
+read diary
+You have analyzed the master's handwriting.
+
+** Task Done  : Return to the master's quarters to read the diary
+** Task Added : Forge a letter using master Nystaulyk's handwriting
+
+forge letter
+You have forged a letter in the handwriting of master Nystaulyk that reads:
+ 
+I am a big doodie head.  -Grandmaster Mage Nystaulyk
+ 
+ 
+You should take the letter to Kiden so he can play the prank.
+ 
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+
+
+The Master Kitchen
+
+give letter kiden
+You give a forged letter to Kiden.
+Kiden says, "Thank you for the forged letter."
+ 
+Kiden says, "I will place this somewhere so Nystaulyk can find it."
+
+** Task Done  : Help Kiden play a prank on master Nystaulyk
+
+** Task Done  : Forge a letter using master Nystaulyk's handwriting
+ 
+Kiden says, 'I have one more prank I'd like you to help me with.
+When the builders were mining the cave one of the items they
+recovered was a powerful recipe sealed in amber.  If you can
+bring me the amber from the showcase I'll know you really
+can be trusted to help me pull off this last big prank.
+ 
+** Task Added : Bring a special piece of amber to Kiden
+
+
+give amber kiden
+You give a chunk of amber to Kiden.
+Kiden says, 'I see that you can be trusted and really want to help me.
+I want to have a full-sized dragon statue in my quarters so when
+Nystaulyk walks in it scares him to death.  To build a dragon statue
+you need a dragon skin and bones to hold it up.  I've heard that dragon
+bones are kinda meaty and I don't want you stinking up my quarters.  It will
+require some high temperatures to take the meat off those bones.  Bring me
+a full dragon skin with all of the proper bones and we can install it
+together.'
+ 
+
+** Task Done  : Bring a special piece of amber to Kiden
+** Task Added : Retrieve a skin and bones to make a dragon statue
+
+
+
+The Butcher House
+
+buy skin
+You buy a dragon skin from Ohran the butcher for 2,000 gold.
+
+kill dragons for bones and and give to Ferron, The Furnace.
+
+
+You need 24 bones
+
+     (Magic) [dragon] ribs (201)
+     (Magic) [dragon] pelvis (201)
+     (Magic) [dragon] backbone (201)
+     (Magic) [dragon] spines (201)
+     (Magic) [dragon] vertebrae (201)
+     (Magic) [dragon] skull (201)
+     (Magic) [dragon] teeth (201)
+     (Magic) [dragon] neckbone (201)
+     (Magic) [dragon] breastbone (201)
+     (Magic) [dragon] jawbone (201)
+     (Magic) [dragon] tailbone (201)
+     (Magic) [dragon] horns (201)
+     (Magic) [dragon] sternum (201)
+     (Magic) [dragon] left shoulder (201)
+     (Magic) [dragon] right knee (201)
+     (Magic) [dragon] talons (201)
+     (Magic) [dragon] right shoulder (201)
+     (Magic) [dragon] left knee (201)
+     (Magic) [dragon] front legs (201)
+     (Magic) [dragon] hind legs (201)
+     (Magic) [dragon] front feet (201)
+     (Magic) [dragon] wings (201)
+     (Magic) [dragon] fangs (201)
+     (Magic) [dragon] hind feet (201)
+
+
+put bones in dragon skin
+
+
+(a few extra heal pots and max hps recommended)
+
+give skin kiden
+
+
+You give a dragon skin to Kiden.
+Kiden says, "You have collected the necessary bones to make a dragon
+ statue."
+Kiden asks, "Are you ready to install the dragon statue?"
+
+** Task Done  : Retrieve a skin and bones to make a dragon statue
+** Task Added : Help Kiden install the dragon statue in his quarters.
+
+
+say yes
+ 
+ 
+Kiden says, 'I should thank you for all of your help but fairly soon
+it won't matter.  How could you not see this coming?  I am not who
+you think I am.  I am actually a Nightshifter and my position as a
+chef was only a cover.  Before Master Mages Fahlen and Fahlyk died
+after leaving Dusk Valley they both had sons.  Grandmaster Mage
+Nystaulyk is the fifth generation grandson of Fahlyk, and I am the
+fith generation grandson of Fahlen.
+ 
+
+
+  For centuries the Relyks refused to share their knowledge and power
+with my race.  They blamed us for The Great War and the destruction of
+Dusk Valley.  My ancestors devoted their lives to the black magicks in
+anticipation of a another war.  Once they realized that the Relyks came
+from integrating Eldars and Giants,  our Eldars wanted an even more
+powerful race so they began integrating with the Shadows to create
+Nightshifters.
+ 
+
+  I was inserted undercover into this mansion when I was still a
+child and have become more powerful every day.  My family has been
+waiting for me to destroy Nystaulyk and claim Afterglow as a permanent
+home for us.  I only had to wait for someone foolish enough to help me
+gain the upper hand.  That is where you came in.
+ 
+
+  You helped me forge a letter in Nystaulyk's handwriting, and that
+was meant to distract him while I finished my plan to attack.  You
+have collected everything I needed to build a dragon and also gave
+me this piece of amber which actually contains a powerful necromancer
+spell to give this dragon life.  You have unknowingly brought the
+race of Relyks to their knees.
+ 
+  Unfortunately you know too much, so after you are gone I will destroy
+Nystaulyk and everyone else in this mansion.'
+
+Kiden utters the words, 'bovalata'.
+
+The amber catches fire and melts to the ground, revealing an ancient scroll.
+
+Kiden recites the scroll and you hear a dragon's roar from the direction
+of Kiden's quarters.
+
+Kiden says, 'Because I feel sorry for tricking you, I will give you only
+one opportunity to escape your fate.  I want to hear you surrender in
+Relyk though:  ' '`',..,,.., ^.-<><>o:`:..o<> }{,,. _,,.>- 
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+
+
+say ' '`',..,,.., ^.-<><>o:`:..o<> }{,,. _,,.>-
+Kiden says, 'You fool!  You fell for it once again.  I've been wanting to
+hear someone surrender to me in the Relyk language for years now.  You
+cannot escape your fate my friend.'
+
+'Goodbye Landion.'
+
+The Chef's Quarters
+
+**********************************************************************
+(Red Aura) (White Aura) A dark dragon lurks here.
+[1] A dark dragon's wave of acid -= DEMOLISHES =- you! [89]
+Kiden the Nightshifter wields <>Conviction<>.1] 
+Kiden the Nightshifter's stab <*><*> LIQUIDATES <*><*> you! [168]
+......
+A dark dragon is burnt to a crisp by Odin's spear! It is DEAD!
+...
+********Kiden summons a dark phase and it begins to hover above you!********
+...
+
+(Red Aura) (White Aura) A dark phase is trying to KILL YOU!
+
+
+
+Kiden the Nightshifter smoulders as the lightning destroys him!!
+
+You get <>Conviction<> from the frazzled corpse of Kiden the Nightshifter.
+
+
+...
+
+
+The dark phase draws energy from you and begins to grow in size.
+ 
+  
+The dark phase draws energy from you and begins to grow in size.
+...
+A dark phase smoulders as the lightning destroys it!!
+
+*********************************************************************
+
+
+
+** Task Done  : Help Kiden install the dragon statue in his quarters.
+** Task Added : Let Grandmaster Mage Nystaulyk know that Kiden is dead.
+
+Find Grandmaster Mage Nystaulyk
+
+
+say  Kiden is dead
+Nystaulyk says, 'I have already heard the news about Kiden and his plot
+against us.  He has been causing me much grief for years with those
+horrible pranks, and there was definitely something not right against him.
+I know you were part of Kiden's last pranks but I don't think you knew the
+damage you were really causing.
+ 
+ 
+  This community is built on trust, accountability, and hard work.  You
+were able to draw Kiden out into the open and deal with him and that horrible
+dragon.  For the contribution you have provided to this community, I will
+scribe your name upon the pages of the Tome of the Relyks.  We thank you
+for your service Landion.'
+
+Nystaulyk scribes your name upon the pages of the Tome of the Relyks.
+
+You receive Tome of the <>Relyks<> from Grandmaster Mage Nystaulyk.
+You receive <>Storms of a White Moon<> from Grandmaster Mage Nystaulyk.
+You receive <>Deep Reflections<> from Grandmaster Mage Nystaulyk.
+
+** Task Done  : Let Grandmaster Mage Nystaulyk know that Kiden is dead.
+
+** Task Done  : Have your name scribed into the Tome of the Relyks
+
+** Goal Completed: Have your name scribed into the Tome of the Relyks
+INFO: The name Landion has been scribed upon the pages of the Tome of the Relyks.
+
+
+
+-----------------------------------------------------------------+
+| Keywords   : 201deep reflections deep                           |
+| Name       : <>Deep Reflections<>                               |
+| Id         : 1616776047                                         |
+| Type       : Armor                     Level  :   201           |
+| Worth      : 10,500                    Weight :    22           |
+| Wearable   : neck                                               |
+| Score      : 310                                                |
+| Material   : opal                                               |
+| Flags      : magic, held, burn-proof, V3                        |
+| Found at   : Afterglow                                          |
++-----------------------------------------------------------------+
+| Stat Mods  : Damage roll  : +21      Hit roll     : +13         |
+|              Strength     : +4       Dexterity    : +4          |
+|              Constitution : +4       Luck         : +2          |
++-----------------------------------------------------------------+
+| Resist Mods: All physical : +11      All magic    : +8          |
+|              Light        : +6       Water        : -3          |
+|              Negative     : -3                                  |
++-----------------------------------------------------------------+
+
++-----------------------------------------------------------------+
+| Keywords   : 201storms white moon storms                        |
+| Name       : <>Storms of a White Moon<>                         |
+| Id         : 1616776046                                         |
+| Type       : Armor                     Level  :   201           |
+| Worth      : 10,500                    Weight :    22           |
+| Wearable   : ear                                                |
+| Score      : 330                                                |
+| Material   : agate                                              |
+| Flags      : magic, held, burn-proof, V3                        |
+| Found at   : Afterglow                                          |
++-----------------------------------------------------------------+
+| Stat Mods  : Damage roll  : +21      Hit roll     : +13         |
+|              Intelligence : +4       Wisdom       : +4          |
+|              Luck         : +4       Constitution : +2          |
++-----------------------------------------------------------------+
+| Resist Mods: All physical : +11      All magic    : +8          |
+|              Fire         : +6       Earth        : -3          |
+|              Cold         : -3                                  |
++-----------------------------------------------------------------+
+
++-----------------------------------------------------------------+
+| Keywords   : 201tome relyks tome                                |
+| Name       : Tome of the <>Relyks<>                             |
+| Id         : 1616776045                                         |
+| Type       : Weapon                    Level  :   201           |
+| Worth      : 1,206                     Weight :     4           |
+| Wearable   : wield                                              |
+| Score      : 2070                                               |
+| Material   : papyrus                                            |
+| Flags      : magic, held, burn-proof, V3                        |
+| Found at   : Afterglow                                          |
++-----------------------------------------------------------------+
+| Weapon Type: exotic                 Average Dam :    475        |
+| Inflicts   : mental energy          Damage Type : Mental        |
++-----------------------------------------------------------------+
+| Stat Mods  : Damage roll  : +20      Hit roll     : +14         |
++-----------------------------------------------------------------+
+
++-----------------------------------------------------------------+
+| Keywords   : conviction 201                                     |
+| Name       : <>Conviction<>                                     |
+| Id         : 1616769589                                         |
+| Type       : Weapon                    Level  :   201           |
+| Worth      : 3,000                     Weight :    10           |
+| Wearable   : wield                                              |
+| Score      : 2070                                               |
+| Material   : titanium                                           |
+| Flags      : magic, held, burn-proof, V3                        |
+| Found at   : Afterglow                                          |
++-----------------------------------------------------------------+
+| Weapon Type: dagger                 Average Dam :    475        |
+| Inflicts   : stab                   Damage Type : Pierce        |
++-----------------------------------------------------------------+
+| Stat Mods  : Damage roll  : +20      Hit roll     : +14         |
++-----------------------------------------------------------------+
+
+
+
+
+
+goal afterglow
+
+             Goal information for: Afterglow - Completed 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Although the powers of Master Mages Fahlyk and Fahlen were released in
+Dusk Valley, the brothers were not completely destroyed.  After regaining
+their powers they both conjured a devastating blow.   The amount of energy
+was so great nearly everything in the Valley was destroyed and a bright
+aura was left in the sky.  The Great War had finally ended but neither
+side had won.  The remaining residents of Dusk Valley were forced to
+settle elsewhere.  The brother's mutual hatred had not lessened though and
+over time they both passed away.  
+
+  Nearly one thousand years after the destruction of Dusk Valley, time
+seemed to heal the devastation wrought during the Brothers' war.   Trees
+grew tall and strong, streams filled the crevices in the land, grass
+covered the valley floor and fauna cautiously populated the region once
+more.
+
+  Upon hearing of the rebirth of the Valley, the Relyks returned to the area
+to start anew.  Although many centuries had passed the aura covering the
+valley remained.  The region became known as Afterglow.  The Relyks in the
+area have built a large mansion to honor their master.  Those who have 
+contributed to the community are scribed into a great book.  Are you 
+honorable enough to contribute to Afterglow?
+
+Welcome to Afterglow, adventurer.
+
+Your name has been scribed into the Tome of the Relyks.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Difficulty       : Difficult           
+Recommended Level: 201
+Maximum Level    : 201
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tasks:
+ 1 -  Have your name scribed into the Tome of the Relyks           : Completed
+ 2 -  Speak to Kiden the chef                                      : Completed
+ 3 -  Help Kiden play a prank on master Nystaulyk                  : Completed
+ 4 -  Return to Kiden to talk about the diary                      : Completed
+ 5 -  Investigate Kiden's nursery rhyme further                    : Completed
+ 6 -  Return to the master's quarters to read the diary            : Completed
+ 7 -  Forge a letter using master Nystaulyk's handwriting          : Completed
+ 8 -  Bring a special piece of amber to Kiden                      : Completed
+ 9 -  Retrieve a skin and bones to make a dragon statue            : Completed
+10 -  Help Kiden install the dragon statue in his quarters.        : Completed
+11 -  Let Grandmaster Mage Nystaulyk know that Kiden is dead.      : Completed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

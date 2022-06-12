@@ -1,0 +1,181 @@
+find village elder
+
+be vis and his mobprog will fire:
+
+The village elder says, "Ahh, once this village was full of mighty warriors, yes! But then they came..."
+The village elder asks, "You there. Have you come to help us?"
+The village elder stares at you pleadingly.
+The village elder says, "This scourge has overwhelmed us and destroyed the entire village! I haven't much to offer, but will you be generous and help destroy these crazed necromancers? If you will help, please give me a nod."
+
+nod elder
+You nod at the village elder.
+
+The village elder says, "I knew I could count on you Raaigar! You may be this village's last hope. In my dreams, I still hear them.  The screams of the victims, their cries for help and mercy.  Their bodies may be gone, but I know their spirits linger in torment, tied to the necromancers and their refuge."
+
+The village elder furrows his brow, deep in thought.
+
+The village elder says, "Perhaps if you could find some sort of trinket, an old belonging from these wrecked homes, one of the spirits would remember their life and be willing to help you."
+The village elder sighs.
+The village elder says, "I am much too old to be of any assistance, so I hope you will be able to get the inside help from a spirit."
+
+The village elder says, "I am sure one of the spirits will tell you what to do."
+Scratching his beard, the elder turns his attention back to trying to catch a rat for dinner.
+
+** Goal Added : Purge the evil in the Necromancers' Guild.
+   Type 'goals necro' for full details on this quest.
+
+** Task Added : Help a restless spirit remember the past.
+
+go to the room a stone hut and there will be a cabinet in the room
+
+open cabinet
+get locket cabinet
+
+go to the actual guild part of the area and find the restless spirit
+
+give locket spirit
+
+You give a tarnished and broken silver locket to a restless spirit of the victim.
+The spirit somehow holds the locket in its ethereal hands.  A single glitter of light trails down its cheek, like a tear.
+
+A restless spirit of the victim exclaims, "Oh, my love. You've been gone so long, but now I can remember your sweet face.  These monsters must pay for this abomination! Our home, our village, our lives - all destroyed!"
+The restless spirit turns to you.
+A restless spirit of the victim says, "You are here to stop them? To get revenge for all that they have ruined?  I will help you.  It seems like an eternity that I have roamed these halls, half mad with grief.  But only half; I have learned much.  I can guide you in destroying them and ruining all they have worked for! The first thing you can do is deprive these beasts of any further victims.  There is a dungeon here, where they hold people until they need more blood and souls.  Go now, and release these innocents!  When you have emptied three cells, return to me."
+
+go to the cells, have the cell key in your inventory and be vis then walk into each room
+
+A human prisoner says, "You have the key?! You have come to release us! Praise the gods, I thought this day would never come." The prisoners quickly toss aside their chains as they are unlocked. Each one takes your hand and bows over it in turn, tears sparkling in their eyes. The last prisoner pauses for a moment.
+A human prisoner says, "It is a good deed you have done."
+With a sad smile, the prisoner turns and runs out to freedom.
+
+A human prisoner says, "You have the key?! You have come to release us! Praise the gods, I thought this day would never come."
+The prisoners quickly toss aside their chains as they are unlocked.
+Each one takes your hand and bows over it in turn, tears sparkling in their eyes. The last prisoner pauses for a moment.
+A human prisoner says, "This realm needs more like you."
+With a sad smile, the prisoner turns and runs out to freedom.
+
+A human prisoner says, "You have the key?! You have come to release us! Praise the gods, I thought this day would never come."
+The prisoners quickly toss aside their chains as they are unlocked.
+Each one takes your hand and bows over it in turn, tears sparkling
+in their eyes. The last prisoner pauses for a moment.
+A human prisoner says, "Whatever your purpose, I thank you for your help."
+With a sad smile, the prisoner turns and runs out to freedom.
+
+return to the restless spirit
+
+A restless spirit of the victim says, "Great work, Raaigar. I saw the prisoners run past me on their way to freedom, and it made my heart sing with joy.  With the innocents safe, we can now get to the task of disrupting the foul deeds being done in these halls."
+The spirit paces, seemingly lost in thought.
+
+The spirit makes up its mind and stops in front of you once again.
+A restless spirit of the victim says, "Classes are being taught here. These classes rely heavily on elixirs and magical powders, both stored in a small room.  Should the elixirs become tainted, and the powders scattered and mixed together on the floor, it would seriously hinder the teachers' ability to continue."
+
+A restless spirit of the victim says, "Go now, Raaigar and see to it that the students have a long break. Return to me and tell me when you are DONE."
+
+** Task Done  : Release the imprisoned villagers.
+** Task Added : Disrupt the vile teachings of the Necromancers.
+
+go to the classroom, kill the teacher for the key north to the storage room and go north
+
+not sure if you need to get the elixir and powder from the shelves, i did, but then kill the assistants and then type scatter powder and taint elixir
+
+scatter powder
+You make a huge mess with the magical powders! Good job!
+
+taint elixir
+Some spit, a little toe-jam, a touch of belly button lint... perfect!
+
+return to restless spirit
+
+say done
+
+You say 'done'
+A restless spirit of the victim says, "Wonderful job, Raaigar!   Already there is chaos in the classrooms.  I'm not quite sure what you used to taint those elixirs, but they say the stench is outstandingly horrible."
+
+** Task Done  : Disrupt the vile teachings of the Necromancers.
+
+A restless spirit of the victim says, "Next, we need to cut off their funding.  There's a treasury here, piled high with gold and treasures pilfered from our town and others like it!  This task will not be easy, however.  The key is on the necromancer's assistant, but he has it hidden unless he needs it.  You must find a way to distract him; I suggest the livestock running around this filthy hole. He has this fear of chickens!
+ Even a single feather will send him shrieking in fear. It's not over when you get the key, for there is a dragon guarding the treasure room itself! Kill the dragon and take the treasure. Then return to me and let me know that the treasure is gone."
+
+** Task Added : Get rid of the Necromancers' funding.
+
+go to animal pens, get 2 seeds, drop in room with chicken until one of them drops a large egg
+
+drop large egg in room with animal keeper and enter and exit room until it hatches
+
+kill newly-born chicken
+
+get feather that drops after it is dead
+
+go to the room of the pentagram
+
+give the feather to the assistant and he will drop the key
+
+get the key and go back to the cell area then all south, open down, down
+
+the dragon will attack you and upon its death, kick you back out of the room
+
+The Bone Dragon raises its head and screams in agony as you mortally wound it.
+The Bone Dragon shudders and glows, then suddenly explodes with a release of mental energy.  The piles of gold in the room vanish in puffs of glowing smoke.  Were they just an illusion, or was the room somehow trapped?
+
+return to the restless spirit
+
+tell the spirit the treasure is gone
+
+You say 'the treasure is gone'
+A restless spirit of the victim exclaims, "You continue to astound me, Raaigar!"
+
+** Task Done  : Get rid of the Necromancers' funding.
+
+A restless spirit of the victim says, "Just one thing left to do. You will need to find a way to disrupt the head necromancer's ceremony. I suggest finding a way to wash that disgusting symbol right off the floor."
+
+** Task Added : Stop the Head Necromancer's summoning ceremony!
+
+kill a cleaning servant for a mop
+
+go to the room of the pentagram
+
+wear mop and type clean floor
+
+Due to the burning candles, the Head Necromancer sees you and tosses you from the room.
+Perhaps you need to snuff out the candles so that you may work in the dark.
+
+go back into the room and type snuff candle
+You would burn your fingers.
+
+then type snuff candles
+The candles continue to burn. It seems that something stronger will be needed to snuff the candles.
+
+go to asardotlan's room and say help
+
+You say 'help'
+Asardotlan says, "The Necromancer and I don't see eye to eye on many things so I am willing to help you out. The magical candles cannot be snuffed out by normal means. You will need a candle freezer! This ceremonial instrument will allow you to snuff the candles."
+
+You receive a ceremonial candle freezer from Asardotlan.
+
+Asardotlan says, "Take this and go while he's doing his summoning. He won't know what hit him...er happened."
+Asardotlan blinks innocently at you.
+Asardotlan says, "Come back if you lose that one."
+
+go back to the room of the pentagram and type snuff candles
+
+Using the ceremonial candle freezer, you extinguish the candles.
+It's a bit of a struggle in the dark, but you manage to quickly slosh the mop around enough to break the bloody pentagram. The head necromancer stops his chanting as he feels his barrier broken. He snaps his fingers, and a light appears hovering above them.  It isn't hard for him to find you in the room, and see the mop in your hands.
+The head necromancer boggles, "WHAT HAVE YOU DONE?!"
+As the head necromancer readies himself to attack you, Asardotlan rushes into the room from a hidden alcove.  His dagger is held high above him, and with a triumphant yell he plunges the blade deep into the head necromancer's back.  A slight gurgling noise issues from the head necromancer's throat before he slumps to the ground, his ball of light still hovering in mid-air. The head necromancer's eyes find yours in the flickering light. You see the life fading from them with every instant.
+The head necromancer says, "At least you will die too. It's too late to run."
+A huge beast emerges from the necromancer's light. The beast leaps at Asardotlan and rips its claws into the back of his head. Without even noticing you, the beast bounds out of the room and off to freedom. A piece of silver drops to the ground behind the beast.
+
+go back to the restless spirit and give him the pentagram
+
+You give a silver pentagram to a restless spirit of the victim.
+A restless spirit of the victim says, "Because of you, I shall be able to rest in peace. Thank you."
+A restless spirit of the victim sighs contentedly as though at peace.
+A restless spirit of the victim says, "Please take this as a token of my thanks. After all what good is gold to a spirit anyway."
+A restless spirit of the victim chuckles to itself.
+The restless spirit hands you 5,000 gold coins.
+A restless spirit of the victim says, "Also you may want to speak to the elder as I'm sure he's very happy that you've broken the necromancer's power."
+
+** Task Done  : Stop the Head Necromancer's summoning ceremony!
+
+** Goal Completed: Purge the evil in the Necromancers' Guild.
+INFO: Raaigar has broken the power of the necromancer.

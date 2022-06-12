@@ -1,0 +1,144 @@
+mapper goto 39002
+
+Smiling at you, Cedyca greets you warmly.
+Cedyca says, "Hello, Raaigar. My name is Cedyca."
+
+Cedyca says, "I am the leader of the tribal rebellion group."
+
+Cedyca says, "I lead a resistance to stop the wrongdoings of the tribe in the garrison to the north."
+
+Cedyca says, "I will not stop until every last one of them is killed."
+
+Cedyca asks, "Would you like to join my rebellion?"
+
+Cedyca says, "A quick warning, though.  There will be a LOT of tribe member killing."
+
+Cedyca says, "If you are okay with that and are willing to join my cause, simply say: I want to join."
+
+Cedyca smiles at you.
+
+You say 'i want to join'
+
+Cedyca cheers and sings... she is just BURSTING with joy!
+Cedyca says, "Excellent! I look forward to having you as part of our rebellion." 
+
+Cedyca says, "For starters, I need to make sure you are up to the task."
+
+Cedyca says, "Head into the garrison and kill..."
+
+Cedyca goes, "Hmmmm."
+Cedyca says, "Kill one of the head garrison gateguards in the upper level of the garrison guard tower."
+
+Cedyca says, "If you're able to do this, return to me and say 'dead'."
+
+Cedyca says, "We will then begin with the slaughter."
+
+Cedyca cackles gleefully at you.  Better keep your distance from her. 
+
+
+** Goal Added : Become famous with the Tairayden rebellion.
+   Type 'goals Ookushka' for full details on this goal.
+
+** Task Added : Kill your first tribe member
+
+mapper goto 39010
+kill head garrison gateguard
+mapper goto 39002
+
+You say 'dead'
+
+Cedyca says, "Good, I see you are up for the task."
+
+Cedyca says, "To become friendly with the rebellion, you simply need to kill any 10 tribe members."
+
+Cedyca says, "Pick any of the tribe members in the garrison and teach them the ultimate lesson."
+
+Cedyca says, "Return to me and say 'friendly' when you've killed 10 of them."
+
+** Task Done  : Return to Cedyca
+** Task Added : Become friendly with the resistance clan
+
+kill any 10 tribe members u find
+
+mapper goto 39002
+
+You say 'friendly'
+
+Cedyca exclaims, "Congratulations on becoming friendly with our rebellion!"
+
+Cedyca says, "Your next task, if you so choose to do so, is to become well-known with the rebellion clan."
+
+Cedyca says, "You must now kill 50 tribe members to increase your reputation."
+
+Cedyca says, "Return to me and say 'well-known' when you've killed 50 of them."
+
+** Task Done  : Become friendly with the resistance clan
+** Task Added : Become well-known with the resistance clan
+
+kill any 50 tribe members u find
+
+mapper goto 39002
+
+You say 'well-known'
+
+Cedyca exclaims, "Congratulations on becoming well-known with our rebellion!"
+
+Cedyca says, "Your next task, if you so choose to do so, is to become honored with the rebellion clan."
+
+Cedyca says, "You must now kill 100 tribe members to increase your reputation."
+
+Cedyca says, "Return to me and say 'honored' when you've killed 100 of them."
+
+** Task Done  : Become well-known with the resistance clan
+** Task Added : Become honored with the resistance clan
+
+kill any 100 tribe members u find
+
+mapper goto 39002
+
+You say 'honored'
+
+Cedyca exclaims, "Congratulations on becoming honored with our rebellion!"
+
+Cedyca says, "Your next task, if you so choose to do so, is to become famous with the rebellion clan."
+
+Cedyca exclaims, "This is the final and most prestigious rank!"
+
+Cedyca says, "You must now kill 500 tribe members to increase your reputation."
+
+Cedyca says, "You can now access the tribal practice grounds, located near the cliff caves."
+
+Cedyca says, "Return to me and say 'famous' when you've killed 500 of them."
+
+** Task Done  : Become honored with the resistance clan
+** Task Added : Become famous with the resistance clan
+
+kill any 500 tribe members u find
+
+mapper goto 39002
+
+You say 'famous'
+
+Cedyca exclaims, "Congratulations on becoming famous with our rebellion!"
+
+Cedyca says, "You have reached the highest rank possible in our clan."
+
+Cedyca says, "This is a very big feat in our group."
+
+Cedyca bows before you. 
+
+Cedyca says, "I will announce to the world of your accomplishments here."
+
+Cedyca says, "The rebellion clan appreciates any additional members you are able to kill."
+
+Cedyca says, "Again, thank you, Raaigar! May your adventures be fruitful."
+
+Cedyca says, "Take this gift from the rebellion clan. It's the least we can do."
+
+You receive the highest rank rebellion clan belt from Cedyca.
+You receive 20 quest points.
+
+** Task Done  : Become famous with the resistance clan
+
+** Goal Completed: Become famous with the Tairayden rebellion.
+INFO: Raaigar has put an end to the Tairayden tribe's reign of terror.

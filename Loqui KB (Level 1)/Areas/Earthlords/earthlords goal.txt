@@ -1,0 +1,119 @@
+Posted by Qbano from Cabal
+
+NOTE: If anyone has completed the sabotage side of the goal, please post the solution and reward.
+
+1. Go to room "Unhospitable Home" (GMCP: 42057) which is the southern most home of the western branch.
+
+2. In this room, lift carpet to be transported to a new room. Type nod sha to open the goal.
+
+** Goal Added : Help the Sacred Flame infiltrate and weaken the Earth Lords.
+Type 'goals earthlords' for full details on this quest.
+
+** Task Added : Sabotage of the city.
+
+3. In the same room, listen le to receive instructions.
+
+4. Go to room "Linlie's Home for the Lost" (GMCP: 42064) which is the eastern most home of the northern branch.
+
+5. Kill the lost little boy or girl and pick up one of the heads off the floor.
+
+6. Go to Jacoby in "The Stoney Grocer" (GMCP: 42049) and drop head.
+
+7. Go back to Sha'nel and Le'lani and listen le again for further instructions.
+
+---------------------------------------------------
+This goal has two solutions, one where you sabotage the city, and one where you help the city.
+At this point, I switched over to the other side and I don't think there is a way back.
+---------------------------------------------------
+
+8. Go to "Church of Gaia" (GMCP: 42062) and type worship.
+
+** Task Done : Sabotage of the city.
+** Task Added : Feed and cloth the lost.
+
+9. Go back to Jacoby and buy apple and asparagus. Then go to the underground part (by typing "jump down" in any of the rooms named
+"Standing Before Earth's Maw") and look for a mob named Rock in the southeast quadrant. Kill Rock for a leather tunic and leather pants.
+
+10. Go back to Linlie's Home and give apple boy, give pants boy, give asparagus girl, give tunic girl.
+
+11. Go back to the Church and listen priest to update the goal.
+
+** Task Done : Feed and cloth the lost.
+** Task Added : Remove the Sacred Flame dissidents.
+
+12. Go back to Sha'nel and Le'lani and kill Le'lani and D'kath.
+
+13. Go back to the Church again and say 'they are dead' to update the goal.
+
+** Task Done : Remove the Sacred Flame dissidents.
+** Task Added : Gather the items to to create a weapon to challenge Gaia.
+
+The priestess of Gaia says, "To successfully challenge Gaia, you must
+gather a wise man's tears, a poor man's smile, winter's heart, and
+summer's bloom. Once you have gathered these items, you will need to find
+a string of earth and a metal band to bind them into a weapon. Return to
+me with the items and we will forge you a weapon."
+
+14. Go to "The Sun Rise Tavern" (GMCP: 42061) on the north side of town and kill Syndny for a Winter's Heart (might not spawn with it every time).
+
+15. Go to "The Doctor's Office" (GMCP: 42098) also on the north side of town and kill a patient for a weak smile (might not spawn with it every time).
+
+16. Go to "Earth Moving Travel Inc." (GMCP: 42052) near the start of the area and type 'get rose'. Then, go to Linlie's Home again,
+and give rose linlie to get Summer's Bloom.
+
+17. Go back to the underground part and look for Iron Mike in the southwest quadrant. Kill him for an Iron Ring with Draconic Runes (not 100% drop either).
+
+18. Go to the second house on the west side of town called "An Adobe Home" (GMCP: 42059) and kill a father for Wisdom of Life
+(he might not spawn with it every time).
+
+19. In that same room, kill the wife (this took me 4-5 repops because she definitely doesn't spawn with it every time) until you get a stone key.
+Once you have that, open west in that room to get to "A Hidden Garden" (GMCP: 42099).
+
+20. In the garden, type 'pick carrot', 'pick tomato', 'pick potato', 'pick lettuce' until you get clumps of earth held together by a string of roots.
+Getting the clumps of earth is a % chance, so if you are not successful, you will have to drop all the veggies and do the picking thing again.
+
+21. Now you have all the items, return to the Church and say 'forge weapon'. Then wait until she gives you Earth's Bloom and the goal updates.
+
+** Task Done : Gather the items to create a weapon to challenge Gaia.
+** Task Added : Battle Gaia.
+
+22. Wear bloom then head underground again. This time, keep going down to Gaia's room. This room is noquaff,
+and the trick is to blind then awe the golems that spawn. Then, dispel Gaia and blast.
+If you have problems killing Gaia, you can recall out and come back and try again (he doesn't heal up).
+
+[Qbano: Gaia does heal after a longer period of time. You don't have to blind and awe the golems. For me only 2 golems spawned and
+               if you are buff enough you can take it :p. At first I was using a shield and wielding only the Earth's Bloom.
+               But after I got Gaia down to 50% my damage was not enough and had to switch to dual. From there it was pretty easy.
+               Maybe should have done that from the start... :/
+               Also...you can't use scrolls either. Well you can but then Gaia takes 50% of your current HP.
+               Gaia says, "You shall fight me fairly or not at all."
+               Gaia chants the phrase 'Earthen Tomb'.
+               A powerful hand reaches up and pulls you down into the earth, crushing you half to death.]
+
+23. The goal completes when Gaia is dead.
+
+** Task Done : Battle Gaia.
+** Goal Completed: Help the Sacred Flame infiltrate and weaken the Earth Lords.
+INFO: Qbano has become a champion of Gaia.
+
+-------------------------------
+Rewards:
+
+You can now say 'arena' at the captain of the guards to be transported there.
+The captain of the guards will now open the gates for you.
+
++-----------------------------------------------------------------+
+| Keywords   : visions scorched earth                             |
+| Name       : Visions of a Scorched Earth                        |
+| Id         : 1783659970                                         |
+| Type       : Armor                     Level  :   200           |
+| Worth      : 2,000                     Weight :    20           |
+| Wearable   : eyes                                               |
+| Score      : 430                                                |
+| Material   : energy                                             |
+| Flags      : unique, invis, magic, burn-proof, nolocate, V3     |
+| Notes      : Item has 5 resistance affects.                     |
++-----------------------------------------------------------------+
+| Stat Mods  : Damage roll  : +24      Hit roll     : +24         |
+|              Constitution : +10      Strength     : +6          |
++-----------------------------------------------------------------+

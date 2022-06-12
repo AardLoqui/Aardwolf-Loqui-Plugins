@@ -1,0 +1,82 @@
+Say "I will help free the prisoners" in 37400
+run ne
+say guardians
+run 3wn
+greet statue for key
+run s2en
+open north
+in this area kill each of the flower mobs for the following items:
+ set of gloves made of leaves
+ thorn
+ violet
+ belt
+While in this area "dig" in the rooms to find the crank, will get a message about digging up something metalic
+pick up the crank
+return to Moorerry (ne of start of area)
+run 2wnuw
+turn crank to get to upper floor
+go to each of the four guardians and say "earn your trust" to unlock their tasks
+go back to elevator (37440) and type push 2 
+kill an elven ranger for a "wooden whip"
+look around area for "spoiled rations" you need two of these
+goto room 37411
+descend stairs
+enter dome
+in this area listen guards until one tells you to give 200 gold
+give him 200 gold twice for the sauce
+find a room with the grimalkins (DONT GO IN)
+drop sauce in the room NORTH or SOUTH of the cell you choose with the grimalkins.  This will make one come to you
+You can now kill that grimalkin
+repeat the sauce for two kills
+look on the floor in the main are (not the cells) and pick up two snail eggs
+hold slingshot and enter a cell with the Gastropods
+If you are SH don't wield a weapon - mob is immune to punch
+engage mob then "shoot egg gastropod" to destroy its shell then kill mob
+repeat for second kill
+wield the wooden whip
+go into a cell with Entozoons and kill them with the wooden whip (2x)
+go into a cell with Rapacious plants
+give the spoiled ration to the plant then kill it
+repeat for second kill
+go back up the elevator and go to each of the guardians.  They will now let you into the rooms above.  Kill the mobs in the rooms above (4 total)
+Once you kill all four of the top guardians go to one of the lower guardians and say "I am willing to do this"
+Then say "I want to go to the dungeon"
+kill Asherodan
+open the cells, go to each of the four, and kill teh mobs for the gems
+enter portal to return to the dome
+enter dome to return to the main area
+ascend northwest
+put tanzanite obelisk
+east
+put realgar obelisk
+south
+put moonstone obelisk
+west
+put peridot obelisk
+kill Galkorum who is now in the room with you
+
+This is the reward
+
+id light
+
++-----------------------------------------------------------------+
+| Keywords   : light orb asherodan                                |
+| Name       : The Light of Asherodan                             |
+| Id         : 2558494448                                         |
+| Type       : Light                     Level  :    90           |
+| Worth      : 360                       Weight :     8           |
+| Duration   : permanent                                          |
+| Wearable   : light                                              |
+| Score      : 110                                                |
+| Material   : energy                                             |
+| Flags      : invis, magic, held, V3                             |
++-----------------------------------------------------------------+
+| Stat Mods  : Hit roll     : +4       Mana         : +10         |
+|              Hit points   : +10      Intelligence : +3          |
+|              Wisdom       : +3                                  |
++-----------------------------------------------------------------+
+
+
+
+
+

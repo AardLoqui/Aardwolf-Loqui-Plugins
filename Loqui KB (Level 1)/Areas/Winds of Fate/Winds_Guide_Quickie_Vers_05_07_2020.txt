@@ -1,0 +1,98 @@
+Winds Guide (Quickie Version) 06-29-2019
+
+**  To open the goal, >Listen Steward then >Accept
+
+0   all to center
+
+1   >Touch obelisk
+
+2   >Search floor
+    -- Kill haunt. 
+    >up
+
+3   >Clear books
+    -- kill warn.  
+    >down
+    
+4   Open all directions
+    -- if no key, someone else in the party should have it. Ask to open all directions.
+    
+5.  Move about all directions until you get teleported to [Trapped]
+
+        >Stand
+        >search cell, search sludge, search floor, search ice, search hole, push square
+        -- aliased as wsearch
+        >get key
+        >up
+        >open door
+        Fight/kill guards  
+        Travel to end of path, open door and get to Lord Orittias
+
+6.  Wait for everyone to get to Orittias
+    When all at the room, type:
+        >Accept (You will be transported automatically)
+	OR
+	>Deny (You will be transported automatically)
+
+7.  Now you're in the maze.  Find Solistar.
+    --Once you're in the room where the graffitti is, it's usually Down North North.
+
+8.  Play the guessing game til someone receives the pebble.
+    Leader receives the pebble from the player.
+        >Enter portal
+
+9a. IF ACCEPT: You have to kill El'cair
+
+    Avoid the Center Room. 
+        >dig up coffin;pry open coffin  -- aliased as 'duc'
+    gather items.
+
+    tell everyone to give items to you.
+
+    Once you have enough items, could be 7 to 15 (random)
+    Go to the North Room, and type:
+
+        >Say I have the items
+    
+    Once he is satisfied with you having enough items 
+    (Last resort is to hit the center room to gather more items)
+
+        >Say please (And your party is transported to next section)
+
+9b. IF DENY:  You have to kill Aron
+
+    Move about the place and avoid the center room for now.
+    And kill Grave Robbers.  They will continually repop here and there.
+    Go to the most North room.  You need to kill Orittas before going to the center room.
+    After killing Orittas at the most northern room, go to the center,
+    and say please.  If need to kill more grave robbers, mobprog will tell you.
+    * Every player needs to move manually out of the center room.
+    Kill more grave robbers to satisfy the mobprog.
+
+    Once killed enough grave robbers, say please in the center room to be 
+    tranported to the next section.
+ 
+10  >Open all doors
+
+11  Head to Daren at East part of the section.
+    
+       >Give Pebble Daren (magical gateway appears)*
+       >Enter gateway
+
+12  Now you're at petrified grove section.
+    Wear Shield. Go 2N for the final Battle.
+    Be sure to rescue.
+
+13  When all done, you're transported to Hynes.
+    where you can:
+
+       >Nod Hynes.
+
+14  >Say sage
+
+15  >Store all
+
+16  Thank everyone for coming.
+
+
+

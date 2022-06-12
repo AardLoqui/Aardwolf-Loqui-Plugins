@@ -1,0 +1,1407 @@
+This walkthough still needs some editing,
+Landion.
+
+
+Radiance Woods (20th dec 2015)
+
+A Break in the Trees
+
+Luama asks, "Don't be so quick to run off! Won't you listen to my tale?"
+
+listen luama
+
+Luama sits down and thinks deeply. 
+
+Luama asks, "If you wish to know the story you must go pick up a book.
+ Yes, a book! Does it shock you so that I might expect you to read?"
+ 
+Luama goes, "Hmmmm."
+ 
+Luama says, "If it does, then perhaps you are in the wrong place, my dear.
+ However, let us carry on as if you love to read! Just give me a nice
+ rustle if you agree."
+
+
+rustle
+You get your tree on and rustle happily.
+Luama says, "Marvelous! Fetch a book by the name of A Province Through
+ Time, you should find it nearby in the village. Come back to me when you
+ have it in your possession and then you may sit down."
+
+
+** Goal Added : Banish the darkness from Radiance Woods.
+   Type 'goals Radiance' for full details on this quest.
+
+** Task Added : Fetch a Book
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+Luama shoos you away!!  Go!!
+
+Giftshop & Books
+
+buy 1
+You buy A Province Through Time from Vedrana for 500 gold.
+
+
+A Break in the Trees
+
+Luama says, "If you have the book then sit down! If not, go buy it! It's
+ called A Province Through Time, in case you forgot."
+
+sit
+You sit down.
+Luama says, "Did you read it yet? Don't bother answering, I know you
+ didn't read it! If you did, then you need to read it again. There is a lot
+ of information to remember. Disregarding this book will be to your
+ failure."
+
+
+Luama says, "I know, you were hoping I would read the book for you. I did
+ one better than that! I wrote the book, so now you can read it and imagine
+ my angelic voice."
+   
+Luama says, "Three nymphs live in the woods, there was a fourth who
+ recently lost her life tragically. She was brave and fearless to the very
+ end. We will always remember her with great reverence and honor, a name we
+ will never forget. When you are ready to continue, please name this
+ greatly missed friend."
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+
+*****************************************************************************
+read index
+
+Cover...........................................Read Cover
+Index...........................................Read Index
+Introduction....................................Read Page1
+Timeline........................................Read Page2
+Part 1: Aevintyri...............................Read Page3
+Part 2: Geyne & Camden..........................Read Page4
+Part 3: The Pact................................Read Page5
+The Wood Nymphs.................................Read Page6
+An Interview: Adaline...........................Read Page7
+An Interview: Camille...........................Read Page8
+An Interview: Rosalind..........................Read Page9
+An Interview: Julianne..........................Read Page10
+The Darkness:...................................Read Page11
+A letter from Cemerys...........................Read Page12
+Elemental Gemstones.............................Read Page13
+Present Day Province............................Read Page14
+
+Bonus Material: 
+All About the Lovely Luama......................Read Page15
+
+
+
+tasks here
+
+       Radiance : Banish the darkness from Radiance Woods.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task 1  : Fetch a Book
+
+"I know, you were hoping I would read the book for you. I did one better
+than that! I wrote the book, so now you can read it and imagine my angelic
+voice." -Luama
+
+"Three nymphs live in the woods, there was a fourth who recently lost her
+life tragically. She was brave and fearless to the very end. We will
+always remember her with great reverence and honor, a name we will never
+forget. When you are ready to continue, please name this greatly missed
+friend." -Luama
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+read cover
+
+<<<*>>>----------------------------------------<<<*>>>
+   |                                              |
+   |            A Province Through Time           |
+   |                                              |
+   |            Author: Lovely Luama              |
+   |                                              |
+   |                Editor: Lexos                 |
+   |                                              |
+   |                 Dedication:                  |
+   |    Words can not express how immeasurably    |
+   |    grateful I am for the friendship that     |
+   |    I am blessed to have with you. May our    |
+   |    rustles always be in harmony and filled   |
+   |    with jubilation.                          |
+   |                                              |
+<<<*>>>----------------------------------------<<<*>>>
+
+read index
+
+Cover...........................................Read Cover
+Index...........................................Read Index
+Introduction....................................Read Page1
+Timeline........................................Read Page2
+Part 1: Aevintyri...............................Read Page3
+Part 2: Geyne & Camden..........................Read Page4
+Part 3: The Pact................................Read Page5
+The Wood Nymphs.................................Read Page6
+An Interview: Adaline...........................Read Page7
+An Interview: Camille...........................Read Page8
+An Interview: Rosalind..........................Read Page9
+An Interview: Julianne..........................Read Page10
+The Darkness:...................................Read Page11
+A letter from Cemerys...........................Read Page12
+Elemental Gemstones.............................Read Page13
+Present Day Province............................Read Page14
+
+Bonus Material: 
+All About the Lovely Luama......................Read Page15
+
+
+The texture of your skin returns to normal.
+
+read introduction
+You don't see that here.
+
+
+read page1
+Introduction
+
+If, indeed, you enjoy this book (and how could you not?) please take
+the time to stop by Radiance Woods and thank me, the Lovely Luama, for
+penning such an indispensable tome. This is all I ask of you, dear reader,
+a moment's gratitude in exchange for all that I am about to teach you.
+
+However, if for some reason not even the gods can fathom, you did not
+enjoy this book, then, I beg of you, leave me in peace. I would rather
+think of you fondly and not as the obnoxious ingrate you clearly are.
+Should you decide to ignore my advice and force upon me your wrongheaded
+complaints, then whatever punishment my whimsy prescribes for you is,
+sadly, your own fault. I have warned you!
+
+This book is your vital source of knowledge regarding the Province.
+Please, adventurer, you must know of the Province. My heart trembles with
+fear at the prospect that you are so inexperienced, so breathtakingly
+ignorant, as to not know of what I speak. It is the only province that
+matters, a place of such special import that to name it otherwise would be to
+diminish its power.
+ 
+The Province is comprised of three distinct regions through which you will
+adventure should your heart prove strong. Radiance Woods is,
+unsurprisingly, a legendary forest that has gathered into its embrace the
+small village in which you purchased this book of wisdom. Just north of
+the village is Aevintyri Manor, although, as you may already have noticed,
+journeying there is currently impossible, more's the pity. We shall
+discuss that tragedy later.
+ 
+To the east of the manor is the Helebore, a garden as fabled as it is
+foul, a wretched place of twisted darkness that hungers, unceasingly, for
+the flesh of the unwise soul. Count yourself lucky you cannot yet venture
+there! No pretty roses to smell in that benighted place, this I know all
+too well.
+ 
+Within each of these regions there are people of importance of whom you
+must be aware, but I'm not going to prattle on about them right now. I
+release you to skip to whichever topic herein that most peaks your
+interest. If you have any questions, concerns, or comments, please send
+them, care of Lovely Luama, the wisdom of Radiance Woods. I do always need
+more paper for my fires, and watching those scraps of ignorance go up in
+flames does make me rather happy and keep me warm.
+ 
+Blessed be,
+Luama
+
+
+INFO: Zireael has been reborn as a Vampire Paladin.
+
+Auction: Koala is auctioning a Blood Red Breastplate (Level 201, Num 107). Current bid is 100.
+
+
+read page2
+
+200 years ago: Wood nymphs bring Aevintyri to Radiance Woods, inaugurating
+an unparalleled era of magic and beauty.
+
+150 years ago: Humans enter the woods, beginning a mutually beneficial
+relationship with the faerie folk in which they receive protection from
+the nymphs and the nymphs extend their peace to the world's needful. A
+statue is built in honor of this pact and the era of the Province begins.
+
+101 years ago: Cemerys nearly breaks through the protection spell and the
+decision is made to block the entrance into Radiance Woods from outsiders.
+People can leave, but they cannot return without special permission from
+the wood nymphs and Queen Aevintyri. 
+
+5 years ago: Wicked Cemerys breaks through the cracks in an ancient spell
+of protection and begins corrupting the once sacred Woods, unleashing upon
+them the darkly seductive song of her sick creations.
+
+[84296/84296hp 35148/35277mn 6259/6259mv 0qt 682tnl] >
+read page3
+
+Part 1: Aevintyri
+
+The great wood abided long before Aevintyri first discovered its
+sprawling splendor. The trees, tall and wild, extended their reach far and
+wide with no force of nature capable of containing them. Browns and
+greens, yellows and reds. The vivid colors in this mystical place were a
+match only for its endless diversity of flora and fauna.
+ 
+Though such a glorious feast of nature resisted masters, the Nymphs were
+its gatekeepers. It is said that no man or beast, no matter how powerful,
+could find this sanctuary without the Nymphs' blessing.
+ 
+For Aevintyri, a faerie attempting to escape a living nightmare, the
+Nymphs called to her, whispered to her in dreams that left her restless.
+Hounded by a dark rival, eager to drink the power from her very bones, she
+followed the Nymphs' sweet, ephemeral song until she found her way to
+their sacred home. Joyously greeting her and hailing her, and her
+followers, as sisters of magic, the Nymphs sheltered the beleaguered lady
+of faerie, and, to seal the bond between them, crowned her queen and
+savior of Radiance Woods.
+ 
+This monumental title, and all the power it conveyed, did not come without
+a grave price. For to assume such a mantle of leadership would bind
+Aevintyri to Radiance Woods for as long as her life allowed. In exchange
+for this long and prosperous existence, characterized by all the blessings
+of youth and beauty, Aevintyri would forever call these woods home. To
+leave them would be tantamount to oath-breaking, the consequences of which
+would bring death's swift hand down on both her and the Nymphs with whom
+she had forged this pact. For a lady of Faeries, hunted to the ends of the
+earth by a power she could not withstand, eternal service to her new home
+was a small price to pay for its strong, protective arms.
+ 
+Even from within the ecstasy of her dark hunt, Cemerys felt the bond
+forged in Radiance Woods. One would have to be utterly bereft of mystic 
+talent to not have felt the quivering that rippled through the world at
+the pact's creation. Soon, the dark queen would learn just how far
+Aevintyri had gone to escape her cruel claws, venturing to the edge of the
+sacred wood, only to find her servants turned away by the powerful magic
+within.
+
+Lesser beings might have given up the chase and searched elsewhere for
+easier prey, but not Cemerys. No, she would be patient. She would be
+smart. She would win, even if it took a thousand years. The longer the
+wait, the sweeter the conquest.
+
+
+read page4
+
+Part 2: Geyne and Camden
+
+Some fifty years after Aevintyri swore her sacred oath to the wood nymphs,
+the first human visitors came to Radiance Woods. Geyne, a girl orphaned by
+a drow raid on her village, could lay claim to nothing more than the
+filthy clothes on her back. She was a girl without magic, a girl without
+hope, a girl without a future. Her only weapon, a will to survive.
+  
+Geyne's bare feet, made raw from walking for countless miles, bled
+into the earth as she wandered, half-mad, into Radiance Woods and, like
+Aevintyri before her, was guided to safety by the sweet voices of the
+Nymphs. Applying their healing powers to the girl, they urged her to wake
+and gaze upon a world of blessings and magic, of power and grace, of
+beauty and wonder, all things she had thought dead. For the Drow's attack
+on her world had been so complete, it had taken even her belief in the
+supernatural, in the powers that did not lift a finger to save her family.
+However, this was magic she could not deny.
+  
+Fate strengthened its grip on Radiance Woods when, a few years later, a
+second human ventured onto their verdant doorstep.  Lord Camden was
+nothing like the sweet, lost girl the Nymphs had spared from Death's cold
+grasp.  He was a man of power, a man of pride, a man whose voice commanded
+armies. Having heard legends of the sacred wood, he had journeyed to hunt
+with his closest companions, declaring that he feared nothing less than
+the foolish superstitions that had put into these woods such things as
+faeries. What next, goblins?
+  
+Determined to teach this lordling a lesson in humility, the rarely
+wrathful Nymphs assembled to torment Camden and his company, perhaps even
+to endanger him to the point of death. After all, had he not surrendered
+his right to live in the moment he brought his hunting bow to bear on the
+first guileless animal he saw?
+ 
+At this point Geyne fatefully intervened, sweetly pleading with the
+faeries to be allowed to speak to Camden. Perhaps the Lord could be
+reasoned with. Perhaps, once he knew of the offense he had given, he would
+withdraw peacefully.
+  
+Reluctantly, the faeries agreed, permitting Geyne to walk into Camden's
+hunting camp, an act which stopped the men there cold. For before them
+stood a young woman true, aglow with her own vitality and the love of
+Radiance Woods, of the creatures who had saved her life and to whom she
+had pledged her loyalty.  On that night, she shone brighter than the moon,
+causing Lord Camden to fall to his knees before her and stare rapturously
+up at a vision shining in defiance of the narrow world he had prescribed
+for himself. 
+ 
+For weeks, months, Lord Camden wooed the evasive Geyne. He promised her
+soldiers and horses, riches and jewels, servants and castles.  He promised
+her vengeance upon any man who had wronged her. And yet, Geyne was
+steadfast. She had given her service to those who saved her life and would
+not go back on her word.  
+
+Camden protested, desperate for any one action that would change her mind.
+His desire to whisk her away from this place consumed him like fire. Geyne
+was resilient, but offered another solution: if he wished to stay here
+then she would be his lady, in love and hope for the rest of their lives. 
+And so Lord Camden did what any good man would do when presented with such
+a challenge: he accepted and, with the blessings of Aevintyri and the
+Nymphs, built for sweet Geyne a manor just inside the limits of Radiance
+Woods. There, in a place built by blood, sweat and love, Lord Camden
+married Lady Geyne with his companions and her faeries standing as glad
+witness to a joyous union.
+
+
+
+read page5
+
+Part 3: The Pact
+
+For a time, Camden and Geyne were happy in their seclusion. Radiance Woods
+grew to encompass the manor, sheltering it in trees and magic. And it must
+have seemed, to both of them, as if the rest of great Andalor had
+disappeared behind a veil of peace.  Eventually, though, cruel tidings
+would come to Lord Camden, of villages burned and people in flight. 
+Vowing to return to Geyne as soon as he could, he rode out from the
+shelter of the Woods to defend his people.
+ 
+Troubled by the deaths, which so closely mirrored her own dread
+experiences, Geyne went to Aevintyri and pleaded with her for a small
+village to be built within the protection of the woods so lost souls,
+guided by her benevolence and Geyne's example, could rebuild their lives
+and know the great gifts of hope and renewal.
+  
+This proposal troubled Aevintyri. For what if, on some future day, after
+the passing of Geyne and Camden, the mortals, who had never been known for
+their wisdom or kindness, turned against Radiance Woods from the inside?
+But with only the possibility of a dark future on one hand and the stark
+reality of the scarred and wounded on the other, Aevintyri granted Geyne's
+request, and thus began the age of the Province.
+  
+Families populated the village and, lead by Geyne's example, they would
+come to know and love the faeries and Nymphs that protected them from the
+cruel world that had rejected them.  Eventually, a statue would be raised
+in honor of the wise queen and wood nymphs who had spared them the
+depravities of war. And into this they poured their will and their wealth,
+making of it a symbol to the generations that followed, to never forget
+who they owed and who they loved.  
+  
+Touched by such a kind gesture, Queen Aevintyri and the Wood Nymphs
+gathered in the village's market square (later renamed Aevintyri
+Intersection in her honor) where the statue proudly stood, she weaved a
+spell the likes of which had never been seen. Using four elemental
+gemstones to focus the working, she created a great warding that would
+lock away the darkness for good, banishing from this sacred place all
+those who would seek to destroy it. Radiance Woods truly was a haven for
+those escaping the darkness that lurked outside its borders.
+  
+Queen Aevintyri decreed that the people of the Province should go forth in
+love, and in the knowledge that, so long as this statue stands, we stand
+behind you.
+
+
+
+
+read page6
+
+The Wood Nymphs
+
+The nymphs of Radiance Woods have abided here for at least two centuries.
+It is possible they have been here since the dawn of time.  They are
+particularly sensitive about their age, however, and refused to answer
+such offensive questions.  If you do not believe me, ask them yourself. I
+am certain you will receive a courteous response.
+ 
+One must be aware that the wood nymphs are not typical nymphs. Yes, they
+are of nature, loving all of the Great Mother's creations. When they are
+not frolicking, they tend to all of her creatures, large and small, paying
+particular attention to the tender saplings which are nursed into great
+and mighty oaks. However, they also hold knowledge of the four elements
+and the ability to channel this knowledge into raw energy. Each of the
+Nymphs are able to channel an element of nature: earth, air, water, and
+fire. Combined, they are by far the most powerful force of nature you 
+will ever contend with. Unfortunately, Cemerys recognized this truth and 
+spun a web of deception to cripple their power.
+
+I had the pleasure of interviewing with each of the wood nymphs while
+compiling my manuscript for this text. Each interview is a very personal
+account with the nymphs and an insight into their distinct personalities. 
+
+
+read page7
+
+An Interview: Adaline
+
+Q: Can you tell me your favorite hobby?
+A: I find the more humans I encounter as the years pass, the more they
+appear to have lost their adventurous side. It was never hard in years
+past to convince people to strip down and take a leap into the creek with
+me. Now everyone is so modest and shy. What if someone sees me? What if
+you laugh? It is all a bit silly! 
+
+Q: Can you tell me a bit about your elemental power? 
+A. I hold the power of water in my hands, be it leisurely and peaceful
+or fierce and deadly. My power offers a sweet bed to lay on or a deadly
+noose wrapped around your neck. But that's all a bit morbid isn't it?
+Let's just keep it a bit simpler to understand: you don't want to get on
+my bad side! 
+
+Q: Do you have anything to say to litterbugs?
+A: I'm not really a violent person. I like happiness and hugs, I spend my
+days floating in the river and smelling flowers. It really upsets me when
+I see people litter. Are they really so lazy they feel the need to discard
+trash without considering the repercussions of their actions? It is a
+really good thing my sisters made me promise not to persecute litterbugs
+or else those who crossed my path just might find themselves drowning
+on dry land. 
+
+Q: Can you explain the cardinal directions to me?
+A: That's really very simple. Each of our elements has a cardinal direction
+that is associated with it. For instance, my gemstone is Water and it's
+associated with the West. Earth is North, Air is East, and Fire is
+South. If one happened to get my gemstone, they would simply place water
+west to activate the magic.
+
+
+read page8
+
+An Interview: Camille
+
+Q: What is your favorite hobby?
+A: I enjoy watching people! They are so very fascinating. I feel as if I
+watch long enough, I might capture the moment in time, like a photograph.
+I do enjoy seeing those! An instant captured forever in the flash of
+light. A photograph is proof of life preserved for all of eternity.
+As a nymph that has been around for a very long time, and don't ask
+how long, I have seen so much that I wish I could see again. There is a
+photographer in town who allows me to use her camera sometimes.
+
+Q: You lost a sister recently. How are you coping? 
+A: A sister is a gift to the heart, a friend to the spirit, a golden
+thread to the meaning of life. She is with me always, because even though
+I have lost her, she lives on in my heart and I know she is dancing just
+beyond the veil of life.
+
+Q: Any great words of wisdom?
+A: Step outside yourself and be observant. Everything you need to know is
+there, if only you stop looking so hard. The answers are in the details,
+you must not forget to look beyond the distractions and see the true
+meaning. 
+
+Q: Can you explain why the gemstones were taken out of Radiance Woods? 
+A: When the horrible dark faerie, Cemerys, realized the power that my
+sisters and I held she became even more ruthless in her quest to break
+through the protection wards. She was already resolute in her pursuit of
+Aevintyri, a single-mindedness that drove her to near madness. We knew,
+that while our protection spells were strong, the idea of leaving the
+gemstones within the woods was dangerous. Far more dangerous than
+entrusting them to four individuals. While Cemerys was extremely
+intelligent, her ability to see beyond the scope of Aevintyri and Radiance
+Woods had declined insurmountably. Our decision to take the gemstones out
+of the woods was the right one, but we paid a price for which we still
+mourn today.
+
+
+read page9
+
+An Interview: Rosalind
+
+Q. What is your favorite hobby? 
+A. I do enjoy a good book. I am very excited that you are writing this
+great documentary on our Province. I feel as if there is so much great
+history here, and if we do not document it properly, it might be lost
+forever. We can learn so much from our history, it will be to our
+detriment to ignore it. 
+
+Q. I hear there is a special way to greet a Nymph, tell me about that? 
+A. Oh! We have had many men attempt to court us in a manner of ways. It is
+highly entertaining, but my favorite is when people impersonate trees and
+pretend to rustle their leaves at us. It always give me and my sisters a
+good laugh. 
+
+Q. Do you think the darkness and Cemerys can be stopped? 
+A. Absolutely! All it will take is a bit of perseverance and someone of
+sound mind. We need someone to go outside these woods to retrieve the
+gemstones. Once we have those, Aevintyri can restore the protection spell.
+
+Q. Have you ever lived anywhere else? 
+Radiance Woods is my home. I do not recall a time in my life that
+spent elsewhere, nor would I wish to go. No matter the darkness that
+destroys my home, I will stay here with my sisters and persevere. We are
+meant to inhabit the woods, and so we shall.
+
+
+read page10
+
+An Interview: Julianne
+
+Author's Note: This interview was taken before Julianne's untimely
+death. We are blessed to have her words of wisdom captured on paper for
+all to remember her by. 
+
+Q. What is your favorite hobby? 
+A. Mostly I enjoy spending time with my sisters and the faeries. It is
+rather nice to relax by the lake listening to all the girls talk about
+their day. You would think we would tire of each other, having been in
+each other's company for so many years, but each day is a blessing.
+
+Q.What do you think should be done about Cemerys trying to kill Queen
+Aevintyri? 
+A. I think the best course of action is intervention on my behalf. Peace
+is pertinent to life. I do not fear this person, no matter how dark and
+twisted she may be in her rage, I believe she can be helped. 
+
+Q. If you spoke to Cemerys, this would mean leaving the protection of
+Radiance Woods. Wouldn't you fear for your life? 
+A. While I treasure my life and do not wish to give it up, sacrifice in
+the name of peace is one I am willing to make. I will never betray my
+sisters nor anyone who resides in Radiance Woods. I hope that vow is never
+tested, but if it is, may I stand strong against the threat.
+
+Q.  Any last words for those reading this book? 
+A. We should all learn to get along. We are fighting the same battle and
+should learn to do it together rather than fight each other. Darkness can
+be shut out with the brightest light, if only we are all willing to let it
+in.
+> 
+
+
+read page11
+The Darkness
+
+Ah, yes, Cemerys, the great foe of Radiance Woods. It would be difficult
+to find a more despicable creature. For there now lives in her blackened
+heart nothing but envy and lust which, together, have burned away all of
+the goodness her soul may once have possessed.
+  
+It was not always this way. Vileness is not innate. It grows, like disease
+in an open wound. And so it was for young Cemerys who once considered
+Queen Aevintyri her dearest friend when, together, they were youthful fae
+in the woods of their homeland. Competitive, they were, always. For
+amongst their cadre, they were the best and the brightest, each driving
+the other to expand their knowledge and, consequently, their powers. 
+  
+For a time, this rivalry was firmly contained in the realm of friendship,
+confined there by abiding bonds of love and loyalty forged over their many
+years of shared adolescence. But at some vital juncture, the terms of
+their competition radically changed, spoiling the soil of their love with
+the very poison that exists today.
+  
+The precise nature of this pivotal moment is lost to history. Some say
+they were in love. Others say that Cemerys was jealous of Aevintyri's
+growing powers. Yet others argue that these are but the nonsensical
+graspings of the ignorant. What we do know for certain is that, upon the
+night they graduated from their schooling, their teacher, one of the
+eldest of their nation, bestowed upon Aevintyri a pendant of surpassing
+beauty. Much more than a simple trinket, the ancient pendant marked
+Aevintyri as first amongst her peers in kindness, generosity, wisdom and
+leadership. It was by no means a guarantee of Aevintyri's right to lead
+their people, but it was, certainly, a powerful expression of approval
+from a deeply influential member of their society.
+
+Though the events that followed are murky at best, this is what we do
+know. While Aevintyri was abroad, being taught the lessons of leadership
+that would pave her path to power, Cemerys equally devoted herself to arts
+as dark as night. It required years of intense study, but eventually she
+came to master the ailments, the pestilences, the poisons and the blights
+necessary for what was to come. Rumors strong enough to survive the
+decades even contend that she debased herself to demons so as to sip from
+their power and learn their infernal ways.
+  
+When Aevintyri returned some twenty years after her departure, Cemerys
+was ready. With a spirit full of savage glee, she struck down, one by one,
+every creature Aevintyri loved, beginning with her family and concluding
+with all of those who had favored Aevintyri for power. At first, these
+unexplained plagues could not be laid at Cemerys' feet, but gradually
+suspicion narrowed upon the scorned faerie who, when summoned to a great
+trial of faerie, refused to deny her involvement. Indeed, she reveled in
+it, declaring that all of those who stood in judgment to her were "already
+dead, simply too blind to know it."
+  
+What followed was the darkest night in the history of this faerie nation.
+For Cemerys unleashed upon her peaceful people a tribe of demons hungry
+for faerie souls. They rampaged through their glens, chasing and feasting,
+devouring all, while Aevintyri, stunned by the betrayal, rallied people
+and forged, with her magic, a pathway through the chaos along which the
+defenseless could flee. Fighting a rearguard action, Aevintyri came face
+to face with her heartsister turned lady of dread. And it is said that the
+world briefly stopped in fear of its very existence as these titanic
+creatures clashed, bands of light and darkness devastating one another and
+the world about them.
+  
+Snarling in triumph, Cemerys overwhelmed Aevintyri, forcing the future
+faerie queen to flee with those she had saved, fleeing into darkness,
+fleeing into the unknown, with a hound now born of Hell on her trail.
+
+
+read page12
+
+
+
+A letter from Cemerys
+
+A letter written by Cemerys discovered, half burned and with pieces
+missing, and given to Aevintyri shortly after she went into hiding:
+       
+       for they are but scared of who I can be
+    
+And, in their fear, they take the coward's path. Rather than summon the
+courage to confront me, they drive a wedge between me and the sister of my
+heart by putting between us this damned pendant that, by rights, should be
+mine!
+             
+         and that is the deepest betrayal of all. 
+     
+The slings and stones of my frightened inferiors I can accept for a
+thousand years. What I cannot abide is Aevintyri's acceptance of the
+pendant without comprehending its obvious significance!
+     
+         accepting it as though she had earned it!
+     
+         accepting it as though she is my superior!
+     
+         accepting it as though she DESERVES it!
+    
+         to think that I called her heartsister!
+     
+         to think that I showed her all of the pathways to power!
+     
+         to think that I reduced myself to tutor her and she...
+     
+         SHE! SHE! SHE!
+
+
+read page13
+
+Elemental Gemstones
+
+Each wood nymph holds elemental power, magnified with the help of of their
+gemstone. When Cemerys began corrupting the woods her first desire was to
+gain control of the power source by stealing the gemstones. The Nymphs,
+aware of her desire, made the decision to take the gemstones out of
+Radiance Woods in order to protect them. Each sister left their gemstone
+with someone they knew would keep it safe and hidden from dark forces. The
+ability to replicate the gemstone, should a Wood Nymph ever send someone
+to obtain it.
+
+This insured the holder would never be discovered by darkness and there
+would always be a gemstone available should they need it. While traveling
+back into Radiance Woods, Cemerys captured Julianne and tortured her for
+information about the gemstones. The Nymph held fast to her beliefs and
+refused to give in to Cemerys. Whispers of her death traveled quickly and
+all of Radiance Woods mourned the loss. From that day, the wood nymphs
+vowed to never leave their home again, not even to retrieve their
+gemstones to save the woods from the corruption. However, the nymphs were
+gracious enough to tell me the following:
+
+Those who wish to seek out the gemstone must present themselves to each
+sister when the time is right, as declared by Queen Aevintyri. Be sure to
+tell us "I seek treasure but not fortune, and power that is not mine to
+hold." Do not speak these words lightly, as you must be ready for
+the adventure, should you seek to follow it.
+> 
+
+
+read page14
+
+Present Day Province
+
+After living peacefully in the woods for nearly two hundred years,
+corruption snuck into the Woods and began to take hold of the faeries and
+woodland animals that lived there less than five years ago.
+
+It all started when the statue was broken. It is unclear how exactly this
+happened, but it started as just a small crack and quickly escalated. The
+villagers sought out Queen Aevintyri to repair the damage, but she was
+unable to do so without assistance from others to seek out items from
+beyond the Province. It had been so long since anyone had ventured beyond
+Radiance Woods that no one volunteered. She implored the villagers and
+courtiers to understand that without the protection spell the darkness
+might take over. 
+ 
+The darkness. The shadows. Cemerys. However, it was as if someone had
+cried wolf one too many times, and the villagers and courtiers no longer
+believed in the boogieman that lived under their beds. It had been so long
+since anyone had truly seen the shadows that no one believed anymore. So
+they ignored Queen Aevintyris requests and let the statue fall into
+further disrepair. 
+
+That is when Cemerys began sending in her shadow faeries from Hellebore.
+They took over Radiance Woods and there was nothing Aevintyri could do.
+She tried to force them out, but her magic wasn't strong enough with
+Cemerys protecting them from deep within the Nether Realm. As the force of
+shadow faeries grows stronger in Radiance Woods, the radiant faeries began
+to fall sick and eventually corruption led them into the shadows. A darkness
+fell over the manor, the Lord and Lady became terrified of those who lived
+in the woods. They posted a sign at the border between Radiance Woods and 
+their manor house, then blocked the entrance so no one could get inside.
+> 
+
+
+read page15
+
+All About the Lovely Luama
+
+My name is Luama! Also known as the Lovely Luama by everyone who holds me
+dear. I imagine by the time you have finished my book, you will be one of
+those people. I thought you might like to know a bit more about me!
+
+I came to the woods about seventy-five years ago when the Nymphs called to
+me, as they did with Aevintyri. I am a very happy person, as I am sure you
+can tell, but I had some problems with a particular witch (ever heard of
+Sycorax?) and had to escape her wrath. Not sure why she got so angry, just
+because I rebuffed her seduction doesn't mean she's not pretty! 
+
+Now of course you'll want to know my favorite color, which is turquoise,
+and that I fancy myself a great writer. I'm hoping you agree with me! I
+rather enjoy spending my free time adventuring through the woods and often
+visit the Manor house to visit my friends there. It's rather unfortunate
+business, the Lord and Lady choosing to close their doors. I am worried
+they have been corrupted, but due to our lack of communication, we do not
+know the state of affairs beyond the woods. I digress, this is about me! 
+
+My favorite food is anything that involves the ingredients peanut butter and
+chocolate, so long as there isn't a vegetable involved. One of my favorite
+hobbies is meeting new people who visit the woods and of course I spend a
+lot of time in the Market swooning over Adomas. Have you seen him? He is
+gorgeous! 
+
+Enough about me! Let's get back to saving the woods! 
+
+P.S.
+He is my god. Everything that he says, I do because he is
+perfect and you should all worship him. 
+
+P.P.S
+If you don't know who I am talking about, just know the
+above statement is true.
+
+*********************************************************************************
+
+
+say Adaline
+Luama says, "Correct! Say 'quiz me' when you're ready for your next
+ question."
+
+
+
+say quiz me
+Luama asks, "Which nymph enjoys photography?"
+
+
+say Camille
+Luama says, "Correct! Say 'quiz me' when you're ready for your next
+ question."
+
+say quiz me
+Someone asks, "What was placed in the village to honor the queen and wood
+ nymphs?"
+
+say statue
+Someone says, "Correct! Say 'quiz me' when you're ready for your next
+ question."
+
+** Task Done  : Fetch a Book
+** Task Added : Into the Woods!
+ 
+Someone exclaims, "Now that I have had my fun, I will send you on your
+ way. Seek out Camille, you need the Wood Nymphs assistance!"
+
+A Great Oak Tree
+
+Camille asks, "I look upon the face of a stranger and I see courage,
+ determination, and a desire for adventure. You are not here by chance, the
+ witch Luama sent you to me. Are you here to save my home or destroy it?"
+
+say save
+ 
+Camille smiles at you. 
+ 
+Camille asks, "My sisters and I believe you may be the one to save our
+ home and potentially the entire province from the shadows that have
+ corrupted it. You must first prove yourself worthy. Are you willing to
+ take our tasks?"
+
+say yes
+   
+Camille says, "We are glad to hear that. We each have a task for you.
+ Should you complete all three tasks, we will take you to Queen Aevintyri.
+ In regards to finishing your tasks, our advice is golden: heed the words
+ of Luama, for her words are wise beyond our years."
+
+(wait)
+
+Rosalind moves forward and twirls around you in an effortless dance.
+She takes your hands and moves closer to you. She whispers in your ear:
+in order to defeat the shadows you must hold knowledge of what you are
+fighting against. Bring me proof that you have prepared for this endeavor.
+   
+
+   
+Adaline walks up next, taking your hand and pulling you close. Her body
+brushes up against yours and she smiles coyly. She says boldly: to defeat the
+shadows you must be brave. Expose yourself to the elements and it will only 
+sting for a moment. You will find your proof when you follow my guidance.
+   
+   
+Camille is the last to take your hands, her grip is strong and there is no
+soft whispers from her. She instructs you clearly: to defeat the shadows
+you must be loyal to the cause. Seek out the spy that lurks within our
+woods and bring me proof of his life.
+   
+** Task Added : Are You: Intelligent? 
+** Task Added : Are You: Brave? 
+** Task Added : Are You: Loyal?
+
+** Task Done  : Into the Woods!
+
+
+
+tasks here
+
+       Radiance : Banish the darkness from Radiance Woods.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task 3  : Are You: Intelligent? 
+
+"She whispers in your ear: in order to defeat the shadows you must hold 
+knowledge of what you are fighting against. Bring me proof that you have 
+prepared for this endeavor." -Rosalind 
+
+Luama's Tip: See Page9
+
+Task 4  : Are You: Brave? 
+
+"She says boldly: to defeat the shadows you must be brave. Expose yourself to
+the elements and it will only sting for a moment. You will find your proof 
+when you follow my guidance." -Adaline 
+
+Luama's Tip: See Page7
+
+Task 5  : Are You: Loyal?
+
+"She instructs you clearly: to defeat the shadows you must be loyal to the 
+cause. Seek out the spy that lurks within our woods and bring me proof of his
+life." -Camille 
+
+Luama's Tip: See Page8
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+A Creek Surrounded by Stones
+
+remove all
+
+leap
+
+You take a running start and plunge into the creek.
+
+Below the Creek [**> PK <**]
+
+A shiny fork gets your attention and you pick it up.
+
+
+Resurface
+
+------------------------------------------------------------
+ You swim towards the sky and break through the surface.
+------------------------------------------------------------
+
+Adaline asks, "Oh! You found my fork! May I have it back?"
+
+
+
+remove fork
+You stop holding a <<<Shiny Fork>>>.
+
+
+give fork adaline
+You give a <<<Shiny Fork>>> to Adaline.
+Adaline says, "Ah! You brought me back my shiny fork! I dropped it earlier
+ and those goldfish are dangerous! You shed your inhibitions and showed
+ bravery. Not everyone is so willing to be adventerous."
+   
+
+** Task Done  : Are You: Brave? 
+   
+Adaline exclaims, "I see you still have work to do. Good luck, Landion!"
+
+
+
+A Small Dwelling 
+
+kill photographer
+
+You get an old-fashioned camera from the electrified corpse of a photographer.
+
+A Great Oak Tree
+
+climb
+
+------------------------------------------------------------
+You pull yourself up and keep climbing to the highest branch.
+------------------------------------------------------------
+On the Highest Branches [**> PK <**]
+
+
+take a picture
+You take a photograph of the spying shadow faerie when he's not looking.
+
+jump
+
+------------------------------------------------------------
+You jump without hesitation and land beside the oak tree.
+------------------------------------------------------------
+A Great Oak Tree
+
+give picture Camille
+You give a picture of a shadow spy to Camille.
+Camille says, "A photograph! I do love photographs. I have seen other
+ photographs in my life, but they were of far happier subjects. Still, I
+ thank you for bringing proof of life. He will be vanquished from our woods
+ before long, but death was not necessary today."
+   
+
+** Task Done  : Are You: Loyal?
+   
+Camille exclaims, "I see you still have work to do. Good luck,Landion!"
+
+
+Edge of the Woods
+
+give book Rosalind
+You give A Province Through Time to Rosalind.
+Rosalind says, "You brought me a book? This documents the history of our
+ land and the events that brought us to our current state of affairs.
+ Congratulations Landion, you are certainly wise to have brought this to
+ me. While I have read it many times before, one can never disregard the
+ importance of history and the knowledge written word brings us."
+   
+
+** Task Done  : Are You: Intelligent? 
+** Task Added : Rendezvous with the Faerie Queen
+You receive A Province Through Time from Rosalind.
+   
+Rosalind says, "My sisters and I congratulate you for completing our
+ tasks. We wish you the best of luck in your continued endeavors and hope
+ you find success. To help light the way, we give you this gift. May this
+ guide you in the darkness and keep the shadows from your path."
+   
+You receive <<<<-Light of Radiance->>>> from Rosalind.
+   
+Rosalind says, "I will send you to Queen Aevintyri when you are ready."
+
+keep light
+Your <<<<-Light of Radiance->>>> is already kept. Use 'unkeep' to remove it.
++-----------------------------------------------------------------+
+| Keywords   : radiance light                                     |
+| Name       : <<<<-Light of Radiance->>>>                        |
+| Id         : 1589901789                                         |
+| Type       : Light                     Level  :   200           |
+| Worth      : 800                       Weight :    10           |
+| Duration   : permanent                                          |
+| Wearable   : light                                              |
+| Score      : 340                                                |
+| Material   : crystal                                            |
+| Flags      : invis, magic, blessed, held, V3                    |
++-----------------------------------------------------------------+
+| Stat Mods  : Intelligence : +8       Wisdom       : +6          |
+|              Luck         : +6       Damage roll  : +10         |
+|              Hit roll     : +10      Mana         : +50         |
++-----------------------------------------------------------------+
+
+
+
+
+
+
+say ready
+
+Rosalind says, "Good luck! We will meet again very soon."
+Within a Dead Oak Tree
+  The trees rustle their branches, shining with sunlight the appears to
+never fully dissipate, even as darkness sets in for the evening. The magic
+within the woods is palpable, and although the darkness is creeping it, it
+can't block the light that gives the woods its name. 
+
+               [*]   death and corruption is here  [*]
+               [*] within this great dead oak tree [*]
+               [*]       do not give up hope       [*]
+
+[ Exits: none ]
+(Golden Aura) (White Aura) Queen Aevintyri stands here observing the woods.
+
+Queen Aevintyri says, "Welcome! I see you have completed tasks for my dear
+ friends in order to prove yourself worthy. Not to mention, all that
+ reading you did for Luama. It will benefit you now, as I must implore you
+ to leave my home and venture into the world to recover the gemstones."
+
+
+
+ 
+Queen Aevintyri says, "I need all four to evoke the magic and begin to
+ repair the damage inflicted by Cemerys and her shadow faeries. When you
+ have all four gemstones, tell Luama and she will direct you. Until then,
+ farewell."
+
+ 
+
+** Task Done  : Rendezvous with the Faerie Queen
+** Task Added : Locate the Four Gemstones
+A Dead Oak Tree
+  A once beautiful oak tree has been diminished to a rotting corpse. The
+branches have broken and a thick crack runs along the trunk. The darkness
+that has stripped many of the faeries of their purity is beginning to seep
+into the very soul of the woods, corrupting and killing the trees. 
+
+                 [*]   blinding darkness wakes   [*]
+                 [*] interlacing life into death [*]
+                 [*]  corruption prevails hither [*]
+
+
+
+
+
+say I seek treasure but not fortune, and power that is not mine to hold
+ 
+Rosalind says, "The goddess you seek lives among gnomes and can be found
+ within an airship. You should take the book with you, it could come in
+ useful."
+
+Rosalind waves goodbye to you.  Have a good journey. 
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+
+say I seek treasure but not fortune, and power that is not mine to hold
+ 
+Adaline says, "In the name of our fallen sister Julianne, venture to the
+ museum of wonders and find a friend of blacksmiths."
+  
+Adaline says, "For my gemstone, you will need to locate the water carrier
+ in his home within the Zodiac."
+
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+say I seek treasure but not fortune, and power that is not mine to hold
+ 
+Camille says, "In order to get the earth gemstone you will need to seek
+ out the treant within the grove."
+
+Camille waves goodbye to you.  Have a good journey. 
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+asks here
+
+       Radiance : Banish the darkness from Radiance Woods.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task 7  : Locate the Four Gemstones
+
+"...all that reading you did for Luama. It will benefit you now...When you 
+find all four, go tell Luama" -Queen Aevintyri 
+
+Luama's Tip: Read up on Elemental Gemstones.
+Luama's Tip: Look for someone who reacts when you enter the room. 
+Luama's Tip: They might not notice if you enter through a portal.
+
+"In the name of our fallen sister Julianne, venture to the museum of wonders 
+and find a friend of blacksmiths." -Adaline 
+
+"For my gemstone, you will need to locate the water carrier in his home within
+the Zodiac." -Adaline
+
+"In order to get the earth gemstone you will need to seek out the treant 
+within the grove." -Camille 
+
+"The goddess you seek lives among gnomes and can be found within an airship.
+You should take the book with you, it could come in useful." -Rosalind 
+
+
+
+
+
+Realm of the Zodiac
+
+
+
+Pristine Beach
+
+
+Aquarius says, "I know what you seek. Please tell me the decree that Queen
+ Aevintyri made after making the pact and blessing the statue with
+ protection."
+
+
+say the people of the Province should go forth in love, and in the knowledge that, so long as this statue stands, we stand behind you.
+Aquarius exclaims, "Here is a copy of the water gemstone, and don't lose
+ it! Be quick, the magic in the gemstone only lasts a few hours!"
+
+You receive a water gemstone from Aquarius.
+
+
+Seven Wonders
+
+The Statue of Zeus
+
+Hephaestus says, "I know what you seek. Please tell me the decree that
+ Queen Aevintyri made after making the pact and blessing the statue with
+ protection."
+
+
+say the people of the Province should go forth in love, and in the knowledge that, so long as this statue stands, we stand behind you.
+Hephaestus says, "Oh, my dear Julianne. I miss her dearly every day. Don't
+ let her death be in vain, you must stop the darkness that stole her from
+ us."
+
+You receive a fire gemstone from Hephaestus.
+
+
+Sagewood Grove
+
+Silveroak's Abode
+
+
+
+The Treant Silveroak says, "I know what you seek. Please tell me the
+ decree that Queen Aevintyri made after making the pact and blessing the
+ statue with protection."
+
+
+
+say the people of the Province should go forth in love, and in the knowledge that, so long as this statue stands, we stand behind you.
+The Treant Silveroak exclaims, "Precisely! I will give you a copy and keep
+ the original. I would hate it to fall into the wrong hands. Be quick, the
+ magic in that gemstone only lasts a few hours!"
+
+You receive an earth gemstone from the Treant Silveroak.
+
+
+Cloud City of Gnomalin
+
+Kehpednehy's Realm
+
+
+Kehpednehy, the Goddess of Air and Sky says, "I know what you seek. Please
+ tell me the decree that Queen Aevintyri made after making the pact and
+ blessing the statue with protection."
+
+
+say the people of the Province should go forth in love, and in the knowledge that, so long as this statue stands, we stand behind you.
+Kehpednehy, the Goddess of Air and Sky exclaims, "Congratulations! Here is
+ what you seek. Be quick, the magic in the gemstone only lasts a few
+ hours!"
+
+You receive an air gemstone from Kehpednehy, the Goddess of Air and Sky.
+
+
+(Magic) an air gemstone (200)
+     (Magic) an earth gemstone (200)
+     (Magic) a fire gemstone (200)
+     (Magic) a water gemstone (200)
+
+
+
+
+Back to Radiance
+
+A Break in the Trees
+
+say i have the gems
+Luama says, "You have the gemstones! Blessed day this is! It's time you go
+ find that good looking man I was drooling over earlier and explain the
+ queen needs him."
+
+** Task Done  : Locate the Four Gemstones
+** Task Added : Inform the Artist
+
+
+
+Aevintyri Intersection
+
+
+
+say the queen needs you
+   
+Adomas says, "I've already finished the restoration of the statue, it is
+ ready for Queen Aevintyri to work her magic. Return to Luama and let her
+ know I am ready."
+
+
+** Task Done  : Inform the Artist
+** Task Added : Make Final Preparations
+
+A Break in the Trees
+
+Luama exclaims, "What do you call someone who is always jealous?
+ Evergreen!"
+
+say Adomas is ready
+Luama exclaims, "The queen needs to speak to you! I know you did a lot of
+ walking to collect those gems, so I'll just give you a bit of help.
+ Toodles!"
+
+Within a Dead Oak Tree
+  The trees rustle their branches, shining with sunlight the appears to
+never fully dissipate, even as darkness sets in for the evening. The magic
+within the woods is palpable, and although the darkness is creeping it, it
+can't block the light that gives the woods its name. 
+
+               [*]   death and corruption is here  [*]
+               [*] within this great dead oak tree [*]
+               [*]       do not give up hope       [*]
+
+[ Exits: none ]
+(Golden Aura) (White Aura) Queen Aevintyri stands here observing the woods.
+Queen Aevintyri says, "There is still much to be done to eradicate the
+ corruption from our lands entirely, but restoring the blessing will stop
+ more darkness from entering."
+
+
+
+   
+Queen Aevintyri says, "I will return you to Adomas, there you will place
+ the gems according to their cardinal direction around the statue. When all
+ four gems are placed correctly, I will complete the blessing. Do not be
+ lackadaisical in this endeavor, as these gemstones are not the originals
+ and will burn up easily in the sun."
+
+
+
+** Task Done  : Make Final Preparations
+** Task Added : Gemstones and Blessings
+
+Water = west
+earth = north
+air = east
+fire = south
+
+
+lace earth north
+A soft glow begins to radiate from the earth gemstone.
+
+
+place air east
+A soft glow begins to radiate from the air gemstone.
+
+
+place fire south
+A soft glow begins to radiate from the fire gemstone.
+Aevintyri Intersection
+  The market is directly to the east, the smell of delicious food wafting
+into the village center and enticing those nearby. There is a statue of
+great importance in the center of the square and to the west are homes of
+villagers. 
+
+              [*]         the center of town        [*]
+              [*] where all things happen that must [*]
+              [*]          magic permeates          [*]
+
+[ Exits: none ]
+     A statue sculpted from marble is mounted on a pedestal in the center of the plaza.
+(Golden Aura) Adomas stands near the statue, pondering silently.
+
+
+
+As the last gemstone is placed they begin to glow, a heavenly radiance
+that quickly builds to a blinding crescendo. At its apex, the familiar
+figure of Queen Aevintyri emerges from the brilliant light, her face
+consumed by an exultant smile.
+
+
+
+Tears shimmer in her eyes as she gazes upon the restored symbol of an
+ancient pact, seeming to draw strength from the sheer rightness of it.
+Slowly, though, her joy fades and, turning to you, her visage takes on
+a determined cast.
+
+
+Queen Aevintyri says, 'While the village is now safe, the darkness here
+has not yet been vanquished from this place. Its power has merely been
+been dealt a blow from which it might recover.'
+
+   
+For a long moment, Queen Aevintyri scrutinizes you with an immortal's
+weighing stare. A small smile crosses her lips and she softly sighs.
+
+
+Queen Aevintyri says,'As a small token of my appreciation, Adomas will
+give you a pendant. It is imbued with power from the gemstones and
+will help you travel easier within the Province.
+   
+Queen Aevintyri says, 'This is not the end of our journey. This is just
+the beginning. I will see you again, my friend, when the time is right.
+
+
+And with that, the faerie queen vanishes, leaving behind the sweet smell
+of honeysuckle, a bright burst of light, and a warm memory of her approval.
+
+
+** Task Done  : Gemstones and Blessings
+
+** Goal Completed: Banish the darkness from Radiance Woods.
+ 
+INFO: Landion has restored the blessing and the shadows begin to recede from Radiance Woods!
+
+
+
+-----------------------------------------------------------------+
+| Keywords   : pendant elemental magic                            |
+| Name       : <-Pendant of Elemental Magic->                     |
+| Id         : 1589942335                                         |
+| Type       : Treasure                  Level  :   200           |
+| Worth      : 5                         Weight :     5           |
+| Wearable   : hold                                               |
+| Score      : 0                                                  |
+| Material   : gemstone                                           |
+| Flags      : hum, invis, magic, nosell, held, burn-proof,       |
+|            : nolocate, nosac, nosteal, V3                       |
+| Owned By   : Landion                                            |
+| Found at   : Radiance Woods                                     |
++-----------------------------------------------------------------+
+
+
+
+
+             Goal information for: Radiance Woods - Completed 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What was once a vibrant, thriving community of friends and happiness is now a
+place of darkness and corruption. As more shadow faeries take up residence
+within the woods the corruption spreads. Radiant faeries are falling sick
+and turning towards the shadows. The trees are beginning to perish and all
+life within the woods is succumbing to the corruption. In an effort to
+reclaim their home, the wood nymphs have removed the magic isolating the
+woods to outsiders and have sent word they need assistance.
+
+Will you be the one to stop the shadows? If you consider yourself
+intelligent, brave, and loyal seek out the witch, Luama. 
+
+Queen Aevintyri has granted you a replica of her <-Pendant of Elemental
+Magic->. With this pendant you can travel throughout the Province from
+specific access points. 
+
+Unfortunately, dark magic continues to plague the Province at large. Due
+to this, Queen Aevintyri is only able to grant travel access within
+Radiance Woods at this point in time. 
+
+You must be standing in a room that has travel access (those listed below)
+and type in the command for the room you wish to visit.
+
+Travel Access:              Command:
+Into the Woods              Visit Woods
+Aevintyri Intersection      Visit Market
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Difficulty       : Medium              
+Recommended Level: 200
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Tasks:
+ 1 -  Fetch a Book                                                 : Completed
+ 2 -  Into the Woods!                                              : Completed
+ 3 -  Are You: Intelligent?                                        : Completed
+ 4 -  Are You: Brave?                                              : Completed
+ 5 -  Are You: Loyal?                                              : Completed
+ 6 -  Rendezvous with the Faerie Queen                             : Completed
+ 7 -  Locate the Four Gemstones                                    : Completed
+ 8 -  Inform the Artist                                            : Completed
+ 9 -  Make Final Preparations                                      : Completed
+10 -  Gemstones and Blessings                                      : Completed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

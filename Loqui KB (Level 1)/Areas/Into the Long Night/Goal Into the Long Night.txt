@@ -1,0 +1,212 @@
+Rollinsford-South Berwick Bridge (G)
+ 
+say yes
+ 
+
+** Goal Added : Discover what happened to South Berwick.
+   Type 'goals LongNight' for full details on this goal.
+ 
+** Task Added : Discover what happened to South Berwick
+ 
+A Candle Lit Room
+ 
+Listen England
+Listen 2.England
+ 
+** Task Added : Food for the Englands
+ 
+A Pizza Shop (Might need to kill demon)
+ 
+
+say Mrs England needs food
+ 
+** Task Added : Jeanne Needs Flour to Feed the Englands
+ 
+Hunt Demon of Gluttony
+ 
+Kill Gluttony
+ 
+You get sack of flour from the electrified corpse of the Demon of Gluttony.
+ 
+A Pizza Shop (Might need to kill demon)
+ 
+give flour Jeanne
+ 
+** Task Done  : Jeanne Needs Flour to Feed the Englands
+Jeanne says, "If you lose the bread, then you can come 
+back here and say 'bread' 
+for a new loaf."
+ 
+A Candle Lit Room
+ 
+Give bread Joan
+ 
+** Task Done  : Food for the Englands
+** Task Added : Talk to Mother Helene
+ 
+Mother Superior's Office
+ 
+Say Mariah
+ 
+** Task Added : A Candle for Helene
+ 
+A Candle Lit Room
+ 
+Get candle
+ 
+You get a votive candle.
+ 
+Mother Superior's Office
+ 
+Give candle mother
+ 
+** Task Done  : Talk to Mother Helene
+ 
+** Task Done  : A Candle for Helene
+** Task Added : Voices in the Dark
+ 
+Above the Courtyard
+ 
+say  Mariah
+ 
+** Task Done  : Voices in the Dark
+** Task Added : Find out What Steve Garland Knows
+ 
+Portland Avenue Garage
+ 
+say summoning circles
+ 
+
+** Task Added : Is Laura Safe?
+ 
+Garland's House
+ 
+Listen Laura
+ 
+** Task Done  : Is Laura Safe?
+ 
+Portland Avenue Garage
+ 
+say your mother is fine
+ 
+** Task Done  : Find out What Steve Garland Knows
+** Task Added : Seek the Advice of Father Phil
+ 
+St. Michael's Church
+ 
+Say demons
+ 
+** Task Added : Restore the Altar for the First Baptist Church
+** Task Added : Restore the Altar for the First Parish Church
+** Task Added : Restore the Altar for the Free Baptist Church
+ 
+
+A Hardware Store
+ 
+Search store
+ 
+Get nails
+ 
+Portland Avenue Garage
+ 
+Listen darian
+ 
+** Task Added : Claws for Darian
+ 
+Hunt Sloth
+ 
+Kill Sloth
+ 
+You get some talonous claws from the frazzled corpse of the Demon of Sloth.
+ 
+Portland Avenue Garage
+ 
+Give claws darian
+ 
+You receive a tire iron from Darian.
+ 
+** Task Done  : Claws for Darian
+Darian says, "You can come back and say 'Tire' or 'Iron' or 'Tire Iron' 
+and I will give you a new one.
+ 
+First Baptist Church
+ 
+Hold iron
+ 
+Repair altar
+ 
+** Task Done  : Restore the Altar for the First Baptist Church
+ 
+Repeat above for Free Baptist and First Parish Church
+ 
+** Task Done  : Restore the Altar for the Free Baptist Churc
+** Task Done  : Restore the Altar for the First Parish Church
+ 
+
+St. Michael's Church
+ 
+Give mana Phil
+ 
+** Task Added : Retrieve the Coin
+ 
+Portland Avenue
+ 
+Enter car
+ 
+Kill demon
+ 
+Look seat
+ 
+Get coin
+ 
+St. Michael's Church
+ 
+Give coin Phil
+ 
+** Task Added : Close the Portal
+** Task Added : Free Mariah from the Portal
+
+** Task Done  : Retrieve the Coin
+ 
+Cemetery (Find portal)
+ 
+Enter portal
+ 
+Inside the Portal
+ 
+Kill Demon
+ 
+** Task Done  : Free Mariah from the Portal
+ 
+** Task Done  : Close the Portal
+ 
+Rollinsford-South Berwick Bridge
+ 
+Say The demons are gone
+ 
+You receive a starburst artifact from Galoran.
+You receive 50 quest points.
+INFO: Landion has prevented demons from flooding Abend and 
+allowed South Berwick to return to where it came from!
+
+ 
+** Task Done  : Discover what happened to South Berwick
+
+** Goal Completed: Discover what happened to South Berwick.
+
++-----------------------------------------------------------------+
+| Keywords   : starburst artifact                                 |
+| Name       : a starburst artifact                               |
+| Id         : 2339127347                                         |
+| Type       : Armor                     Level  :   150           |
+| Worth      : 1,000                     Weight :    15           |
+| Wearable   : hold                                               |
+| Score      : 150                                                |
+| Material   : silver                                             |
+| Flags      : invis, magic, held, V3                             |
+| Notes      : Item has 2 resistance affects.                     |
++-----------------------------------------------------------------+
+| Stat Mods  : Dexterity    : +5       Constitution : +5          |
+|              Mana         : +40      Strength     : +5          |
+|              Hit points   : +40      Moves        : +40         |
++-----------------------------------------------------------------+

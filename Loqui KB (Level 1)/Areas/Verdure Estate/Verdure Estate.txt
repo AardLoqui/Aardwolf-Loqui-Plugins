@@ -1,0 +1,81 @@
+Verdure Estate
+
+(65, 'schen', 3, '196.25.168.11', NULL, '
+1.  Kill gate guard and wear breastplate, shield, and broadsword\n   =20
+now go to lord and have token in inventory, if you have everything\n    =
+it will transport you to the slave room. When it is empty during\n    =
+repop it will have 3 pieces of eq, gloves, boots, and robe, get\n    =
+those and head east and return to begining (no clue what they are\n    =
+for YET)\n\n
+2.  Say ''i love music too'' to randall for harp.\n\n
+3.  Wear harp and go to the pk room with a fairy boy, entering\n    it =
+will make the bow give you the flute.\n\n
+4.  Wear flute and go back to randall, he will give you a flower.\n\n
+5.  Get the two vials in a small room at the end of the underground\n    =
+section.\n\n
+6.  Go all south, then north, down, all east, give the vial with\n    =
+trueseeing on it to the fairy woman for necklace.\n\n
+7.  Go back to first room and give necklace to petite waitress for\n    =
+a bracelet which is a key.\n\n
+8.  Go back down and wear flower, open the door to the east and go\n    =
+to the top and back east, the man will trigger giving you a\n    petal =
+and asking you if the trade is fair. Getting the rose is\n    something =
+I dont know how to do but I know a cheap way. To get\n    the rose =
+without having to figure out what to wear when killing\n    him. Just do =
+the part over again, if he is already holding a rose\n    and you go in =
+and get another petal again, he loads a second rose\n    this one not =
+worn, so plainly use steal to get it.\n\n
+9.  Wear petal and go to vial room, a woman will react and give you a\n  =
+  berry for it.\n\n
+10. Take the berry to the library and look and see if a cleaning maid\n  =
+  is there, if so then give her the berry, you will get a bottle, and\n  =
+  she will drop a penny(no clue what to do with bottle and penny).\n\n
+11. Go to the groom''s room now and say ''darrel, you love alanna, =
+don''t\n    you?'' you will get everlasting love.\n\n
+12. Take the love back to cleaning maid in library and give it to her\n  =
+  and say ''alanna it''s from darrel.'' for basket.\n\n
+13. Take basket to woman who gave you berry and give it to her and say\n =
+   ''what is this basket for?'' for holy well the area portal.\n\n
+14. Wear Bottle and kill sewing maids until you get the thread.\n\n
+16. In the room where ya got the well, wear rose and, go in and out,\n   =
+ the lady will ask for a trade, say ''yes, i will trade with you''\n    =
+to get the ivy vine, and ivy root.\n\n
+17. Now go around and collect the tunic, the cloak, the skirt, the\n    =
+garland, and wear them and the ivy pieces.\n\n
+18. Go and open the second locked east door and go up to the room with\n =
+   four exits and type exits.\n\n
+19. Go to the room named ''A cold stone passage''. A woman is there, =
+now\n    go up and it will transport you to the room "The =
+Sacrifice".\n\n
+20. Kill the lion and it loads the Snake.\n\n
+21. Say ''i have learned much since my arrival'' to get the next =
+question.\n\n
+22. Say ''aurelian. it means gold'' to get the next question.\n\n
+23. When it asks the other name for the realm say ''the perilous =
+realm''\n    for next question. (it also has possible to mention 2 who =
+broke the\n    law, you need to name 2 names, im still working on =
+that)\n\n
+24. It will ask the old name for what day it is.\n    say ''the feast of =
+the dead'' to be pushed into the fire.\n\n
+25. Kill the fire as fast as you can and Aurelian will be before\n    =
+you.\n\n
+26. Now 5% chance on this working, but go down now, and he should give\n =
+   you 2 items, a mask, and gauntlet and then head to guest room.\n\n
+27. Perhaps more? *shiver*\n\n\nObject ''holy well clay figurine =
+wellfigurine'' is type portal\nExtra flags: invis magic =
+burn-proof.\nWeight is 30, value is 720, level is 120.\nWorn take =
+hold.\nAffects save vs spell by 12.\nAffects intelligence by =
+3.\n----------------------------------------------\n\nObject ''golden =
+mask goldenmask'' is type armor\nExtra flags: invis magic noremove =
+burn-proof.\nWeight is 15, value is 625, level is 150.\nWorn take =
+eyes.\nArmor class is 28 pierce, 31 bash, 30 slash, and 18 vs. =
+magic.\nAffects save vs spell by 8.\nAffects strength by 5.\nAffects =
+constitution by =
+7.\n----------------------------------------------\n\nObject ''golden =
+gauntlets studded goldengauntlets'' is type armor\nExtra flags: invis =
+magic noremove burn-proof.\nWeight is 15, value is 1000, level is =
+150.\nWorn take hands.\nArmor class is 18 pierce, 21 bash, 16 slash, and =
+28 vs. magic.\nAffects damage roll by 14.\nAffects hit roll by =
+8.\nAffects constitution by =
+4.\n----------------------------------------------', 0, 1145684893, =
+NULL, 

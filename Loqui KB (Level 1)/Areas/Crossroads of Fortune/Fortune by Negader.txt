@@ -1,0 +1,788 @@
+Fortune Goal by Negader -- Posting this due to variations of goals given at this area.
+
+********************************************************************************
+Roomnames are in Brackets
+What you type are preceded by '>'
+Notes by me are preceded by '--'
+********************************************************************************
+
+[Innocense]
+
+>Listen lord
+>say yes -- to open goal
+
+>listen lord
+Lord Durkin raises his eyes to you with great effort and gives you an
+evaluating stare.
+
+Lord Durkin says, "I am unable to go on, traveler. I am overwhelmed with
+the choices before me, and filled with guilt over choices long past."
+
+Lord Durkin sighs.
+
+Lord Durkin says, "I have heard tales of a wise magician that may be able to
+provide some guidance, and perhaps can help me find peace.  Would you act
+as my messenger and seek out this magician?"
+
+>say yes
+You say 'yes'
+Lord Durkin says, "Thank you, traveler. If you can assist me, your help
+will not go unrewarded. First, I will tell you what little I know:
+
+People talk of a wise man that can be found in these lands; a man with
+great and unimaginable powers of magic. It is said that if you seek him out,
+he can divine knowledge and provide guidance to those with troubled
+thoughts. I do not truly know if he can help me, but I believe he is the
+only one who can.
+
+Seek out this man on my behalf, promise him any renumeration he requires
+in my name, and return anything you learn from him to me."
+
+** Goal Added : Help Lord Durkin get his life back on track!
+   Type 'goals fortune' for full details on this goal.
+
+** Task Added : Find someone who can offer guidance to Lord Durkin.
+
+-- go to musician at [Persistence]
+
+>say guidance
+
+You say 'guidance'
+The red magician says, "Greetings! So, this Lord Durkin requires my
+assistance, does he? Well, you've come to the right place, but not at the
+right time. I recently used the last of the herbal ingredients I require
+to divine such information. As such, I am unable to help."
+
+The old magician frowns thoughtfully, tapping one of his fingers
+rhythmically against his cheek...
+
+The red magician says, "Wait... If you are willing to see this through, then
+I can assist you. Collect samples of herbs and plants from each of the four
+seasons and return them to me. With these, I will perform a reading for this
+Lord Durkin. Once you're done just come back and tell me so."
+
+** Task Done  : Find someone who can offer guidance to Lord Durkin.
+** Task Added : Collect herbs of the seasons; return to the red magician.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+-- goto [A Castle Roof] - 38626
+>get flower
+
+-- goto [A Funeral by the Sea] - 38616
+>get flower
+
+-- goto [Decadence and Dancing] - 38585
+>kill fragrant bouquet
+As the flowers are destroyed, you realize this is the herb of autumn and
+collect a sample!
+** Task Hint  : Your 'tasks' list has been updated
+
+-- goto [Vines and Snow] - 38605
+>kill wintering vines
+As the vines are destroyed, you realize this is the herb of winter and
+collect a sample!
+** Task Hint  : Your 'tasks' list has been updated
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+--goto [Persistence] - 38562
+>say done
+
+You say 'done'
+
+** Task Done  : Collect herbs of the seasons; return to the red magician.
+The red magician looks at you in surprise, then says, "Excellent. You have
+collected the ingredients I require. As promised, I will divine the
+knowledge you seek... but here is where things get difficult:
+
+"I will draw 3 cards from this enchanted deck. Each has a spiritual
+representation in this realm. I will give each of the cards to you - you
+must locate these spritual representations and draw them in. Once you have
+done this, return to me, and the information can be taken to Lord Durkin."
+
+The magician sits unceremoniously on the ground and sets out four small
+crucibles in a pattern arranged to the north, south, east, and west. In
+each, he places a small amount of the collected herbs, a small amount of
+some kind of clear, viscous liquid, then sets a spark to each. The
+contents of each crucible starts to burn with a slow, steady flame.
+
+With bowed head and a reverent pause after each, he draws 3 cards from the
+deck. He does not reveal them, but hands them directly to you.
+
+** Task Added : The Empress
+** Task Added : The Star
+** Task Added : The Lovers
+
+The red magician says, "Go now. Hopefully when you find the spirit of each
+card, you will be wise enough figure out what to do next. Once you have
+collected all three, return to me."
+
+[Utopia] - 38564
+
+>pick flower
+
+The empress rises from her cushions and regards you with a cool stare. After a
+moment, she speaks, "I could have you executed for that, traveler. Those
+flowers are royal property."
+Her mouth turns into a sudden smirk, then she continues, "Retrieve for me a
+peach, that I may sate my hunger, and I will forgive you."
+After a moment, she turns and returns to her cushions in the manner of a
+satisfied feline.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+-- go to room named [Passion]
+
+A spiritual being asks, "Greetings, traveler! I sense you are seeking
+ something - if you help me, perhaps I can help you. Are you interested?"
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+[Passion]
+
+(G) A spiritual being hovers over the scene, its wings made of fire.
+A spiritual being asks, "Greetings, traveler! I sense you are seeking
+ something - if you help me, perhaps I can help you. Are you interested?"
+
+>say yes
+
+You say 'yes'
+A spiritual being says, "Spectacular! I am glad you can see the value of
+ my proposition. I will give you an enchanted bow and arrow. I would simply
+ like you to visit a poor couple that has been enslaved by a foul beast.
+ Shoot the man and lady with an enchanted arrow, and they will be freed
+ from their captivity. Do not worry, though - they will not be harmed."
+You receive the bow of love <3 from a spiritual being.
+A spiritual being says, "Oh, by the way: If you happen to lose your bow,
+ simply return to me and tell me you have lost it. I can easily conjure
+ another."
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+       Fortune : Help Lord Durkin get his life back on track!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task 3  : The Empress
+
+Collect the spirit of the card "The Empress"
+
+- Find and return to the Empress with a delicious peach.
+
+Task 4  : The Lovers
+
+Collect the spirit of the card "The Lovers"
+
+- Seek out the man in bondage and shoot the man
+ If you lose your bow, return to to the spiritual being to report it lost.
+
+- Seek out the lady in bondage and shoot the lady
+ If you lose your bow, return to to the spiritual being to report it lost.
+
+Task 5  : The Star
+
+Collect the spirit of the card "The Star"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Obsession] [**> PK <**]
+
+>shoot the man
+>shoot the lady
+
+You carefully take aim, then shoot one of the magical arrows at the chained
+man. Before the arrow strikes, it glows and changes into a blast of white-hot
+energy. The man is encapsulated for a moment in the light, then suddenly his
+bonds are released.
+
+A horned man starts moaning.
+
+You carefully take aim, then shoot one of the magical arrows at the chained
+lady. Before the arrow strikes, it glows and changes into a blast of white-hot
+energy. The lady is encapsulated for a moment in the light, then suddenly her
+bonds are released.
+
+A horned lady starts moaning.
+
+Seeing each other freed, the previously chained man and lady rush towards one
+another, then embrace forcefully.  With a sense of satisfaction, you realize
+that your job here is done.  With a sudden glint of magic, the bow disappears
+from your hand and is gone.
+A shimmer appears in the air above your head, and you realize the spirit of
+[The Lovers] has been released.
+
+** Task Done  : The Lovers
+
+
+       Fortune : Help Lord Durkin get his life back on track!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task 3  : The Empress
+
+Collect the spirit of the card "The Empress"
+
+- Find and return to the Empress with a delicious peach.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-- kill joyful youth for a juicy peach. (Not sure which room)
+
+You get a juicy peach from the corpse of a joyful youth.
+
+>give peach empress
+
+You give a juicy peach to the empress.
+The empress smiles in obvious delight as she receives the peach. "Thank you,
+traveler. To be honest, I have been craving the taste of peach for days, and
+right now they are not in season. My orchards have not yet ripened.  You may
+consider yourself forgiven. Go now, and do not disturb my flowers again."
+
+The empress eats a juicy peach.
+She gives you a quick nod and you realize you have been dismissed.
+
+A shimmer appears in the air above your head, and you realize the spirit of
+[The Empress] has been released.
+
+** Task Done  : The Empress
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Task 5  : The Star
+
+Collect the spirit of the card "The Star"
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+at room named [Hope]
+
+>listen woman
+
+A woman pouring water says, "Greetings, traveler, and blessings of the stars be upon you.  I sense that you are seeking spiritual refreshment, and I can offer you that. Come back here tomorrow during daylight hours and we can prepare together."
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+task here
+       Fortune : Help Lord Durkin get his life back on track!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task 5  : The Star
+
+Collect the spirit of the card "The Star"
+
+- Return to the woman pouring water after a day has passed, during daylight
+  hours.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Hope]
+
+>listen woman
+A woman pouring water says, "Please, return tomorrow so I have time to prepare for the cleansing ritual."
+
+-- when i went back during daytime of next day and 
+
+>listen woman
+
+The woman greets you with a solemn look on her face. "Welcome again, traveler.
+I am glad you have returned safely. I have collected the necessary components
+for the spiritual cleansing. I will ask you to meditate for just a short
+while. I will be near, using harmonics to cleanse your spirit."
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+>meditate
+
+meditate
+As you begin your meditations, the woman takes a tightly wrapped bundle of
+herbs, applies them to a flame briefly, then extinguishes them. With the
+bundle releasing a hazy smoke, she circles slowly around you, pausing in each
+of the cardinal directions for an extended period. Once she has completed the
+circuit, she sets the smoking bundle aside and approaches. "This portion of
+the cleansing is complete. I ask that you return after dark so that you may
+finish the cleansing by the light of the stars."
+A woman pouring water says, "When you return, simply tell me that you are ready."
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+       Fortune : Help Lord Durkin get his life back on track!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task 5  : The Star
+
+Collect the spirit of the card "The Star"
+
+- During evening hours, return to the woman and say "I am ready".
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-- go back at evening hours and type
+
+>say i am ready
+
+You say 'i am ready'
+The woman greets you without words, instead inclining her head and hands to the
+stars above. She pauses for a moment, then leads you to the edge of the pond.
+With a few hand gestures, she signals you to undress and enter the pool, then
+turns her back to you and once again faces the stars.
+
+You enter the pool and are immediately filled with an immense feeling of hope
+and well-being. You soak under the light of the stars for a few minutes until
+the cold water jolts you back to a more lucid state. You exit the pond and don
+your armor in silence, afraid to interrupt the serenity around you.
+
+A shimmer appears in the air above your head, and you realize the spirit of
+[The Star] has been released.
+
+** Task Done  : The Star
+You have collected the required spirits. Return to the magician as soon as
+possible! Let him know that you have released the spirits.
+** Task Added : Return to the Magician
+
+-- go back to the magician and..
+
+>say i have released the spirits
+
+You say 'i have released the spirits'
+The magician looks at you intently, then after a brief pause smiles broadly,
+"Spectacular, traveler. You have indeed collected the spirits I require. Please
+give me a moment to perform the reading.
+The red magician holds his hands up and starts to chant rhythmically.
+
+You feel a slight tingle, and realize the spirits you collected are being
+drained from your body. The chanting continues.
+The magician frowns, but continues chanting...
+The red magician says, "This is unfortunate, traveler. It appears that there are greater forces at work than I had expected. This reading is beyond my ability."
+The red magician says, "All is not lost, however. I can send you to someone who has greater power than I possess. If you are prepared, simply nod when you are ready."
+** Task Done  : Return to the Magician
+** Task Added : In need of more power...
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+       Fortune : Help Lord Durkin get his life back on track!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task 4  : In need of more power...
+
+- When you are ready, nod at the magician to be transported to
+  someone more powerful.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+>nod
+
+You nod.
+The magician holds his hands aloft, raises his eyes skyward, and begins to chant.
+
+There is a sudden blinding flash, and you realize you are somewhere else.
+Predestination
+
+(R) A man hangs upside-down from what looks like a trapeze.
+(G) A lost puppy is whimpering softly as it makes its way through the debris.
+Droll Nikrud gasps in pleasant surprise then cracks a smile.
+
+Droll Nikrud says, "Ah, the cards told me you'd be along, that they did, traveler. I'm very happy to see you. As you see, it's a little lonely around here."
+Droll Nikrud hops around like a little kid. 
+2 seconds until tick - ts
+Droll Nikrud asks, "Anyhow, let's talk turkey! You need a reading, and I need more spiritual energy. If I draw some cards, will you collect them for me?"
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+       Fortune : Help Lord Durkin get his life back on track!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task 4  : In need of more power...
+
+- Say yes to Droll Nikrud to let him know you will collect some
+  spirits for him.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+>say yes
+
+You say 'yes'
+Droll Nikrud says, "Excellent!! Let's do this! I will draw 4 cards from my tarot deck. As you have been through this before, you should be able to collect the spirits I require."
+Droll pulls a glowing deck of cards from a small box in his pocket. He shuffles
+them with inhuman dexterity, then draws 4 cards from the deck. He does not
+reveal them, but hands them directly to you.
+
+** Task Done  : In need of more power...
+** Task Added : Seven of Pentacles
+** Task Added : Ten of Pentacles
+** Task Added : King of Pentacles
+** Task Added : Six of Cups
+
+Droll says, "Okay! Shoo! Have fun! Come back when you're done, I'm sure that
+lovely magician will send you my way again!"
+Using familiar gestures, Droll holds his hands aloft, raises his eyes skyward,
+and begins to chant.
+
+       Fortune : Help Lord Durkin get his life back on track!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task 8  : Six of Cups
+
+Collect the spirit of the card "Six of Cups"
+
+Task 9  : Seven of Pentacles
+
+Collect the spirit of the card "Seven of Pentacles"
+
+Task 10 : Ten of Pentacles
+
+Collect the spirit of the card "Ten of Pentacles"
+
+Task 11 : King of Pentacles
+
+Collect the spirit of the card "King of Pentacles"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[In the Greenhouse]
+
+>listen gardener
+
+The gardener pauses for a moment, wipes his brow, then speaks, "Good day to
+you, traveler.  As you can see, I'm a bit busy. Unfortunately, not as busy as
+I'd like to be. I was preparing to plant a very rare acorn that was to be
+delivered by a dear old soldier friend of mine. Unfortunately, his troops saw
+a very rough battle, and I'm afraid he may have fallen. It is very unfortunate
+indeed. I don't suppose there is anything you can do to help, is there?"
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+>say i can help
+
+You say 'i can help'
+A hard-working gardener says, "You'll help, traveler? That is very gracious of you.  My friend was a brave knight who commanded many battles. My guess is that he passed the acorn on to one of those under his command. That is the best information I can give you."
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+Task 9  : Seven of Pentacles
+
+Collect the spirit of the card "Seven of Pentacles"
+
+- The gardener has been awaiting delivery of a very special acorn from a
+  knight friend of his who has fallen. Track down the acorn and delivery it.
+
+[At the Healer]
+
+>say acorn
+
+You say 'acorn'
+The knight is a bit surprised at your mention of the acorn. "You say the
+baron's gardener sent you to collect the acorn? My commander passed it to
+me when he fell and told me of its importance. I would have delivered it
+myself, but my legs have not fully healed. Please, take it."
+You receive an acorn from the wounded knight.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+-- go back to the gardener and type:
+
+>give acorn gardener
+
+You give an acorn to a hard-working gardener.
+The gardener takes the acorn from you very delicately, thanks you quietly, grabs
+his spade and heads off. "I've got some work to do, please excuse me."
+
+A shimmer appears in the air above your head, and you realize the spirit of
+[Seven of Pentacles] has been released.
+
+** Task Done  : Seven of Pentacles
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Reflections on Family]
+
+>listen baroness
+
+The baroness takes a moment to compose herself, then speaks to you in a weary
+voice, "Greetings, traveler. I apologize for the disarray of my household. Our
+youngest has been extremely energetic lately, and I admit, I have not kept up
+as well as I would have hoped."
+After a brief pause, she continues, "Could you help me, traveler? I have
+corresponded with one of the local monks, and he has promised that he has
+something that will make dealing with the little one a bit easier. Can you
+visit him and pick it up? Just tell him I sent you."
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+Task 10 : Ten of Pentacles
+
+Collect the spirit of the card "Ten of Pentacles"
+
+- The overwhelmed baroness requests that you pick up an item from the
+  monk. Just mention that she sent you.
+
+-- find monk and..
+
+[A Construction Site]
+
+>say baroness sent me
+
+You say 'baroness sent me'
+A simply-dressed monk exclaims, "Oh, you are here for the baroness' item! Here you go!"
+You receive a willow tree branch from a simply-dressed monk.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+return to baroness at [Reflections on Family]
+
+>give branch baroness
+
+You give a willow tree branch to the busy baroness.
+The baroness thanks you graciously, takes the willow branch in her hand, then
+points it at her troublemaking youngest child. She cries out, "PACIFY!"
+The child suddenly calms, walks to the table, and sits down quietly.
+The busy baroness says, "Thank you, traveler. This will help tremendously. If ever you are in need, please let me know."
+The busy baroness calmly returns to tending her household.
+
+A shimmer appears in the air above your head, and you realize the spirit of
+[Ten of Pentacles] has been released.
+
+** Task Done  : Ten of Pentacles
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[The Throne of the King] 38610
+
+>listen king
+
+The king appraises you with a stern look, "Traveler, this kingdom sees a
+struggle that we are unable to deal with. If you or any can help with this, I
+would see it rewarded as handsomely as possible.  Are you interested, traveler?"
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+>say yes
+
+You say 'yes'
+The king continues with a nod of his head, "Hopefully you will have strength
+where others have failed. Your task is this:  The original flag of my kingdom,
+a symbol of our unity, has been stolen by an army of the undead. The leader of
+this army claims he was cheated by an ancestor, and took the flag as payment.
+   I have sent soldiers to face him, but each has fallen and been raised as a
+warrior for the opposing army. Morale in my kingdom is lower than I have ever
+seen it.  Return my flag, return some hope to my kingdom, and you will receive
+my reward."
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+Task 11 : King of Pentacles
+
+Collect the spirit of the card "King of Pentacles"
+
+- You have been tasked with returning the flag of the kingdom from the
+  leader of an undead army. Find him and demand that he return the flag.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Transformation]
+
+-- find reaping skeleton and type:
+
+>say flag  he will aggro you, and task updates.
+
+As he collapses in defeat, this skeleton rider reaches inside his robes and
+pulls forth a tattered flag. He tosses it into your hands. "You have earned this,
+traveler. Enjoy it, and the curse that comes with it!"
+A reaping skeleton laughs at you diabolically...Muhahaha!
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+Your daily blessing added 8,552 gold to the corpse.
+You have 70 daily blessing bonus gold kills remaining.
+You get 17,104 gold coins from the hacked corpse of a reaping skeleton.
+
+-- go back to the throne of king, choose path carefully, not to enter pk rooms,
+-- cus undead warriors will populate and aggro you, and you doesn't allow you to retreat.
+
+[The Throne of the King]
+
+(G) Shaped by the events of his life, the king's rule is pragmatic, but caring.
+The king stands in surprise at your hurried entrance. "Traveler! You appear to
+have been successful in your task, though you look a bit worse for wear."
+The pragmatic king carefully takes the flag from you and hands it to a waiting servant.
+The pragmatic king says, "You have done well, traveler, and as promised, you receive your reward."
+The pragmatic king gives you 1,000,000 gold coins.
+The pragmatic king bows before you. 
+
+A shimmer appears in the air above your head, and you realize the spirit of
+[King of Pentacles] has been released.
+
+** Task Done  : King of Pentacles
+
+[A Walk Down Memory Lane]
+
+>listen nostaligic
+
+The nostalgic lady says, "I'm just recalling the days of my youth, traveler. I found a doll that my sisters and I used to play with. If only I could find the dollhouse..."
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+Task 8  : Six of Cups
+
+Collect the spirit of the card "Six of Cups"
+
+- The nostalgiac lady thinks of the past and the dollhouse she used to
+  play with as a child.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-- go to [A Cozy Country Cottage] and you will find the dollhouse on ground.
+
+>get dollhouse
+
+-- go back to nostalgic
+
+>give dollhouse nostalgic
+
+You give a dollhouse to the nostalgic lady.
+The nostalgic lady gasps in astonishment.
+The nostalgic lady says, "It's wonderful, traveler. I can't believe you found this. It's exactly as I remember it. I will treasure it. Perhaps I will be able to share it, along with stories of my sisters, with children of my own. Thank you, traveler. I am in your debt."
+A shimmer appears in the air above your head, and you realize the spirit of
+[Six of Cups] has been released.
+
+** Task Done  : Six of Cups
+** Task Added : Return to Droll (via the magician)
+You have collected the required spirits. Have the magician send you back to
+Droll as quickly as possible!
+
+-- go to the magician and type:
+
+>say droll nikrud?
+
+** Task Done  : Return to Droll (via the magician)
+Droll looks at you with a frown, then smiles suddenly.
+
+Droll Nikrud dances a stumbling, drunken jig to some unheard tune..step away from the drunkard...
+He finishes his little dance, then turns to you with a predatory glint in his
+eyes. "Now comes the fun part! These spirits aren't nearly enough for what we
+need to get Lord Durkin's reading done. There has been far too much meddling.
+It's time to get serious."
+
+"His smile turns cold before continuing, "Certain forces have been at work that
+have damaged a number of the spirits. They've been broken into pieces and must
+be put back together. I've got the glue if you've got the time, traveler. Those
+opposing forces keep me from interfering, but they can do nothing if I send you
+in... well, maybe they can kill you, but that's beside the point. If you're
+ready for a bit of a challenge, just let me know."
+** Task Added : Droll has a tougher job...
+
+>say ready
+
+You say 'ready'
+Droll takes a breath as if drawing strength from the air around him. "Okay,
+traveler. It's time to get serious. Deadly serious. I'm going to draw 3 cards
+from my deck. You simply need to dispatch the creatures that have absorbed the
+fragments of each of those cards' spirits. Simple enough? There will be plenty
+of other nasty creatures trying to slow you down. Don't die."
+
+Drolls face suddenly relaxes, his eyes lose focus, and he pulls the cards from
+his pocket. He draws 3, and hands them to you.
+
+** Task Done  : Droll has a tougher job...
+** Task Added : Dangerous Draws
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+** Task Added : The World (Reversed)
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+** Task Added : The Hierophant (Reversed)
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+** Task Added : The Devil (Reversed)
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+Droll says, "When you think you're up for it, let me know you're ready to boogie."
+
+>say ready to begin
+
+Droll Nikrud says, "Needed a bit of a breather, did you, traveler? If you're ready to return to the flip side for a break, just say 'return'. The magician should be able to send you back my way. He owes me a favor or two. If you want to head back to face the nasties, just give me a nod."
+
+       Fortune : Help Lord Durkin get his life back on track!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Task 7  : Dangerous Draws
+
+- If you need to be tranferred so you can collect more fragments, let
+  Droll know you're once again ready to boogie.
+
+Task 15 : The Hierophant (Reversed)
+          Fragments Collected: 0
+
+Collect the spirit of the card "The Hierophant (Reversed)"
+
+- Collect 5 fragments of this card's spirit
+
+Task 16 : The Devil (Reversed)
+          Fragments Collected: 0
+
+Collect the spirit of the card "The Devil (Reversed)"
+
+- Collect 5 fragments of this card's spirit
+
+Task 17 : The World (Reversed)
+          Fragments Collected: 0
+
+Collect the spirit of the card "The World (Reversed)"
+
+- Collect 5 fragments of this card's spirit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-- Just keep killing mobs until #s go up, and tasks disappear.
+-- When all completed, you will see something like this:
+
+You collect a fragment of [The Hierophant (Reversed)] as a nervous nun
+is destroyed.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+** Task Done  : The Hierophant (Reversed)
+
+** Task Done  : Dangerous Draws
+All the required fragments have been collected, you can take them to Droll.
+** Task Added : Return to Droll Nikrud with the collected fragments
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Predestination]
+
+[ Exits: none ]
+(R) A man hangs upside-down from what looks like a trapeze.
+(G) A lost puppy is whimpering softly as it makes its way through the debris.
+Droll greets you with a heartwarming smile, "It is a fine day, is it not,
+traveler? I believe it is the day we will complete that pesky reading, and
+perhaps I can have a little peace. You've done me a little favor, got rid of
+some pests for me, and I'll owe you one for this."
+
+With a flourish, Droll takes a small scroll that appears to be blank from his
+pocket. He rolls it up with a flick of his wrist, then touches one end to his
+forehead. A small spark seems to jump from his skin to the parchment of the
+scroll, then he puts it in your hands. "Make haste, traveler. I will send you
+back to where this must be delivered. Lord Durkin will be expecting you."
+
+Using familiar gestures, Droll holds his hands aloft, raises his eyes skyward,
+and begins to chant.
+
+** Task Done  : Return to Droll Nikrud with the collected fragments
+** Task Added : Full Circle
+
+-- go to lord durkin to complete the goal:
+
+[Innocence]
+
+Lord Durkin asks, "I have waited long, traveler. What word do you bring?"
+Lord Durkin takes the scroll from you, and reads it carefully.
+Lord Durkin turns away from the scroll. "Traveler, thank you. I will need to
+study this in detail, as you might expect. I believe this information will
+provide me the guidance I need, but it is not straighforward.
+
+"There is also information for you, traveler. The scroll contains magical power
+that is able to transport you to Droll's reversed realm. Simply come to me and
+say 'reverse' any time you desire this.
+
+"The last bit of information is a reading for you, traveler. I will make a copy
+for you."
+INFO: New post #95277 in forum Personal from Lord Durkin Subj: A Tarot reading from the crossroads of fortune
+He continues, "The scroll also details that it has the power to provide future
+readings as situations change in life. This power can be called upon one time
+per week. You can return to me and ask for a reading - if the scroll has
+enough power, I will copy it down for you again."
+
+He smiles fondly, "For your help with this, I would like you to have one final
+gift. Please take this card. It has been with me for a long time, but I think
+it has outlived its usefulness."
+
+Lord Durkin gives you |0[/THE FOOL]0|
+With a deep bow, Lord Durkin bids you safe and fortuitous travels.
+INFO: At the Crossroads of Fortune, Negader travels one of many paths.
+
+** Goal Completed: Help Lord Durkin get his life back on track!
+

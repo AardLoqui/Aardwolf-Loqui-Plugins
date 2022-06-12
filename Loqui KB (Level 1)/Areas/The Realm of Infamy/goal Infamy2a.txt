@@ -1,0 +1,527 @@
+These notes need a lot of editing but should fill in the gaps
+in the walkthrough
+
+Landion.
+
+
+Infamy
+
+White Halls of Meditation
+
+listen woman
+Gabryl says, "My twin sister was taken into the realm of Infamy, and my
+ powers are not strong enough to get her out. If I go, we will both be
+ trapped inside forever. It is a bad time to be in Infamy, there is much
+ trouble."
+
+say trouble
+Gabryl asks, "One of the villains is planning to escape. If he succeeds
+ the realms will never be safe again. Will you help my poor sister?"
+
+
+say i will help
+Gabryl says, "Thank you so much! You can save my sister and all of the
+ realms. Go into the prison and seek out the champion. Rashyl told me that
+ she knows everything that happens in Infamy, certainly she will have
+ information."
+
+** Goal Added : Secure the realm against the villains of Infamy!
+   Type 'goals Infamy' for full details on this quest.
+
+** Task Added : Talk to Fufa for some information.
+Entrance to the Realm of Infamy
+
+
+Info Center [**> PK <**]
+
+say One of the villains is planning to escape
+Fufa the champion says, "You want to know who is trying to escape. That
+ information is very delicate. If this person hears I have been telling
+ people about their plan, I will be in grave danger."
+   
+Fufa the champion exclaims, "Most of us are happy here in Infamy. We get
+ to live out our days being evil, killing those who come to visit us, and
+ practicing our evil laughter without being mocked. The villains belong
+ here, but Rashyl does not, she isn't evil at all!"
+   
+Fufa the champion says, "However, before I entrust you with this
+ knowledge, you must seek out the approval of my friends. I will send you
+ to Vlad first. I warn you, do not talk to anyone without explicit
+ direction, as you might question the wrong person and this would be
+ disastrous for us."
+
+** Task Done  : Talk to Fufa for some information.
+** Task Added : Get the approval of residents.
+
+Realm of Infamy [**> PK <**]
+
+Vlad, the Impaler exclaims, "Who sent you to me? Don't be shy and spit it
+ out!"
+Vlad, the Impaler glares icily at you, you feel cold to your bones. 
+An evil sidekick is in perfect health.
+
+say fufa sent me
+Vlad, the Impaler says, "That scoundrel is always up to no good, but I
+ want this treachery to be stopped. First, I need a favor."
+
+
+say what favor
+Vlad, the Impaler says, "There is a lady, a most beautiful woman by the
+ name of Morgan le Fey. I wish to take her out for dinner, perhaps kill
+ some people for her, shed some blood, let her torture them, you know, the
+ romantic stuff we villains do."
+   
+Vlad, the Impaler sighs.
+   
+Vlad, the Impaler says, "Take this tulip to her, I hear tulips are
+ Morgan's favorite, and bring me her favor if she returns my affection. Now
+ go away, so I might kill someone while I wait."
+   
+You receive a pure white tulip dripping with blood from Vlad, the Impaler.
+** Task Added : Play matchmaker for Vlad the Impaler.
+
+
+hunt fay (Morgan le Fey is in 2nd area)
+
+
+give tulip fay
+There is nobody in the room with that name.
+
+give tulip fey
+You give a pure white tulip dripping with blood to Morgan le Fey.
+   
+Morgan le Fey says, "A tulip is pretty, but I want power and you will get
+ it for me."
+   
+Morgan le Fey says, "Leave this place and fight for your faith, then seek
+ out four beasts that take the form of two dragons, an owl, and a dinosaur.
+ Bring back two of each treasure they carry to fulfill your mission. When
+ you return, say I have the...well, you get the idea."
+   
+** Task Added : Seek out the four beasts for Morgan le Fey.
+
+
+crynn 
+
+kill mobs
+
+Room of Bronze (owl)
+
+You get a Bronze Orb from the frazzled corpse of a Beast of Bronze.
+You get a Bronze Orb from the frazzled corpse of a Beast of Bronze. 
+
+Room of the Diamond (dinosaur)
+
+You get a Diamond Orb from the frazzled corpse of a Beast of Diamond.
+You get a Diamond Orb from the frazzled corpse of a Beast of Diamond.
+
+Room of Gold (dragon)
+
+You get a Golden Orb from the frazzled corpse of a Beast of Gold.
+You get a Golden Orb from the frazzled corpse of a Beast of Gold.
+
+
+Room of Silver (dragon)
+
+You get a Silver Orb from the frazzled corpse of a Beast of Silver.
+You get a Silver Orb from the frazzled corpse of a Beast of Silver.
+
+
+infamy
+
+Hidden Lair 2nd level
+
+
+say i have the orbs
+Morgan le Fey says, "Good work, I'll take those items."
+Morgan le Fey exclaims, "Take my favor to Vlad so he will know my
+ decision, and here is your letter!"
+   
+You receive a silk handkerchief from Morgan le Fey.
+You receive a Letter of Endorsement from Morgan le Fey.
+
+** Task Done  : Seek out the four beasts for Morgan le Fey.
+
+give handkerchief vlad
+You give a silk handkerchief to Vlad, the Impaler.
+Vlad, the Impaler throws back his head and cackles with insane glee!
+   
+Vlad, the Impaler says, "You did it! Now I will have the opportunity to
+ woo Morgan! You should go talk to Thiol next and tell him Fufa sent
+ you."
+   
+You receive a Letter of Endorsement from Vlad, the Impaler.
+   
+
+** Task Done  : Play matchmaker for Vlad the Impaler.
+** Task Added : Entreat with Thiol.
+
+
+
+Realm of Infamy [**> PK <**] 3rd level
+
+[ Exits: north east ]
+(Invis) (Hidden) (Red Aura) Thiol stands here looking rather ticked.
+Thiol the ticked says, "All those newbies! Yak, yak, yak! They do not ever
+ stop talking! Whining is more like it! If one more newbie complains about
+ a goal..."
+   
+Thiol the ticked raises his hand in a fluid motion and pretends he's shooting a gun.
+   
+Thiol the ticked asks, "Did you at least bring me a newbie to kill while
+ you're pestering me?"
+   
+
+
+Thiol the ticked is here!
+
+
+say fufa sent me
+Thiol the ticked says, "If you want that letter, you will have to deliver
+ a message for me. Don't worry, you won't have to go far. Go see Grendel's
+ mother and tell her she needs to stop leaving rotting corpses all over the
+ place because it's making this place stink. Come back when you're done."
+
+** Task Done  : Entreat with Thiol.
+** Task Added : Tell Grendel's mother to clean up her act! 
+
+Realm of Infamy [**> PK <**]
+
+say stop leaving rotting corpses all over the place because its making this place stink.
+
+kill mother
+
+You receive the bloody head of Grendel's mother from Grendel's mother.
+You get Ginsu Knife of Grendel's mother from the battered corpse of Grendel's mother.
+You bury your fangs deep into the battered corpse of Grendel's mother, drinking thirstil
+
+
+
+
+You give the bloody head of Grendel's mother to Thiol the ticked.
+Thiol the ticked exclaims, "Ha! You brought me her bloody head. This was a
+ most unexpected surprise!"
+   
+You receive a Letter of Endorsement from Thiol the ticked.
+   
+Thiol the ticked says, "Fufa told me to direct you to that pesky dog. See
+ if you can figure out what he's barking about."
+
+** Task Done  : Tell Grendel's mother to clean up her act! 
+** Task Added : Romp with Rover.
+
+
+2nd level
+
+*nod
+You nod. 
+Arrooooooo! Arrooooooo! Bark bark bark! Arf! Arf!
+Ruff! Arf! Ruff! Ruff! Arrooooooo! Arrooooooo!
+  
+
+** Task Done  : Romp with Rover.
+** Task Added : Fetch Cerbie's doggie accoutrements.
+
+
+dig in rooms for toy
+
+(Magic) a <<<<SQUEAKY TOY>>>> (1)
+(Magic) a <<<<SQUEAKY TOY>>>> (1)
+(Magic) a <<<<SQUEAKY TOY>>>> (1)
+
+
+
+canyon hospital
+
+kill Chilnuzil for collar
+
+You get ====[a red dog collar]==== from the electrified corpse of Ms. Chilnuzil.
+
+
+
+
+
+Cerberus licks you across the face. YUCK!
+
+** Task Done  : Fetch Cerbie's doggie accoutrements.
+   
+Cerberus is digging something up...
+Looks like he fetched you a letter for Fufa!
+  
+You receive a Letter of Endorsement from Cerberus the Three-Headed.
+  
+Cerbie is playing in his water bowl now.
+I wonder if that is supposed to be a sign?
+  
+** Task Added : Call upon the Lady of the Lake
+
+say fufa sent me
+Nimue, Lady of the Lake says, "I know your purpose and you will have to do
+ something for me first."
+   
+Nimue, Lady of the Lake says, "My dear friend, Morpheus, is rather unhappy
+ right now. He is running low on sand and needs more to keep up his work
+ here in Infamy. Leave this prison and seek out the golden grain of sand.
+ Collect five and return them to Morpheus directly. When you are done,
+ return to me and make it known."
+   
+** Task Added : Restore the gift of dreams and nightmares.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+
+
+
+mirrored Room (G) [**> PK <**]
+
+[ Exits: north east ]
+     (Invis) The corpse of Rok lies here.
+(Invis) (Hidden) (Red Aura) Morpheus brings on dusk, and everlasting sleep.
+ 
+Morpheus, the Sandman says, "Thank you for this gift. I will return the
+ favor by sending you a special dream tonight."
+   
+You receive a Letter of Endorsement from Morpheus, the Sandman.
+   
+
+** Task Done  : Restore the gift of dreams and nightmares.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+
+
+say im am done
+
+say i'm done
+Nimue, Lady of the Lake says, "Morpheus says you brought him my gift."
+   
+You receive a Letter of Endorsement from Nimue, Lady of the Lake.
+   
+Nimue, Lady of the Lake says, "Return to the champion with all six letters
+ in your possession. If you are missing any, my friends and I are not
+ opposed to bribery."
+
+** Task Done  : Call upon the Lady of the Lake
+** Task Added : Judge Fufa will now hear your case.
+
+
+
+say watfish
+Fufa the champion says, "Precisely! According to my sources Watfish is
+ trying to escape. Such a shame, I really like him. It surprises me that
+ Mordred wasn't behind this, that would make more sense to me. Alas,
+ Watfish is the one you need to go confront. Take him these documents to
+ prove you know what his plans are."
+   
+You receive Confidential and Incriminating Documents from Fufa the champion.
+
+** Task Hint  : Your 'tasks' list has been updated with a new hint.
+
+
+say mordred
+Watfish, the First Superhero says, "Exactly! Mordred the Evil is behind
+ this plan, and he framed me in hopes to distract you long enough to get
+ away with it. "
+    
+Watfish, the First Superhero says, "There is still time to fix this
+ mistake. Go visit Rashyl. She is wandering around near that crazy dog.
+ When you find her say the secret code phrase, bat poop crazy, and she will
+ help you."
+    
+Watfish, the First Superhero says, "I hope you stop all this madness, I'd
+ like to go back to terrorizing people."
+   
+Watfish, the First Superhero beams with pride at you.
+
+** Task Done  : Present Exhibit A 
+** Task Added : Play hide and seek with Rashyl.give documents watfish
+You give Confidential and Incriminating Documents to Watfish, the First Superhero.
+
+[Fighting: 70096/84146hp 25479/31937mn 3636/3639mv 169tnl Enemy: 44% ]>
+
+Watfish, the First Superhero says, "I know that Fufa is incredibly
+ resourceful and she usually has the right idea about events going on in
+ Infamy. However, in this particular case she is incorrect. Now, I am sure
+ that is exactly what you think an evil mastermind villain would say when
+ trying to get out of this predicament. However, I only ask for you to
+ listen to my story before you pass judgment."
+
+[Fighting: 70096/84146hp 25479/31937mn 3636/3639mv 169tnl Enemy: 44% ]>
+
+[2] Watfish, the First Superhero's thrust <*><*> LIQUIDATES <*><*> you! [169]
+[8] Your shocking bite does UNBELIEVABLE things to Watfish, the First Superhero! [7031]
+[3] An evil minion's beating <-=-> SUNDERS <-=-> you! [184]
+An evil minion chants the phrase 'din ndibe'.
+You glow with energy as you absorb an evil minion's mind freeze.
+Watfish, the First Superhero needs a hospital.
+
+[Fighting: 69743/84146hp 25549/31937mn 3636/3639mv 169tnl Enemy: 17% ]>
+
+   
+Watfish, the First Superhero says, "I was walking through the realms a few
+ weeks ago when I came across Cronus. He was partaking in an intimate
+ conversation with Rok, their heads bowed over some papers and they were
+ pointing this way and that way, yelling at each other and demanding the
+ other listen. The end result was Rok getting so angry he bashed Cronus
+ over the head with a rock and a brawl ensued."
+
+[Fighting: 69743/84146hp 25549/31937mn 3636/3639mv 169tnl Enemy: 17% ]>
+
+ 
+say mordred
+  
+Watfish, the First Superhero exclaims, "While they were busy rolling
+ around like a couple of schoolyard newbies, I snuck over to have a look at
+ those papers. It was a detailed plan to break out of Infamy. What was
+ worse, they had scratched out his name and written in 'Watfish', so that
+ they would appear to be my plans!"
+Watfish, the First Superhero says, "Exactly! Mordred the Evil is behind
+ this plan, and he framed me in hopes to distract you long enough to get
+ away with it. "
+    
+Watfish, the First Superhero says, "There is still time to fix this
+ mistake. Go visit Rashyl. She is wandering around near that crazy dog.
+ When you find her say the secret code phrase, bat poop crazy, and she will
+ help you."
+    
+Watfish, the First Superhero says, "I hope you stop all this madness, I'd
+ like to go back to terrorizing people."
+   
+Watfish, the First Superhero beams with pride at you.
+
+** Task Done  : Present Exhibit A 
+** Task Added : Play hide and seek with Rashyl.
+
+
+
+  
+When it becomes obvious to Rashyl that you are not following
+along she stops signing and begins writing. A flourish of words
+appear on an old scroll and she shows you the message.
+
+[Fighting: 68889/84146hp 26030/31937mn 3639/3639mv 348tnl Enemy: 50% ]>
+
+  
+'To stop Mordred, I have to concoct an elixir that will prevent
+him from using magic to pass through the corpses and escape into
+the realm. Fufa told me there is a trapdoor located near here.
+
+[Fighting: 68889/84146hp 26030/31937mn 3639/3639mv 348tnl Enemy: 50% ]>
+
+  
+I have been looking, but have not found it. Fufa says it's hidden
+very well and only the markings set it apart. Once you find the
+door, return to me quickly. You can only go through this door if
+I am with you. Beckon and I will follow.'
+  
+
+** Task Done  : Play hide and seek with Rashyl.
+** Task Added : Show Rashyl the ultimate hiding place.
+
+
+
+
+beckon rashyl
+You beckon for Rashyl to follow -- sure hope they do!
+Rashyl starts to follow you.
+Rashyl signs 'I am following you'.
+
+
+Mirrored Room (G) [**> PK <**]
+
+
+
+enter trapdoor
+Antechamber of the Tomb [**> PK <**]
+
+
+north
+
+Secret Tomb [**> PK <**]
+  The tomb is filled with a large stone table, a crack running down the middle.
+It is barren except for old papers, yellowed and cracking with age. Two 
+shelves line the walls, dusty old bottles lining each one, cramped and dirty.
+There is no light in the tomb, darkness encompassing every inch of space. A 
+single candle has been left on a rickety old chair, the wax burned down low 
+and the wick burned low.
+
+[ Exits: south ]
+     An old stone table takes up the majority of the room.
+Rashyl arrives from the south.
+   
+Rashyl gets excited when she sees the table and the old potions.
+She then begins picking up bottles and inspecting the labels.
+
+
+     
+Rashyl starts measuring and mixing various liquids. After a few
+minutes steam begins to pour from one of the bottles. Rashyl
+takes a cork and seals it. She walks over and puts the bottle
+on the table. She scribbles a message on the old scroll, hands
+it to you. She signs 'I will see you soon' and leaves.
+
+
+     
+The message reads:
+Go back the way we came and enter the corpse, then toss the
+elixir at Mordred. Our work here will be done and we can go home.
+     
+
+** Task Done  : Show Rashyl the ultimate hiding place.
+     
+** Task Added : Stop the mister and reunite the sisters.
+
+get elix
+You get a bottle of [(Clear Elixir)].
+
+
+
+
+
+Room of Fire [**> PK <**]
+
+
+toss elixir
+Mordred is looking pretty pissed off at you right about now.
+Perhaps it is because he realizes you just foiled his master
+plan to escape this place. Now would probably be a good time
+to get out of here before he attacks you.
+
+[68289/84146hp 26139/31937mn 3639/3639mv 0qt 587tnl] >
+
+A moment later Rashyl and Gabryl appear smiling at you. Rashyl
+signs 'good-bye my friend' and Gabryl hugs you. They snap their
+fingers and you are back in Aylor looking at familiar streets.
+   
+
+
+** Task Done  : Stop the mister and reunite the sisters.
+
+** Goal Completed: Secure the realm against the villains of Infamy!
+
+
+The Grand City of Aylor (G)
+
+
+INFO: Landion is victorious and the realm is safe from villains again!
+
+
+
+**********************************************************************************************
+goal Infamy
+
+             Goal information for: Put a stop to the villains and reunite the sisters. - Completed 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A villain is scheming to escape the prison of Infamy and unleash destruction 
+upon the known lands. Will you help reunite the sisters and put this vile 
+menace back in his cage?
+
+As a reward for helping the sisters, when you need assistance finding your 
+way through the Realm of Infamy, you can beseech Gabryl or beseech Rashyl 
+for help. 
+
+
+
+
+
+

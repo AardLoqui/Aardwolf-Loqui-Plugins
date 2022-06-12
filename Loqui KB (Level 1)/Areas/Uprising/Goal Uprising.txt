@@ -1,0 +1,293 @@
+
+Aardwolf Uprising Goal Guide
+
+?November 23, 2014?Uncategorized?aard, aardwolf, area, area quest, dark lady blessing, dark lady's blessing, goal, guide, uprising, walkthrough?gguidance	
+  
+
+Rewards:
+ Dark Lady’s blessing
+– A level 131 light with good DR, Str and Dex. It’s obtained from
+ the repeatable AQ that’s unlocked after the goal.
+ .
+ A note copy-pasted from ‘help uprising':
+ As a warning, starting this goal makes completion of quests and campaigns
+ within this area more difficult. Further to this, single class warriors and
+ rangers will require assistance from other players if they need to complete
+ certain quests or campaigns within this area while working on the goal (if
+ they do not yet have access to their level 201 skills).
+ .
+ The goal involves mobprogs that impede movement withing the area,
+ which leads to the situation described above.
+ You have been warned.
+ .
+
+ From starting room of Uprising (A Widening Cavern),
+ run sese2se3s to Twist in the Tunnels.
+ The dark elf high priestess should start talking.
+ After a while, she will ask you to say yes.
+ Say ‘yes’ to start the goal.
+ .
+ ** Goal Added : A Dark Elf Dilemma
+ Type ‘goals Uprising’ for full details on this quest.
+ ** Task Added : Help the High Priestess
+ .
+ Type ‘sign yes’ to add a task.
+ .
+ ** Task Added : Rescue the Dark Elves from the Cyclopses
+ .
+ run ws3w3n2w3n to A Sharp Corner (G), and ‘walk through wall’
+to get to Cyclops Lair.
+ .
+ You can set a trigger to ‘sit’ on the phrase
+‘Maybe you should get down low!’,
+and ‘stand’ on the phrase
+‘The cyclops does not see you, it’s safe to continue!’.
+ .
+In addition, killing the cyclops stops them from stopping you,
+ It makes running through rooms easier (in between repops).
+ .
+ Also, every time you get thrown out,
+ some of your spellup spells will be dispelled.
+ .
+ Mist form does not work in many parts of Uprising.
+ .
+ (Copy-and-pasting speedwalks doesn’t work due to blocking cyclopses.)
+ run 3w4s to A Sleeping Dormitory.
+ (have pass door to walk through the locked door)
+ (‘potsearch pass door’ to look for such a potion)
+ .
+ Look for a dark elf priestess, and ‘beckon priestess’.
+She should ask you to get a key.
+ .
+ Walk to Before a Large Room, then look for a troll slave.
+ You should also see a bright magenta message saying
+‘This troll slave is wearing something that might fit!’
+.
+Kill the troll slave to loot a heavy cotton robe.
+ Wear the robe. You should see a bright white message
+ saying that ‘You slip into the troll’s robe’.
+ .
+From Before a Large Room, run 3nwn to A Lip over the Hole.
+ Here, ‘jump in’ to A Cyclops Pit.
+ The cyclops leader should say ‘try a lot harder’,
+and throw you to A Sleeping Dormitory.
+ .
+ From here, run 2ne to An Enchanter’s Room.
+‘get all rack’ to get all potions from the rack.
+‘id 1.potion;id 2.potion;id 3.potion’ until you find
+ the potion with long colored instructions on what to do.
+ Drop the other potions.
+ .
+ Kill troll slaves until one random-drops a lock of troll hair.
+ Return to An Enchanter’s Room, then type the following in order:
+ fill flask;
+ add hair;
+ get bar table;
+ wear bar;
+ mix potion;
+ get straw table;
+ insert straw;
+ slurp potion;
+ .
+ In the end, you should see the message
+‘Your body contorts itself until it resembles that of the troll slave!’
+.
+Check that you are wearing a heavy cotton robe,
+ then run w2nwn to return to A Lip over the Hole, and ‘jump in’.
+You should stay in the room A Cyclops Pit.
+ .
+ Kill the cyclopses(?) there until you see the message:
+‘You get a key from the corpse of the cyclops!’
+In your inventory, you will see a warped key.
+ .
+ From A Lip over the Hole, run s4e to return to Cyclops Lair,
+ then ‘walk through wall to get out to A Sharp Corner (G).
+ .
+ Be invis, hidden and sneaking, then
+ run 2en2ese2se3sws2w to Before the Gates (G).
+ open n;run 2n to Southern Temple Road.
+ .
+ From Southeastern Temple Road, run 3n to A Burned-Out Forge.
+‘get hammer’ to get a massive hammer off the floor,
+ then ‘open drawer;get tongs drawer’ to get some tongs.
+‘wear tongs;wear key;heat it up’ to get a red hot warped key.
+‘give key anvil;wear hammer;hammer anvil’ to get a perfect key.
+ .
+ Don’t forget to re-wear your normal weapon before moving.
+ .
+ While you’re in the dark elf city,
+ kill dark elf archers until you loot ‘a bolt and crossbow’
+(if you don’t have it already).
+ Keep the crossbow, you will need it later.
+ .
+ Get out of the city, to Before the Gates (G).
+ Be invis, hiding and sneaking, then
+ run 2ene3nw2nwn2ws2w;walk through wall to Cyclops Lair.
+ run 3w3s (watch out for cyclops, remember to sit)
+ to Before a Large Room.
+ In this room, ‘open south’
+to unlock the door, and update tasks.
+ .
+ ** Task Done : Rescue the Dark Elves from the Cyclopses
+ ** Task Added : Rescue the Dark Elves from the Cerejellums
+ .
+ From Before a Large Room,
+ run 3n3e;walk through wall;run 2en2eses;squeeze through
+ to An ornate hallway.
+ Every time you move a room, you will get attacked.
+ Fleeing and retreating do not work.
+ .
+ Slooooowly kill your way (e4nen,open n,nene)
+ to the The Birthing Chambers.
+ Upon reaching there, a long mobprog in dark yellow should occur.
+ Wait a bit… just a bit longer… until you see:
+‘The chief dark gnome slave bows before you.’
+.
+By now, the cerejellums have stopped mobprog-aggroing you.
+ .
+ Portal/recall out, and head to recall.
+ From recall, run 4s;ride bucket to Tinkers’ Guild.
+ Kill all the gnomes until you loot
+ x-89q kakorrhaphiophobic super blazebomb plans.
+ .
+ From recall, ‘rt potions’ and ‘buy vial’ to buy an empty vial.
+ .
+ Return to Uprising, and walk around the outer caves,
+ typing ‘investigate’ in each room until you
+‘capture some of the explosive gas in your vial’.
+‘a vial of explosive gas’ will be added to your inventory.
+ .
+‘where colossal’ to see where a colossal spider is,
+ then run to it and ‘listen colossal’.
+It will ask for 8 bugs.
+ .
+ Walk around until you see
+‘A big, juicy bug crawls out from the shadows’.
+Quickly ‘kill bug’ to attack a big, juicy bug.
+ Upon killing, you will get a juicy bug.
+ Do this until you have 8 bugs.
+ .
+ Look for any colossal spider, and ‘bow colossal’
+to recieve the cobweb of a colossal spider.
+ .
+ Get to the Dark Elf city.
+ Now, getting around the city is tricky.
+ If you try to walk away from a room with a dark elf,
+ you will be thrown out of the city.
+ Same if you attack any of the dark elves.
+ Refer to the below section ‘Navigating the Dark Elf City’
+whenever you need to travel within it
+ (until the goal is complete):
+ .
+—————————————————————–
+Navigating the Dark Elf City:
+ .
+ Use slit/disintegrate/banishment/holy word
+ on dark elf patrol guards to remove them.
+ It’s okay if you fail the instakill, just kill them normally.
+ The point is to get rid of them without getting transported.
+ .
+ Panic works to drive them out of the room,
+ but it only makes them go into a neighbouring room.
+ .
+ Certain spells e.g. blind, dispel magic, charm
+ can initiate combat without getting transported,
+ You can use them on dark elf archers,
+ then finish killing them to loot ‘a bolt and crossbow’
+(if you didn’t get the crossbow earlier on).
+ Strangle also works.
+—————————————————————–
+.
+Walk to A Burned-Out Forge
+ Type ‘look hearth’ (‘examine’ does not work, only ‘look’)
+A fire elemental will appear, and
+‘(G) a cheerful fire elemental’ will be added to your inventory.
+ .
+ run
+ Look for a giant dynamite bat in the outer caves.
+ Wear the ‘a bolt and crossbow’ you had obtained earlier on.
+ (If you did not manage to get ‘a bolt and crossbow’ earlier,
+ scroll back up to Navigating the Dark Elf City for details.)
+ Be vis before killing the bat.
+ .
+ The giant dynamite bat expires shortly after you get it,
+ so stack your commands such that as soon as you attack the bat,
+ you run straight to The Birthing Chamber.
+ This would involve a speedwalk to A Slippery Ledge (G),
+ followed by squeeze through;run e4nen;open n;run nene
+ to run to The Birthing Chambers.
+ .
+ Walk into The Birthing Chambers with all 5 items
+ (including plans)
+ Upon entering the room, leader should update tasks.
+ .
+ ** Task Done : Rescue the Dark Elves from the Cerejellums
+ ** Task Added : Gather Twelve Dark Elf Weapons for the Priestesses
+ .
+ Remember to re-wear your normal weapon.
+ .
+ From The Birthing Chambers,
+ run wsw2sw4sw;squeeze through;run se3sws2w;open n;n
+ to Entering the City Proper.
+ .
+ Same as before in the dark elf city.
+ Slit/disintegrate/banish the patrol guards
+ (you can also strangle/sleep the patrol guards),
+ strangle/blind/not-combat-spell the other dark elves.
+ .
+ Every time you kill a dark elf, you should see
+ a yellow message mentioning a cerejellum sage,
+ and the number of weapons left to collect.
+ Keep killing dark elves until it’s
+‘time to return to the cerejellum leader’.
+ .
+Get to Before the Gates (G), then
+ run 2ene3nwn;squeeze through;run e4nen;open n;run nene
+ to The Birthing Chambers.
+ Upon entering the room, you should recieve a blazebomb
+ and complete a task.
+ .
+ ** Task Done : Gather Twelve Dark Elf Weapons for the Priestesses
+ .
+ The blazebomb expires in a few minutes.
+ To get another bomb, run back to The Birthing Chambers.
+ Upon entering the room, you should recieve a blazebomb.
+ .
+ Before planting the bomb:
+ Right after repop, kill all the dark elves in the city.
+ Time it such that they won’t repop when
+ you run in to plant the bomb.
+ Sense life can help with this.
+ .
+ As before, use slit/distingrate/banishment/strangle/etc.
+ Refer to previous section on Navigating the Dark Elf City for details.
+ .
+ With city dark elves dead, and at least a few min before repop,
+ return to (room west of birthing chambers),
+ run ewsws;open s;run 2sw4sw;squeeze through;
+ run se3sws2w;open n;run 2nenws2wn;plant bomb
+ to get to The Pulpit, and plant the bomb.
+ .
+ You will be transported to Approaching the City,
+ and be told to find the high priestess.
+ run 3ene to Twist in the Tunnels.
+ Upon entering, she should ask you to nod to her.
+‘nod high’ to get transported to In the Dark Lady’s Realm.
+ Go north to complete the goal!
+ .
+ ** Task Done : Help the High Priestess
+ ** Goal Completed: A Dark Elf Dilemma
+ INFO: Player has earned the favor of the Dark Lady.
+ .There is a post-goal Area Quest here.
+ From starting room, run sese2se3sws2w;open n;n to Entering the City Proper.
+ Walk around the city, killing dark elves for the Dark Lady’s amulet.
+ You won’t get transported, since you completed the goal.
+ The amulet has a rather low chance of spawning,
+ so you have to kill a lot of dark elves. Keep going!
+ Kill until you have 5 Dark Lady’s amulets.
+ .
+ Have all 5 amulets in your inventory (not bag).
+ Return to the dark elf high priestess,
+ then ‘nod high;north’ to return to the Dark Lady.
+ Upon entering the room, she will take your 5 amulets
+ and give you the Dark Lady’s blessing.

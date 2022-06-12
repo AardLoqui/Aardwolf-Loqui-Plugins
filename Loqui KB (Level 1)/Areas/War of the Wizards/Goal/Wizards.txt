@@ -1,0 +1,14 @@
+Go to room 'The white monolith'(31403)
+Type 'accept'
+** Goal Added : Stop the warring wizards!
+Go to room 'Virgil's bedroom'(31376)
+Say 'yes'
+Say 'preservation stone'
+Go to room 'Richard's room'(31347)
+Find mob 'A bucket' and kill
+Go to room 'The white monolith'(31403)
+Go to room 'Richard's room'(31347)
+Type 'use stone'
+Go to room 'The black monolith'(31392)
+Kill grogg
+Go to room 'The white monolith'(31403)

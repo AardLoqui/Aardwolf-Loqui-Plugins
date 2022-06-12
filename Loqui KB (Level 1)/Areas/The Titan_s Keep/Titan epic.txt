@@ -1,0 +1,228 @@
+This is my understanding of the the Titan Goal, a few details
+may be missing.
+Landion.
+
+Group size 5
+The group needs a set of 3 sigils to start the goal:
+Sigil of Stealth,
+Sigil of Might,
+Sigil of Magic.
+
+Obtained by pupping L3.
+
+Go to Salkin and nod Salkin to start goal (only group leader should 
+nod)
+
+There are 8 bosses:
+Durthar,
+Rograg,
+Lugthurg, 
+Grakkr,
+Morgak,
+Gjaka,
+Orzbuk,
+and Hej.
+
+You need to defeat 3 to complete the goal.
+
+If you die during a run you can't return until the boss has been
+defeated. Return to salkin and wait.
+Run leader will tell you when to nod salkin, you must return before
+the reward is handed over.
+
+Dispel sanc on bosses when they quaffs sanc.
+Reversing bosses is a good plan.
+
+1) Durthar
+100 room move maze, you just need to find him and kill him.
+Place a pet in a room next to him and inform the rest of the group.
+
+He transports around the area (no hunt)
+
+If you're attacked by tendril retreat.
+
+He heals when not being attacked.
+
+2) Rograg(hearts)
+
+One person says yes or nods and goes to tank the boss solo.
+
+Group members go to each guardian mob and kill it to
+reveal the colour of the altar.
+
+Red altar damages boss.
+White heals tank.
+Not sure about the other colours.
+
+Push titan from center room to altar, then keep killing it.
+Type sac heart to sacrifice heart, repeat.
+
+3) Lugthurg
+
+Keep hps up and blast.
+
+4) Grakkr
+
+Damage type keeps changing, change weapon/spell as required,
+You will need 6 weapon types.
+
+Weapons with a suitable damage type can be obtained for L3, easy to get.
+Pierce | Air | Elec] - dynamo
+Negative | Fire | Light - despair
+Water | Slash | Sonic -  render
+Cold | Acid | Bash - corroder
+Holy | Shadow | Mental- gloom
+Magic | Energy | Earth - spirit
+
+5) Morgak
+
+Follow self.
+
+Exploding runes.
+
+ 9 rooms, Morgak in center room.
+
+When you see the message 'A powerful magical aura grows around Morgak'
+runes will appear in some of the rooms. These runes explode after a set 
+period of time. You must find a safe room before they explode.
+
+When you see the mesage update the map and look in the room you're in, if 
+you don't see a rune then stay.
+
+If you do see a rune then look for the green ! in the other rooms.
+Run to room without a green ! and wait. 
+Return to center room when you see the explosions.
+Don't heal in the side rooms after the explosion. Morgak could have
+dropped more runes, moving back into the center room with a rune (green !) 
+will set it off and damage everybody.
+
+If you don't see the green ! in the rooms, you will need to look in each room
+in order to find a safe room.
+Look for 'A rune lies on the floor glowing faintly'
+
+It's a good idea to add a trigger to update the map when you see the message 
+
+'A powerful magical aura grows around Morgak'
+
+And to speed up checking the runes when you don't see the green !.
+
+'A rune lies on the floor glowing faintly'
+
+
+6) Gjaka
+
+Reduce hps to <20k.
+Do this by either by fleeing or turning off autoassist and running east.
+
+
+7) Orzbuk
+
+The 4 body parts need to be killed, once one has been killed you have a
+limited time to kill the other 3.
+
+Orzbuk's right leg
+Orzbuk's left leg
+Orzbuk's right arm
+Orzbuk's left arm
+
+Aim at each one in turn, to check health.
+
+You receive a restore when all their hps fall below 90%, again at 80% and so
+on.
+
+8) Hej
+
+ 3 body parts 
+
+Need to be kept apart by using web, once one has been killed you have a
+limited time to kill the other 2.
+
+If they join together report stack,  flee and find an anomaly.
+Give anomaly to one of the hej to split (report split).
+
+Report to group the health of hej you're fighting.
+
+**************************************************
+When a boss is defeated one member of the group will receive
+an item (eg Gjaka's Burden).
+
+This item needs to be given to Salkin. Once this had been done
+you can move on to the next boss.
+Ensure any group member that died has returned before handing over the
+item.
+
+After 3 bosses have been defeated you will receive Salkin's Reward,
+and possibly a Soul Fragment.
+These items need to be give to the man in the start room in order
+receive your reward.
+
+If you receive  fragment of the Great Rift portal be sure to wear it
+or keep it in your inventory (suggest not in a bag).
+(If you don't you'll never receive greaves)
+
+If you receive 'Soul of a Dying Star' (must have portal to receive) give 
+this back to the man.
+
+Reply 'say destroy worlds'
+You will receive rank 1 greaves
+
+The second time you receive a Soul of a Dying Star give it back to man, 
+followed by rank1 greaves. DON'T say destroy worlds a 2nd time.
+
+You'll receive the next rank.
+
+****************************************************
+
+If you receive a Fractal Rune this can be used to add a resist to
+an item (only once per item)
+
+In order to do this you need to collect 20 essence items, random drops
+for Titan L3.
+
+Essence of Acid
+Essence of Holiness
+Essence of Light
+Essence of Piercing
+Essence of Disease
+Essence of Sound
+Essence of Shadow
+Essence of Coldness
+Essence of Negativity
+Essence of Bashing
+Essence of Slashing
+Essence of Water
+Essence of Electricity
+Essence of Energy
+Essence of Magic
+Essence of Earth
+Essence of Fire
+Essence of Air
+Essence of Poison
+Essence of the Mind*
+
+Collecting these if you don't have the uncurse wish is very hard work.
+
+*If you find an essence of mind you should give it to Landion:P
+
+These items must be taken to The Star Forge - on 2nd level of titan.
+
+type 'forge essence'
+
+You'll receive Essence of Resistance (saves a lot of space)
+
+If you have a Fractal Rune type 'forge rune essence'
+
+You'll receive a fractal rune.
+
+This rune can be used to add resistance to and item.
+
+id rune for instructions.
+
+
+
+
+
+
+
+
+     

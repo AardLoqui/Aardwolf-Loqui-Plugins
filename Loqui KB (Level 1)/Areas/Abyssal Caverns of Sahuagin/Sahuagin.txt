@@ -1,0 +1,9 @@
+
+This info has been added for Castiel, needs editing, 
+Landion
+
+Walkthrough supplied by Nokian.
+
+(900, 'Nokian', 44, '174.88.70.24', NULL, 'Level locked at 165 must be able to wear level 160 eq.\n\nfrom entrance run dend\n\nbe vis and say raiding party - tasks will open\n\nsay attack\n\nsay sahuagin - task will open to kill 25 sahuagin\n\ngo to the sahuagin parts and kill a bunch of ''em. beware of pk rooms, and sharks do not count.\n\nreturn to the liberated elf\n\ngo to each prince  (just hunt prince), kill their bodyguards, then kill them. you get an item from each one if you kill their bodyguards first. Seems once you kill one, the future sharks and bodyguards will aggro you.\n\nGet:\nBaton of Persecution\nlibido\nAbacus of the $Estate$\nthe Corselet of Nichydra\n\nWear all of these items, and go down from the prince rooms to find the kings area - go to before the locked doors and you will be automatically transferred in to the kings room.\n\nDefeat this dude (you can put your other items back on) to get a couple items and a key. Enter the portal in that room to be transferred to the elf king.\n\nunlock the maiden in that room, to get dialogue\nsay yes\n\nImmediately start healing the king (I used renew) and shortly after he is fully healed you will complete the goal. I did not heal him the first time and he died, and I had to do it all over again
+
+************************************
