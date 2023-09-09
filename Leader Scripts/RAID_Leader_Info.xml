@@ -1,0 +1,577 @@
+<muclient>
+<plugin
+   name="RAID_Leader_Info"
+   author="Nokfah"
+   id="cc26cf429bcf2c1c432cae40"
+   language="Lua"
+   purpose="Keeps helps the leader report information"   
+   save_state="y"
+   version="1.0"
+   >
+      <description trim="n">
+      <![CDATA[
+==================== RAID Leader Info ==================== 
+ rd buffer <buffer>    -- Sets the instructions to get to the buffer room
+ rd buffer             -- Reports the buffer instructions to the group
+
+ rd here        -- Count how many are in your current room   
+ rd here        -- Count how many are in your current area
+
+ rd key <key>   -- set the key(as it appears in inventory)
+ rd keys        -- look at everyone who is in the room to see the distribution of keys
+]]>
+</description>
+</plugin>
+
+<aliases>
+   <alias enabled="y" script="Help"
+      regexp="y" match="^rd help$"        
+      sequence="1"
+   ></alias>
+
+   <alias script="SetBuffer"
+      enabled="y" regexp="y" match="^rd buffer (.*)$"           
+      sequence="100" keep_evaluating="n"
+   ></alias>
+
+   <alias script="ReportBuffer"
+      enabled="y" regexp="y" match="^rd buffer$"  
+      sequence="100" keep_evaluating="n"
+   ></alias>
+
+   <alias script="TankReport"
+      enabled="y" regexp="y" match="^rd tank$"           
+      sequence="100"
+   ></alias>
+
+   <alias script="Here"
+      enabled="y" regexp="y" match="^rd here$"           
+      sequence="100"
+   ></alias>
+
+   <alias script="StartInArea"
+      enabled="y" regexp="y" match="^rd area$"           
+      sequence="100"
+   ></alias>
+
+   <alias script="SetKey"
+      enabled="y" regexp="y" match="^rd key (.*)$"           
+      sequence="100"
+   ></alias>
+
+   <alias script="LookForKeys"
+      enabled="y" regexp="y" match="^rd keys$"           
+      sequence="100"
+   ></alias>
+</aliases>
+
+<triggers>
+      <!-- study -->
+      <trigger group="study" script="LogStudy" enabled="y" keep_evaluating="y"            
+         match="^(.*) \w+ (in perfect health)\.$"  regexp="y"></trigger>      
+      <trigger group="study" script="LogStudy" enabled="y" keep_evaluating="y"            
+         match="^(.*) \w+ (a few minor scratches)\.$"  regexp="y"></trigger>
+      <trigger group="study" script="LogStudy" enabled="y" keep_evaluating="y"            
+         match="^(.*) \w+ (showing a few grazes)\.$"  regexp="y"></trigger>
+      <trigger group="study" script="LogStudy" enabled="y" keep_evaluating="y"         
+         match="^(.*) \w+ (bleeding lightly)\.$"  regexp="y"></trigger>
+      <trigger group="study" script="LogStudy" enabled="y" keep_evaluating="y"            
+         match="^(.*) \w+ (some small wounds and bruises)\.$"  regexp="y"></trigger>
+      <trigger group="study" script="LogStudy" enabled="y" keep_evaluating="y"            
+         match="^(.*) \w+ (showing a few battle scars)\.$"  regexp="y"></trigger>
+      <trigger group="study" script="LogStudy" enabled="y" keep_evaluating="y"            
+         match="^(.*) \w+ (quite a few wounds)\.$"  regexp="y"></trigger>
+      <trigger group="study" script="LogStudy" enabled="y" keep_evaluating="y"            
+         match="^(.*) \w+ (some big nasty wounds and scratches)\.$"  regexp="y"></trigger>
+      <trigger group="study" script="LogStudy" enabled="y" keep_evaluating="y"            
+         match="^(.*) \w+ (some very nasty wounds)\.$"  regexp="y"></trigger>
+      <trigger group="study" script="LogStudy" enabled="y" keep_evaluating="y"            
+         match="^(.*) \w+ (a hospital)\.$"  regexp="y"></trigger>
+      <trigger group="study" script="LogStudy" enabled="y" keep_evaluating="y"            
+         match="^(.*) \w+ (gravely injured)\.$"  regexp="y"></trigger>
+      <trigger group="study" script="LogStudy" enabled="y" keep_evaluating="y"            
+         match="^(.*) \w+ (at death''s door)\.$"  regexp="y"></trigger>
+      
+      <!-- look -->
+      <trigger name="start_room"
+         match="^\{roomchars\}$"
+         enabled="n" regexp="y" keep_evaluating="y"
+         script="StartRoom"
+         omit_from_output="y"
+      ></trigger>
+      
+      <trigger name="end_room" group="fighting"
+         match="^\{/roomchars\}$"
+         enabled="n" regexp="y" keep_evaluating="y"
+         script="EndRoom"
+         omit_from_output="y"
+      ></trigger>
+   
+      <trigger name="log_fightingmob" group="fighting"
+         match="^(?:\(.*\))* (?<attacker>.*) is trying to KILL (?<victim>.*)!$"
+         enabled="n" regexp="y" keep_evaluating="y"
+         script="LogFighting"
+      ></trigger>
+      
+      <trigger name="log_fightingplayer" group="fighting"   
+         match="^(?:\(.*\))* (?<attacker>.*) is fighting (?<victim>.*)\.$"
+         enabled="n" regexp="y" keep_evaluating="y"
+         script="LogFighting"
+      ></trigger>
+      
+      <trigger name="log_unengaged" group="fighting"
+         match="^(?:\(.*\))* (?<player>.*) is here\.$"
+         enabled="n" regexp="y" keep_evaluating="y"
+         script="LogUnengaged"
+      ></trigger>
+
+      <trigger name="found_in_area"
+         match="^Players found: \[([0-9]+)\], Max this reboot: \[[0-9]+\], Connections this reboot: \[[0-9]+\]$"
+         enabled="n" regexp="y" keep_evaluating="y"
+         script="FoundInArea"
+      ></trigger>         
+
+      <trigger name="peeking_at_who"
+         match="^You sneak a look at (.*)'s? inventory:$"
+         enabled="n" regexp="y" keep_evaluating="y"
+         script="PeekingAtWho"
+      ></trigger> 
+      
+      <trigger name="inventory_start"
+         match="^\{inventory\}$"
+         enabled="n" regexp="y" keep_evaluating="y"
+         script="InventoryStart"
+      ></trigger>
+
+      <trigger name="inventory_end"
+         match="^\{/inventory\}$"
+         enabled="n" regexp="y" keep_evaluating="y"
+         script="InventoryEnd"
+      ></trigger>      
+</triggers>
+
+<script>
+<![CDATA[
+   require "gmcphelper" 
+   require "serialize"
+
+   local studyMap = {
+         ["in perfect health"] = "100",
+         ["a few minor scratches"] = "95-99",
+         ["showing a few grazes"] = "85-94",
+         ["bleeding lightly"] = "75-84",
+         ["some small wounds and bruises"] = "65-74",
+         ["showing a few battle scars"] = "55-64",
+         ["quite a few wounds"] = "45-54",
+         ["some big nasty wounds and scratches"] = "35-44",
+         ["some very nasty wounds"] = "25-34",
+         ["a hospital"] = "15-24",
+         ["gravely injured"] = "5-14",
+         ["at death's door"] = "0-4"
+      }
+	
+   local channel = "gtell";
+
+   local buffer = ""
+
+   local me = ""
+   local group = { }    
+   local players = { ["you"] = {} }
+   local unengaged = {}   
+
+   local clrSep = "@D"
+   local clrLbl = "@x208"
+   local clrVal = "@W"
+
+   local key = ""
+   local peekingAt = ""
+   local keys = {}
+
+	function SetBuffer(name, line, wildcards)
+      buffer = wildcards[1]
+   end
+
+   function ReportBuffer()
+      SendNoEcho(channel .. " @D[@x208BUFFER@D|@W" .. buffer .. "@D]")
+   end
+
+   function Help()
+      ColourNote("orange", "black", GetPluginInfo (GetPluginID (), 3))
+   end
+
+   function OnPluginInstall()  
+      Help()
+
+      ColourNote("orange", "black", GetPluginInfo (GetPluginID (), 3))                 
+      
+      -- get player name and group
+      Send_GMCP_Packet("request char")
+      Send_GMCP_Packet("protocols gmcp sendgroup")         
+   end                         
+   
+   function OnPluginBroadcast (msg, id, name, text)
+      -- Look for GMCP handler.
+      if (id == '3e7dedbe37e44942dd46d264') then
+         if (text == "group") then
+            res, gmcparg = CallPlugin("3e7dedbe37e44942dd46d264","gmcpval","group")
+            if gmcparg == "" then gmcparg = "nil" end
+            luastmt = "gmcpdata = " .. gmcparg --- Convert the serialized string back into a lua table.
+            assert (loadstring (luastmt or "")) ()
+         
+            if (gmcpdata ~= nil) then
+               local noLongerInGroup = {}
+               for name, info in pairs(group) do
+                  noLongerInGroup[name] = true
+               end
+
+               for i, member in ipairs(gmcpdata.members or {}) do                   
+                  local memberName = string.lower(member.name)
+                  if (member.name == me) then memberName = "you" end
+               
+                  group[memberName] = { 
+                     hp = tonumber(member.info.hp) / tonumber(member.info.mhp) * 100,                       
+                     here = member.info.here
+                  }
+
+                  noLongerInGroup[memberName] = false
+               end                           
+
+               for member, notInGroup in pairs(noLongerInGroup) do
+                  if notInGroup then
+                     group[member] = nil
+                  end
+               end
+            end
+         elseif (text == "char.status") then
+            res, gmcparg = CallPlugin("3e7dedbe37e44942dd46d264","gmcpval","char.status")
+            luastmt = "gmcpdata = " .. gmcparg --- Convert the serialized string back into a lua table.
+            assert (loadstring (luastmt or "")) ()
+            
+            players["you"].attacking = gmcpdata.enemy or ""
+          elseif (text == "char.base") then
+            res, gmcparg = CallPlugin("3e7dedbe37e44942dd46d264","gmcpval","char.base")
+            luastmt = "gmcpdata = " .. gmcparg --- Convert the serialized string back into a lua table.
+            assert (loadstring (luastmt or "")) ()
+         
+            if (gmcpdata ~= nil) then
+               if me ~= gmcpdata.name then
+                  me = gmcpdata.name
+                  ColourNote("orange", "", "Me: " .. me) 
+               end
+            end
+         end
+      end         
+   end -- onpluginbroadcast
+   
+   function Here()
+      local here = 0
+      local notHere = {}      
+      for player, info in pairs(group) do
+         if info.here == "1" then
+            here = here + 1
+         else
+            table.insert(notHere, player)
+         end
+      end
+
+      local reportTbl = StartLabel("HERE")
+      table.insert(reportTbl, { typ="val", color="@G", val=tostring(here) })            
+      table.insert(reportTbl, { typ="sep", val="|" })
+      table.insert(reportTbl, { typ="val", color="@R", val=tostring(#notHere) })
+      table.insert(reportTbl, { typ="sep", val="|" })
+      for i, player in ipairs(notHere) do
+         table.insert(reportTbl, { typ="val", val=player })
+         table.insert(reportTbl, { typ="sep", val="," })
+      end
+      table.remove(reportTbl)
+      table.insert(reportTbl, EndLabel())
+
+      Report(reportTbl)
+   end
+
+   function StartInArea()
+      EnableTrigger("found_in_area", true)
+
+      SendNoEcho("who area group")
+   end
+
+   function FoundInArea(name, line, wildcards)
+      EnableTrigger("found_in_area", false)
+
+      local totalInGroup = 0
+      for player, info in pairs(group) do
+         totalInGroup = totalInGroup + 1
+      end
+
+      local inArea = tonumber(wildcards[1])
+
+
+      local reportTbl = StartLabel("AREA")
+      table.insert(reportTbl, { typ="val", color="@G", val=tostring(inArea) })      
+      table.insert(reportTbl, { typ="sep", val="|" })            
+      table.insert(reportTbl, { typ="val", color="@R", val=tostring(totalInGroup - inArea) })         
+      table.insert(reportTbl, EndLabel())
+
+      Report(reportTbl)
+   end
+
+   function SetKey(name, line, wildcards)
+      key = wildcards[1]
+
+      DeleteTrigger("log_key")
+      local triggerFlags = trigger_flag.KeepEvaluating + trigger_flag.RegularExpression        
+      AddTriggerEx("log_key", "^(?:\\((?<count>\\s*[0-9]+)\\))?\\s*(?:\\(K\\))?\\(M\\) " .. key .. "(?: \\([0-9]+\\))?$", "", triggerFlags,
+            custom_colour.NoChange, 0, "", "LogKey", sendto.script, 200)
+
+      ColourNote("orange", "", "Key set to: ", "cyan", "", key)
+   end
+
+   function LookForKeys()
+      if key ~= nil and key ~= "" then
+         EnableTrigger("log_key", true)
+         EnableTrigger("peeking_at_who", true)
+         EnableTrigger("inventory_start", true)
+         EnableTrigger("inventory_end", true)
+
+         keys = {}
+         for player, info in pairs(group) do
+            if info.here == "1" and player ~= "you" then
+               SendNoEcho("look " .. player)     
+            end  
+         end
+
+         SendNoEcho("inventory")
+      else
+         ColourNote("orange", "", "Look for keys: ", "red", "", "no key set")
+      end
+   end   
+
+   function PeekingAtWho(name, line, wildcards)
+      peekingAt = wildcards[1]      
+   end
+
+   function LogKey(name, line, wildcards)
+      local count = 1
+      if wildcards.count ~= nil and wildcards.count ~= "" then
+         count = tonumber(wildcards.count)
+      end
+
+      if keys[peekingAt] == nil then keys[peekingAt] = 0 end
+      keys[peekingAt] = keys[peekingAt] + count
+   end
+
+   function InventoryStart()
+      peekingAt = me
+   end
+
+   function InventoryEnd()
+      EnableTrigger("log_key", false)
+      EnableTrigger("peeking_at_who", false)
+      EnableTrigger("inventory_start", false)
+      EnableTrigger("inventory_end", false)
+
+      ReportKeys()
+   end
+
+   function ReportKeys()
+      local totalKeys = 0
+      for player, count in pairs(keys) do
+         totalKeys = totalKeys + count
+      end
+
+      local reportTbl = StartLabel("KEYS")
+      table.insert(reportTbl, { typ="val", val=tostring(totalKeys) })      
+      table.insert(reportTbl, EndLabel())   
+
+      for player, count in spairs(keys, function(t,a,b) return t[a] > t[b] end) do
+         table.insert(reportTbl, { typ="sep", val=" " })
+         ConcatTables(reportTbl, StartLabel(player))
+         table.insert(reportTbl, { typ="val", val=tostring(count) })
+         table.insert(reportTbl, EndLabel())         
+      end
+
+      Report(reportTbl)
+   end
+
+   function UpdateRoom()   
+      EnableGroup("fighting", true)
+      SendNoEcho("study")        
+      SendNoEcho("look")         
+   end
+   
+   function StartRoom()                
+      Note("Start ROOM")
+
+      players = { ["you"] = {} }       
+      unengaged = {}
+
+      EnableTriggerGroup("fighting", true)
+   end
+   
+   function EndRoom()   
+      Note("End ROOM")
+      EnableTriggerGroup("fighting", false)
+                        
+      -- build foe and unengaged maps
+      for who, what in pairs(players) do     
+         if players[who].attacking ~= nil then
+            for i, target in ipairs(players[who].attacking) do
+               if (players[target] == nil) then  players[target] = {} end
+               if (players[target].foes == nil) then players[target].foes = {} end
+               table.insert(players[target].foes, who)
+            end                                       
+         else
+            table.insert(unengaged, who)
+         end
+      end         
+   end
+   
+   function LogStudy(name, line, wildcards)
+      local nameLowercase = string.lower(wildcards[1])
+      if players[nameLowercase] == nil then players[nameLowercase] = {} end
+      
+      players[nameLowercase].health = studyMap[wildcards[2]]
+   end
+   
+   function LogFighting(name, line, wildcards)              
+      local nameLowercase = string.lower(wildcards.attacker)         
+      
+      --ColourNote("orange", "", (nameLowercase or "") .. " - ".. (wildcards.victim or "") .. " - " .. (wildcards.player or ""))
+      
+      if players[nameLowercase] == nil then players[nameLowercase] = {} end
+      
+      if players[nameLowercase].attacking == nil then players[nameLowercase].attacking = {} end
+      table.insert(players[nameLowercase].attacking, string.lower(wildcards.victim))
+      players[nameLowercase].count = (players[nameLowercase].count or 0) + 1                    
+   end
+   
+   function LogUnengaged(name, line, wildcards)
+      local nameLowercase = string.lower(wildcards.player)
+      if (players[nameLowercase] ~= nil) then 
+         players[nameLowercase].attacking = nil 
+      end                  
+   end
+   
+   function TankReport()   
+      local tanking = {}
+      local somethingToReport = false   
+
+      for groupie, data in pairs(group) do
+         if players[groupie] ~= nil and players[groupie].foes ~= nil then              
+            local foeCount = table.getn(players[groupie].foes)                     
+
+            if foeCount > 0 then 
+               somethingToReport = true
+               tanking[groupie] = foeCount                  
+            end
+         end
+      end 
+
+      local reportTbl = {}
+      table.insert(reportTbl, { typ="sep", val="[" })
+      table.insert(reportTbl, { typ="lbl", val="TANKING" })
+      table.insert(reportTbl, EndLabel())
+
+      for player, count in spairs(tanking, function(t,a,b) return t[a] > t[b] end) do
+         local playerName = player
+         if player == "you" then playerName = string.lower(me) end    
+
+         local hpColor = "@G"
+         if group[player].hp < 70 then hpColor = "@Y" end
+         if group[player].hp < 30 then hpColor = "@R" end
+
+         table.insert(reportTbl, { typ="sep", val=" [" })
+         table.insert(reportTbl, { typ="val", color=hpColor, val=string.format("%3.1f%%", group[player].hp) })
+         table.insert(reportTbl, { typ="sep", val="|" })
+         table.insert(reportTbl, { typ="val", val=playerName })
+         table.insert(reportTbl, { typ="sep", val="|" })
+         table.insert(reportTbl, { typ="val", val=tostring(count) })
+         table.insert(reportTbl, { typ="sep", val="]" })
+      end         
+
+      if somethingToReport then 
+         ReportChannel(reportTbl) 
+      else
+         ColourNote("orange", "", "Tank report: No tanks...")
+      end
+   end
+
+
+   -----------------------------------
+   -- REPORTING
+   -----------------------------------
+   function Report(reportTbl)
+      ReportChannel(reportTbl)
+   end
+   
+   function ReportChannel(reportTbl)
+      local reportStr = channel .. " "
+      
+      for i, style in pairs(reportTbl) do
+         local color = "@w"
+         if style.color == nil then
+            if style.typ == "sep" then color = clrSep 
+            elseif style.typ == "lbl" then color = clrLbl 
+            elseif style.typ == "val" then color = clrVal end
+         else
+            color = style.color
+         end
+         
+         reportStr = reportStr .. color .. style.val
+      end
+      
+      SendNoEcho(reportStr)
+   end
+   
+   function ConcatTables(firstTbl, secondTbl)
+      for i, val in ipairs(secondTbl) do
+         table.insert(firstTbl, val)
+      end
+   end
+
+   function ReportTracker(reportTbl)
+   
+   end
+         
+   function ReportMain(reportTbl)
+
+   end   
+         
+   function StartLabel(label)
+      return {
+         { typ="sep", val="[" },
+         { typ="lbl", val=label },
+         { typ="sep", val="|" }
+      }
+   end
+   
+   function EndLabel()
+      return { typ="sep", val="]" }
+   end
+
+   function spairs(t, order)
+         -- collect the keys
+         local keys = {}
+         for k in pairs(t) do keys[#keys+1] = k end
+
+         -- if order function given, sort by it by passing the table and keys a, b,
+         -- otherwise just sort the keys 
+         if order then
+            table.sort(keys, function(a,b) return order(t, a, b) end)
+         else
+            table.sort(keys)
+         end
+
+         -- return the iterator function
+         local i = 0
+         return function()
+            i = i + 1
+            if keys[i] then
+               return keys[i], t[keys[i]]
+            end
+         end
+      end
+]]>
+</script>
+
+</muclient>

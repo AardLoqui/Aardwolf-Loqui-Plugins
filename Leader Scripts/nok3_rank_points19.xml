@@ -1,0 +1,479 @@
+<muclient>
+<plugin
+   name="Nok3_Rank_Points"
+   author="Nokfah"
+   id="441d94e9e4cdfb78145efd75"
+   language="Lua"
+   purpose="Calculate the rank points for all loqui members"   
+   save_state="y"
+   version="1.0"
+   >
+</plugin>
+
+<aliases>
+   <alias regexp="y" match="^getrank (.*)$" enabled="y" script="Rank"></alias>
+   <alias regexp="y" match="^getrankdebug$" enabled="y" script="ToggleDebug"></alias>
+</aliases>
+
+<triggers>
+-- Landion is a Ghost of Loqui.
+   <trigger group="capture"
+      regexp="y" match="^.* is an? (?<rank>.*) of Loqui\."
+      enabled="n" script="CurrentRank"
+   ></trigger>
+
+-- Quests Complete : [  15549]  Quests Failed: [   761]  Gquests Won: [      0]
+   <trigger group="capture"
+      regexp="y" match="^Quests Complete : \[\s*(?<quest>[0-9]+)\]  Quests Failed: \[\s*[0-9]+\]  Gquests Won: \[\s*(?<gq>[0-9]+)\]\s*$"
+      enabled="n" script="QuestGQ"
+   ></trigger>
+
+-- Campaigns Done  : [   2896]  Duels Won    : [    18]  
+   <trigger group="capture"                                                
+      regexp="y" match="^Campaigns Done  : \[\s*(?<cp>[0-9]+)\]"
+      enabled="n" script="CP"
+   ></trigger>
+
+-- PK Victories    : [     10]  PK Losses    : [    64]
+   <trigger group="capture"
+      regexp="y" match="^PK Victories    : \[\s*(?<pk>[0-9]+)\]  PK Losses    : \[\s*[0-9]+\]\s*$"
+      enabled="n" script="PK"
+   ></trigger>
+
+-- Total Wars  : [  34]  Won: [  13]  Lost: [  21]   Kills: [  18]
+   <trigger group="capture"
+      regexp="y" match="^Total Wars  : \[\s*[0-9]+\]  Won: \[\s*(?<warWin>[0-9]+)\]  Lost: \[\s*[0-9]+\]   Kills: \[\s*(?<warKill>[0-9]+)\]$"
+      enabled="n" script="War"
+   ></trigger>
+
+   --Total Wars  - Won: [  59]  Kills: [  61]
+   <trigger group="capture"
+      regexp="y" match="^Total Wars  - Won: \[\s*(?<warWin>[0-9]+)\]  Kills: \[\s*(?<warKill>[0-9]+)\]$"
+      enabled="n" script="War"
+   ></trigger>
+
+   -- Farringar has donated 32,000,001 gold and 0 qp to the clan.
+   <trigger group="capture"
+      regexp="y" match="^.* has donated (.*) gold and .* qp to the clan\.$"
+      enabled="n" script="Gold"
+   ></trigger>
+
+   -- No one of that name is playing.
+   <trigger group="capture"
+      regexp="y" match="^No one of that name is playing\.$"
+      enabled="n" script="NotOnline"
+   ></trigger>
+</triggers>
+
+<script>
+<![CDATA[
+   require "wait"
+   require "serialize"
+
+   local ranks = {
+      [0] = "Malcontent",
+      [250] = "Agitator",
+      [550] = "Protagonist",
+      [1000] = "Rebel",
+      [1700] = "Activist",
+      [3200] = "Revolutionary"
+   }
+
+   local rankNumbers = {
+      ["Malcontent"] = 1,
+      ["Agitator"] = 2,
+      ["Protagonist"] = 3,
+      ["Rebel"] = 4,
+      ["Activist"] = 5,
+      ["Revolutionary"] = 6,
+      ["Ghost"] = 7, 
+   }
+
+   local points = { -- gq = 6/4,warWin = 2,warKill = 2,level = 1/10,redoLevels = 1/35,cp = 3/4,quest = 1/10,pup = 1/45
+      gold = 1/1000000,
+      pk = 5,
+      gq = 6/4,
+      warWin = 2,
+      warKill = 2,
+      level = 1/10,
+      redoLevels = 1/35,
+      cp = 3/4,
+      quest = 1/10,
+      pup = 1/45
+   }
+   
+   local baseStats = {
+      Chosig     = { gold = 0, pk = 0,   gq = 7,   warWin = 1,  warKill = 1,  level = 263,   cp = 24,    quest = 617,   pup = 0,      offset=0 },
+      Gawyn      = { gold = 0, pk = 0,   gq = 0,   warWin = 0,  warKill = 0,  level = 888,   cp = 27,    quest = 464,   pup = 0,      offset=0 },
+      Vernis     = { gold = 0, pk = 0,   gq = 0,   warWin = 0,  warKill = 12, level = 610,   cp = 22,    quest = 574,   pup = 0,      offset=0 },
+      Attikus    = { gold = 0, pk = 0,   gq = 0,   warWin = 1,  warKill = 0,  level = 1683,  cp = 116,   quest = 1482,  pup = 0,      offset=0 },
+      Farringar  = { gold = 0, pk = 23,  gq = 7,   warWin = 48, warKill = 51, level = 5087,  cp = 145,   quest = 3794,  pup = 234,    offset=0 },
+      Savvy      = { gold = 0, pk = 0,   gq = 53,  warWin = 67, warKill = 87, level = 1465,  cp = 589,   quest = 10439, pup = 888,    offset=0 },
+      Dranged    = { gold = 0, pk = 0,   gq = 0,   warWin = 1,  warKill = 2,  level = 1610,  cp = 140,   quest = 2156,  pup = 1154,   offset=0 },
+      Mavelost   = { gold = 0, pk = 0,   gq = 34,  warWin = 0,  warKill = 3,  level = 1143,  cp = 71,    quest = 1707,  pup = 0,      offset=0 },
+      Bellagree  = { gold = 0, pk = 4,   gq = 0,   warWin = 13, warKill = 16, level = 6103,  cp = 150,   quest = 3321,  pup = 590,    offset=0 },
+      Aldehyde   = { gold = 0, pk = 0,   gq = 2,   warWin = 1,  warKill = 0,  level = 1249,  cp = 81,    quest = 1691,  pup = 47,     offset=0 },
+      Madcatz    = { gold = 0, pk = 1,   gq = 12,  warWin = 50, warKill = 92, level = 2799,  cp = 39,    quest = 6749,  pup = 87,     offset=0 },
+      Baurus     = { gold = 0, pk = 5,   gq = 2,   warWin = 13, warKill = 13, level = 2259,  cp = 313,   quest = 3023,  pup = 4720,   offset=0 },
+      Cares      = { gold = 0, pk = 2,   gq = 225, warWin = 4,  warKill = 16, level = 16303, cp = 2053,  quest = 7650,  pup = 4451,   offset=0 },
+      Rokshel    = { gold = 0, pk = 2,   gq = 0,   warWin = 0,  warKill = 0,  level = 3251,  cp = 557,   quest = 672,   pup = 260,    offset=0 },
+      Adam       = { gold = 0, pk = 106, gq = 6,   warWin = 0,  warKill = 0,  level = 71085, cp = 1539,  quest = 10495, pup = 96565,  offset=0 },
+      Limunious  = { gold = 0, pk = 10,  gq = 70,  warWin = 24, warKill = 32, level = 16884, cp = 1241,  quest = 11014, pup = 156892, offset=0 },
+      Noegel     = { gold = 0, pk = 37,  gq = 9,   warWin = 3,  warKill = 4,  level = 13197, cp = 243,   quest = 6156,  pup = 280,    offset=0 },
+      Slinks     = { gold = 0, pk = 24,  gq = 74,  warWin = 10, warKill = 10, level = 16884, cp = 1073,  quest = 5356,  pup = 48936,  offset=0 },
+      Bodhi      = { gold = 0, pk = 1,   gq = 0,   warWin = 0,  warKill = 0,  level = 11963, cp = 4475,  quest = 6026,  pup = 28470,  offset=0 },
+      Durel      = { gold = 0, pk = 0,   gq = 133, warWin = 0,  warKill = 0,  level = 2814,  cp = 681,   quest = 6136,  pup = 9930,   offset=0 },
+      Adra       = { gold = 0, pk = 1,   gq = 0,   warWin = 0,  warKill = 0,  level = 9282,  cp = 919,   quest = 5091,  pup = 51,     offset=0 },
+      Rauru      = { gold = 0, pk = 145, gq = 884, warWin = 26, warKill = 28, level = 19698, cp = 15306, quest = 16537, pup = 156081, offset=0 },
+      Bupy       = { gold = 280, pk = 8,   gq = 78,   warWin = 1,  warKill = 1,  level = 9302,  cp = 2070,   quest = 7421, pup = 6598, offset=1700 },
+      Gizmmo     = { gold = 0,   pk = 3,   gq = 21,   warWin = 0,  warKill = 0,  level = 3777,  cp = 522,    quest = 2013, pup = 60,   offset=550 },
+      Zexe       = { gold = 0,   pk = 1,   gq = 75,   warWin = 0,  warKill = 0,  level = 4582,  cp = 861,    quest = 3043, pup = 2778, offset=550 },
+      Taveris    = { gold = 10,  pk = 6,   gq = 14,   warWin = 1,  warKill = 1,  level = 2732,  cp = 24,     quest = 6035, pup = 61,   offset=550 },
+      Jegeas     = { gold = 0,   pk = 0,   gq = 22,   warWin = 0,  warKill = 0,  level = 7289,  cp = 418,    quest = 8104, pup = 266,  offset=250 },
+      Arf        = { gold = 3,   pk = 0,   gq = 0,    warWin = 0,  warKill = 0,  level = 3319,  cp = 818,    quest = 7922, pup = 64,   offset=550 },
+      Principium = { gold = 28,  pk = 1,   gq = 23,   warWin = 0,  warKill = 0,  level = 1946,  cp = 358,    quest = 493,  pup = 1784, offset=250 },
+      Vespar     = { gold = 222, pk = 44,  gq = 209,  warWin = 0,  warKill = 0,  level = 4747,  cp = 3099,   quest = 3242, pup = 54,   offset=250 },
+      Mahon      = { gold = 5,   pk = 1,   gq = 1,    warWin = 0,  warKill = 0,  level = 10114, cp = 1966,   quest = 8884, pup = 698,  offset=1700 },
+      Noro       = { gold = 0,   pk = 3,   gq = 6,    warWin = 28, warKill = 46, level = 3683,  cp = 214,    quest = 6135, pup = 994,  offset=0 },
+      Moshu      = { gold = 7,   pk = 0,   gq = 0,    warWin = 0,  warKill = 0,  level = 830,   cp = 48,     quest = 1117, pup = 31,   offset=250 },
+      Tormat     = { gold = 25,  pk = 5,   gq = 51,   warWin = 4,  warKill = 0,  level = 3130,  cp = 1899,   quest = 9034, pup = 19331, offset=1700 },
+      Gideon     = { gold = 20,  pk = 0,   gq = 8,    warWin = 0,  warKill = 1,  level = 3825,  cp = 378,    quest = 3583, pup = 0,     offset=250 },
+      Blonk      = { gold = 7,   pk = 0,   gq = 0,    warWin = 0,  warKill = 0,  level = 745,   cp = 62,     quest = 426,  pup = 0,     offset=250 },
+      Bloodreaver= { gold = 11,  pk = 57,  gq = 153,  warWin = 138,warKill = 173,level = 5227,  cp = 1295,   quest = 12946,pup = 2647, offset=0 },
+      Phy        = { gold = 4,   pk = 0,   gq = 8,    warWin = 0,  warKill = 0,  level = 3717,  cp = 113,    quest = 990,  pup = 201,  offset=550 },
+      Glade      = { gold = 11,  pk = 49,  gq = 79,   warWin = 1,  warKill = 0,  level = 6744,  cp = 4111,   quest = 5504, pup = 6452, offset=1000 },
+      Suomi      = { gold = 6,   pk = 1,   gq = 0,    warWin = 14, warKill = 26, level = 3904,  cp = 44,     quest = 1324, pup = 78,   offset=250 },
+      Emilee     = { gold = 0,   pk = 7,   gq = 60,   warWin = 1,  warKill = 5,  level = 7035,  cp = 1000,   quest = 6955, pup = 11762, offset=0 },
+      MightyChick = { gold = 5,  pk = 3,   gq = 43,   warWin = 0,  warKill = 0,  level = 9129,  cp = 1840,   quest = 5103, pup = 6958, offset=1700 },
+      Cide       = { gold = 187, pk = 1,   gq = 6,    warWin = 11, warKill = 13, level = 2351,  cp = 178,    quest = 2615, pup = 287,  offset=1700 },
+      Menolin    = { gold = 40,  pk = 1,   gq = 11,   warWin = 8,  warKill = 8,  level = 3732,  cp = 173,    quest = 2080, pup = 1781,  offset=550 },
+      Kratos     = { gold = 0,   pk = 245, gq = 213,  warWin = 135, warKill = 228, level = 24050, cp = 7248, quest = 14424, pup = 97985, offset=0 },
+      Xolotl     = { gold = 0,   pk = 0,   gq = 4,    warWin = 50,  warKill = 48,  level = 2055,  cp = 75,   quest = 4329,  pup = 242,   offset=0 },
+      Khadaji    = { gold = 0,   pk = 75,  gq = 22,   warWin = 0,   warKill = 1,   level = 6834,  cp = 254,  quest = 1705,  pup = 17618, offset=0 },
+      Lundfu	 = { gold = 0,   pk = 0,   gq = 141,  warWin = 0,   warKill = 0,   level = 9024,  cp = 1315, quest = 4149,  pup = 623, offset=0 },
+      Morn       = { gold = 7.1, pk = 71,  gq = 383,  warWin = 16,  warKill = 28,  level = 8442,  cp = 5254, quest = 12207, pup = 11569, offset=1000 },
+      Intuition  = { gold = 0,   pk = 2,   gq = 84,   warWin = 1,  warKill = 1,   level = 6189,   cp = 4682, quest = 6296,  pup = 2595, offset=0 },
+      Dixon      = { gold = 0,   pk = 0,   gq = 64,   warWin = 0,  warKill = 0,   level = 4662,   cp = 1246, quest = 1154,  pup = 156, offset=0 },
+      Kelaire    = { gold = 0,   pk = 2,   gq = 76,   warWin = 0,  warKill = 0,   level = 3993,   cp = 820,  quest = 1028,  pup = 379, offset=0 },
+      Rathik     = { gold = 29,  pk = 0,   gq = 126,  warWin = 6,  warKill = 10,  level = 963,    cp = 406,  quest = 5045,  pup = 0,   offset = 1000},
+      Kaeus      = { gold = 0,   pk = 1,   gq = 226,  warWin = 0,  warKill = 0,   level = 4141,   cp = 1219, quest = 2164, pup = 853,  offset=0 },
+      Vandit     = { gold = 0,   pk = 0,   gq = 9,    warWin = 0,  warKill = 0,   level = 5471,   cp = 3569, quest = 2822, pup = 1847, offset=0 },
+      Yhtaa      = { gold = 0,   pk = 19,  gq = 249,  warWin = 0,  warKill = 0,   level = 13871,  cp = 1493, quest = 13859, pup = 83165, offset=0 },
+      Arindel    = { gold = 54,  pk = 1,   gq = 3,    warWin = 0,  warKill = 0,   level = 7186,   cp = 661,  quest = 4610,  pup = 4475,  offset=1000 },
+      Anhur      = { gold = 0,   pk = 3,   gq = 98,   warWin = 0,  warKill = 0,   level = 4245,   cp = 1563, quest = 1469,  pup = 174, offset=0 },
+      Omnivek    = { gold = 0,   pk = 0,   gq = 168,  warWin = 0,  warKill = 0,   level = 5381,   cp = 2187, quest = 3484,  pup = 51, offset=0 },
+      Gaballon   = { gold = 0,   pk = 1,   gq = 201,  warWin = 0,  warKill = 0,   level = 5491,   cp = 1511, quest = 2652, pup = 518, offset=0 },
+      Averan     = { gold = 0,   pk = 0,   gq = 50,   warWin = 0,  warKill = 0,   level = 3635,   cp = 1099, quest = 4621,   pup = 0, offset= 250 },
+      Enne       = { gold = 0,   pk = 0,   gq = 53,   warWin = 0,  warKill = 0,   level = 1620,   cp = 335,  quest = 601,  pup = 2454, offset = 0 },
+      WhiteTiger = { gold = 0,   pk = 0,   gq = 21,   warWin = 7,  warKill = 14,  level = 1107,   cp = 203,  quest = 2358, pup = 13, offset = 0 },
+      SimiLanJ   = { gold = 0,   pk = 0,   gq = 471,  warWin = 16, warKill = 24,  level = 16884,  cp = 5681, quest = 32376, pup = 266817, offset=0 }
+}
+     
+
+   local debugMode = false
+   local currentStats = {}	
+   local tellRequest = false
+   local tellPlayer = ""
+	
+   function OnPluginBroadcast (msg, id, name, text)
+      -- Look for GMCP handler.
+      if (text == "comm.channel") then
+         res, gmcparg = CallPlugin("3e7dedbe37e44942dd46d264","gmcpval","comm.channel")             
+         luastmt = "gmcpdata = " .. gmcparg --- Convert the serialized string back into a lua table.
+         assert (loadstring (luastmt or "")) ()
+
+         if (gmcpdata.chan == "tell" and string.find(gmcpdata.msg, "\'getrank\'") ~= nil) then                 
+            tellRequest = true
+            tellPlayer = gmcpdata.player
+            Execute("getrank " .. tellPlayer)
+         end                  
+      end         
+   end -- onpluginbroadcast
+
+   function ToggleDebug()
+      if debugMode == false then
+	debugMode = true
+	ColourNote("orange", "", "You will now see table line when getranking people.")
+      else
+	debugMode = false
+	ColourNote("orange", "", "You will no longer see table line when getranking people.")
+      end
+   end
+
+   function Rank(name, line, wildcards)
+      local player = wildcards[1]:gsub("^%l", string.upper)
+
+      if baseStats[player] == nil then
+         baseStats[player] = { gold = 0, pk = 0, gq = 0, warWin = 0, warKill = 0, level = 0, cp = 0, quest = 0, pup = 0 }
+      end
+
+      ColourNote("orange", "", "Finding rank for:", "cyan", "", player, "orange", "", ".")
+
+      currentStats = {
+         name = player,
+         rank = "",
+         online = true,
+         gold = 0, pk = 0, gq = 0, warWin = 0, warKill = 0, level = 0, cp = 0, quest = 0, pup = 0 
+      } 
+
+      EnableTriggerGroup("capture", true)
+
+      SendNoEcho("whoi " .. player)
+
+      --trigger for myrank 16
+      local triggerFlags = trigger_flag.Enabled + trigger_flag.KeepEvaluating + trigger_flag.RegularExpression + trigger_flag.OneShot
+      local match = "^\\s*[0-9]+\\) who\\s+Loqui\\s+(?<level>[0-9]+)\\s+[0-9]+\\s+[0-9]+\\s+[0-9]+\\s+(?<pup>[0-9]+)\\s+[0-9]+$"
+
+      AddTriggerEx("level_pup" .. player, match:gsub("who", player), "", triggerFlags,
+            custom_colour.NoChange, 0, "", "LevelPup", sendto.script, 100)
+
+      SendNoEcho("myrank " .. player .. " 16")
+
+      --match for myrank 1, but keep triggerFlags from above
+      match = "^\\s*[0-9]+\\) who\\s+Loqui\\s+(?<level>[0-9]+)\\s+[0-9]+\\s*[0-9]+\\s+[0-9]+\\s+\\s+[0-9]+$"
+
+      AddTriggerEx("level_rankone" .. player, match:gsub("who", player), "", triggerFlags,
+            custom_colour.NoChange, 0, "", "Level", sendto.script, 100)
+
+      SendNoEcho("myrank " .. player .. " 1")
+      SendNoEcho("warinfo " .. player)
+   end	
+
+   function NotOnline()
+      currentStats.online = false
+   end
+
+   function CurrentRank(name, line, wildcards)
+      currentStats.rank = wildcards.rank
+   end
+
+   function QuestGQ(name, line, wildcards)
+      currentStats.quest = tonumber(wildcards.quest)
+      currentStats.gq = tonumber(wildcards.gq)
+   end
+
+   function CP(name, line, wildcards)      
+      currentStats.cp = tonumber(wildcards.cp)      
+   end
+
+   function PK(name, line, wildcards)
+      currentStats.pk = tonumber(wildcards.pk)      
+   end
+
+   function War(name, line, wildcards)
+      currentStats.warWin = tonumber(wildcards.warWin)      
+      currentStats.warKill = tonumber(wildcards.warKill)      
+
+      wait.make(
+         function() 
+            wait.time(.1)
+            ShowPoints()
+         end
+      )
+   end   
+
+   function Gold(name, line, wildcards)
+      local scrubbed = string.gsub(wildcards[1], ",", "")
+
+      currentStats.gold = tonumber(scrubbed)      
+   end
+
+   function LevelPup(name, line, wildcards)
+      currentStats.level = tonumber(wildcards.level)      
+      currentStats.pup = tonumber(wildcards.pup)      
+   end
+
+   function Level(name, line, wildcards)
+      currentStats.level = tonumber(wildcards.level)      
+   end
+
+   function ShowPoints()
+      EnableTriggerGroup("capture", false)   
+
+      if currentStats.online then
+         local nameLength = 7         
+         if string.len(currentStats.name) > nameLength then nameLength = string.len(currentStats.name) end
+         local nameFormatString = "%"..nameLength.."s"
+
+         ColourNote("orange", "", string.format(nameFormatString, currentStats.name),
+            "dimgray", "", " | ", 
+            "orange", "", " lvl ", "dimgray", "", " | ",
+            "orange", "", "  pup  ", "dimgray", "", " | ",
+            "orange", "", "quest", "dimgray", "", " | ",
+            "orange", "", "  cp  ", "dimgray", "", " | ",
+            "orange", "", " gq ", "dimgray", "", " | ",
+            "orange", "", " pk ", "dimgray", "", " | ",
+            "orange", "", "war win", "dimgray", "", " | ",
+            "orange", "", "war kill", "dimgray", "", " | ",
+            "orange", "", "gold")      
+
+         ColourNote("dimgray", "", "---------------------------------------------------------------------------------------")
+
+         ColourNote("cyan", "", string.format(nameFormatString, "Joined"), "dimgray", "", " | ",
+            "white", "", string.format("%5s", baseStats[currentStats.name].level), "dimgray", "", " | ",
+            "white", "", string.format("%7s", baseStats[currentStats.name].pup), "dimgray", "", " | ",
+            "white", "", string.format("%5s", baseStats[currentStats.name].quest), "dimgray", "", " | ",
+            "white", "", string.format("%6s", baseStats[currentStats.name].cp), "dimgray", "", " | ",
+            "white", "", string.format("%4s", baseStats[currentStats.name].gq), "dimgray", "", " | ",
+            "white", "", string.format("%4s", baseStats[currentStats.name].pk), "dimgray", "", " | ",
+            "white", "", string.format("%7s", baseStats[currentStats.name].warWin), "dimgray", "", " | ",
+            "white", "", string.format("%8s", baseStats[currentStats.name].warKill), "dimgray", "", " | ",
+            "white", "", string.format("%5s", math.floor(baseStats[currentStats.name].gold) .. "M"))
+
+         ColourNote("cyan", "", string.format(nameFormatString, "Current"), "dimgray", "", " | ",
+            "white", "", string.format("%5s", currentStats.level), "dimgray", "", " | ",
+            "white", "", string.format("%7s", currentStats.pup), "dimgray", "", " | ",
+            "white", "", string.format("%5s", currentStats.quest), "dimgray", "", " | ",
+            "white", "", string.format("%6s", currentStats.cp), "dimgray", "", " | ",
+            "white", "", string.format("%4s", currentStats.gq), "dimgray", "", " | ",
+            "white", "", string.format("%4s", currentStats.pk), "dimgray", "", " | ",
+            "white", "", string.format("%7s", currentStats.warWin), "dimgray", "", " | ",
+            "white", "", string.format("%8s", currentStats.warKill), "dimgray", "", " | ",
+            "white", "", string.format("%5s", math.floor(currentStats.gold/1000000) .. "M"))
+
+         ColourNote("yellow", "", string.format(nameFormatString, "Change"), "dimgray", "", " | ",
+            "white", "", string.format("%5s", currentStats.level - baseStats[currentStats.name].level), "dimgray", "", " | ",
+            "white", "", string.format("%7s", currentStats.pup - baseStats[currentStats.name].pup), "dimgray", "", " | ",
+            "white", "", string.format("%5s", currentStats.quest - baseStats[currentStats.name].quest), "dimgray", "", " | ",
+            "white", "", string.format("%6s", currentStats.cp - baseStats[currentStats.name].cp), "dimgray", "", " | ",
+            "white", "", string.format("%4s", currentStats.gq - baseStats[currentStats.name].gq), "dimgray", "", " | ",
+            "white", "", string.format("%4s", currentStats.pk - baseStats[currentStats.name].pk), "dimgray", "", " | ",
+            "white", "", string.format("%7s", currentStats.warWin - baseStats[currentStats.name].warWin), "dimgray", "", " | ",
+            "white", "", string.format("%8s", currentStats.warKill - baseStats[currentStats.name].warKill), "dimgray", "", " | ",
+            "white", "", string.format("%5s", math.floor((currentStats.gold/1000000-baseStats[currentStats.name].gold)) .. "M"))
+
+         local playersPoints = {
+            level = math.floor((currentStats.level - baseStats[currentStats.name].level) * points.level),
+            pup = math.floor((currentStats.pup - baseStats[currentStats.name].pup) * points.pup),
+            quest = math.floor((currentStats.quest - baseStats[currentStats.name].quest) * points.quest),
+            cp = math.floor((currentStats.cp - baseStats[currentStats.name].cp) * points.cp),
+            gq = math.floor((currentStats.gq - baseStats[currentStats.name].gq) * points.gq),
+            pk = math.floor((currentStats.pk - baseStats[currentStats.name].pk) * points.pk),
+            warWin = math.floor((currentStats.warWin - baseStats[currentStats.name].warWin) * points.warWin),
+            warKill = math.floor((currentStats.warKill - baseStats[currentStats.name].warKill) * points.warKill),
+            gold = math.min(rankNumbers[currentStats.rank] * 100, math.floor((currentStats.gold - (baseStats[currentStats.name].gold)*1000000) * points.gold))            
+         }
+
+	if currentStats.level > 14070 then --Differentiate between normal and redo levels
+           if baseStats[currentStats.name].level < 14070 then -- Joined before redo range
+              playersPoints.preRedo = math.floor((14070 - baseStats[currentStats.name].level) * points.level)
+              playersPoints.postRedo = math.floor((currentStats.level - 14070) * points.redoLevels)
+              playersPoints.level = playersPoints.preRedo + playersPoints.postRedo
+	   else
+              playersPoints.preRedo = 0
+              playersPoints.postRedo = math.floor((currentStats.level - baseStats[currentStats.name].level) * points.redoLevels)
+              playersPoints.level = playersPoints.preRedo + playersPoints.postRedo
+	   end
+	end
+
+         if currentStats.name == "Crowley" then
+            playersPoints.gold = math.floor((currentStats.gold - baseStats[currentStats.name].gold) * points.gold)
+         end
+
+         ColourNote("lime", "", string.format(nameFormatString, "Points"), "dimgray", "", " | ",
+            "white", "", string.format("%5s", playersPoints.level), "dimgray", "", " | ",
+            "white", "", string.format("%7s", playersPoints.pup), "dimgray", "", " | ",
+            "white", "", string.format("%5s", playersPoints.quest), "dimgray", "", " | ",
+            "white", "", string.format("%6s", playersPoints.cp), "dimgray", "", " | ",
+            "white", "", string.format("%4s", playersPoints.gq), "dimgray", "", " | ",
+            "white", "", string.format("%4s", playersPoints.pk), "dimgray", "", " | ",
+            "white", "", string.format("%7s", playersPoints.warWin), "dimgray", "", " | ",
+            "white", "", string.format("%8s", playersPoints.warKill), "dimgray", "", " | ",
+            "white", "", string.format("%4s", playersPoints.gold))
+
+
+	 if baseStats[currentStats.name].offset ~= nil then
+		if baseStats[currentStats.name].offset > 0 then
+			ColourNote("orange", "", currentStats.name .. " has an offset of: ", "white", "", baseStats[currentStats.name].offset)
+		end
+ 	 end
+         ColourNote("dimgray", "", "---------------------------------------------------------------------------------------")
+
+         local totalPoints = playersPoints.level + playersPoints.pup + 
+            playersPoints.quest + playersPoints.cp + playersPoints.gq + 
+            playersPoints.pk + playersPoints.warWin + playersPoints.warKill + 
+            playersPoints.gold + (baseStats[currentStats.name].offset or 0)
+
+         local shouldBeRank = "Malcontent"
+         local nextRank = nil
+         for points, rank in spairs(ranks) do
+            if totalPoints >= points then
+               shouldBeRank = rank
+            end
+
+            if totalPoints < points then
+               nextRank = { points = points, rank = rank }
+               break
+            end
+         end
+
+         if currentStats.rank == "Ghost" then
+            shouldBeRank = "Sux0r!"
+         end
+
+         ColourTell("orange", "", currentStats.name .. " has ",
+            "white", "", tostring(totalPoints),
+            "orange", "", " points, is ranked ",
+            "cyan", "", currentStats.rank,
+            "orange", "", ", should be ranked ",
+            "cyan", "", shouldBeRank)
+
+         if nextRank ~= nil then
+            ColourTell("orange", "", ", will be ranked ",
+            "cyan", "", nextRank.rank,
+            "orange", "", " in ",
+            "white", "", tostring(nextRank.points - totalPoints),
+            "orange", "", " points")
+         end
+
+         ColourNote("", "", "")
+
+         if tellRequest then
+            local tellStr = "t " .. tellPlayer .. 
+               " @x208You have @W" .. totalPoints .." @x208points; ranked @C" .. currentStats.rank .. "@x208; should be ranked @C" .. shouldBeRank               
+
+            if nextRank ~= nil then
+               tellStr = tellStr .. "@x208; will be ranked @C" .. nextRank.rank .. "@x208 in @W" .. nextRank.points - totalPoints .. "@x208 points."
+            end
+
+            SendNoEcho(tellStr)
+            tellRequest = false
+         end
+
+         if debugMode == true then
+           print("DEBUG DATA:\n\rPre/Post Redo Level points:" .. (playersPoints.preRedo or 0) .. "/" .. (playersPoints.postRedo or 0))
+           print(string.format("%9s = { gold = %i, pk = %i,   gq = %i,   warWin = %i,  warKill = %i,  level = %i,   cp = %i,    quest = %i,   pup = %i,      offset=%i },",
+             currentStats.name, currentStats.gold, currentStats.pk, currentStats.gq, currentStats.warWin, currentStats.warKill,
+             currentStats.level, currentStats.cp, currentStats.quest, currentStats.pup, (baseStats[currentStats.name].offset or 0)))
+         end
+      else
+         ColourNote("cyan", "", currentStats.name, "orange", "", " is not online.")
+      end
+   end
+
+   function spairs(t, order)
+         -- collect the keys
+         local keys = {}
+         for k in pairs(t) do keys[#keys+1] = k end
+
+         -- if order function given, sort by it by passing the table and keys a, b,
+         -- otherwise just sort the keys 
+         if order then
+            table.sort(keys, function(a,b) return order(t, a, b) end)
+         else
+            table.sort(keys)
+         end
+
+         -- return the iterator function
+         local i = 0
+         return function()
+            i = i + 1
+            if keys[i] then
+               return keys[i], t[keys[i]]
+            end
+         end
+      end
+]]>
+</script>
+
+</muclient>

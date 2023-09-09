@@ -1,0 +1,183 @@
+<muclient>
+	<plugin
+		name="RAID_Maze_Repop"
+		author="Nokfah"
+		id="a5f636f02ec21a4016acdaad"
+		language="Lua"
+		save_state="y"
+		purpose="Keeps track of 10 minute clan maze repop"
+		version="1.0"		
+	>
+	<description trim="n">
+		<![CDATA[
+==================== RAID Report Room Help====================	
+	rd r <area name>    -- set the area to track repops fo
+	rd r clear          -- stop tracking maze repops
+	rd r <channel>      -- set the channel to report repops to
+	rd r                -- report the current time until repop
+]]>
+		</description>
+	</plugin>
+	
+	<!--  Get our standard constants -->
+	<include name="constants.lua"/>		
+
+	<aliases>
+		<alias enabled="y" script="Help"
+			regexp="y" match="^rd help$" 			
+			sequence="1"
+		></alias>
+
+		<alias
+			enabled="y" regexp="y" match="^rd r (.*)$" 		
+			script="SetMaze" sequence="200"	
+		>
+		</alias>	
+
+		<alias
+			enabled="y" regexp="y" match="^rd r clear$" 		
+			script="ClearMaze" sequence="100"	
+		>		
+		</alias>
+		
+		<alias
+			enabled="y" regexp="y" match="^rd r$" 		
+			script="ReportTime" sequence="100"	
+		>		
+		</alias>
+
+		<alias
+			enabled="y" regexp="y" match="^rd r channel (.*)$" 		
+			script="SetChannel" sequence="100"	
+		>		
+		</alias>
+	</aliases>	
+	
+	<script>
+	<![CDATA[							   																			
+		require "serialize"
+
+		local maze = ""
+		local repop = nil		
+
+		local settings = {
+			channel = "gtell"
+		}
+		if (GetVariable("settings") ~= nil) then			
+			luastmt = "obj = " .. GetVariable("settings")
+			assert (loadstring (luastmt or "")) ()		
+			settings = obj
+		end
+		
+		function OnPluginInstall()
+			Help()
+		end
+
+		function Help()
+			ColourNote("orange", "black", GetPluginInfo (GetPluginID (), 3))
+		end
+
+		function OnPluginBroadcast (msg, id, name, text)
+		   -- Look for GMCP handler.
+			if (id == '3e7dedbe37e44942dd46d264') then
+				if (text == "comm.repop") then
+					res, gmcparg = CallPlugin("3e7dedbe37e44942dd46d264","gmcpval","comm.repop")				 
+					luastmt = "gmcpdata = " .. gmcparg --- Convert the serialized string back into a lua table.
+					assert (loadstring (luastmt or "")) ()
+					
+					if (maze == gmcpdata.zone) then 						
+						Resync() 						
+					end
+				elseif (text == "comm.channel") then
+					res, gmcparg = CallPlugin("3e7dedbe37e44942dd46d264","gmcpval","comm.channel")				 
+					luastmt = "gmcpdata = " .. gmcparg --- Convert the serialized string back into a lua table.
+					assert (loadstring (luastmt or "")) ()
+					
+					if (gmcpdata.chan == "gtell" and string.find(gmcpdata.msg, "\'mazerepop\'") ~= nil) then						
+						ReportTime("gtell")
+					end
+				end			  
+			end		   
+		end -- onpluginbroadcast
+		
+		function SetMaze(name, line, wildcards)
+			maze = wildcards[1]
+			ColourNote("orange", "", "MAZE REPOP: ", "gray", "", "Now tracking maze repops for ", "cyan", "", maze)
+		end
+		
+		function ClearMaze()
+			maze = ""
+			DeleteTimers()
+			ColourNote("orange", "", "MAZE REPOP: ", "gray", "", "Maze timers cleared")
+		end		
+		
+		function Resync()
+			SendNoEcho(settings.channel .. " " .. dispLbl("[") .. dispBlbl("MAZE REPOP") .. dispLbl("|") .. dispVal("REPOP - SYNCHRONIZED") .. dispLbl("]"))
+			repop = os.time()	
+			ResetTimers()
+		end
+
+		function DeleteTimers()			
+			DeleteTimer("three_min")
+			DeleteTimer("one_min")
+			DeleteTimer("reset_timers")
+		end
+
+		function ResetTimers()		
+			BroadcastPlugin(1, "repop")
+
+			DeleteTimers()		
+
+			AddTimer("three_min", 0, 7, 0, "", timer_flag.Enabled + timer_flag.OneShot, "ReportTime")
+			AddTimer("one_min", 0, 9, 0, "", timer_flag.Enabled + timer_flag.OneShot, "ReportTime")	
+			DoAfterSpecial(60, "NoResyncReset()", 14)			
+		end					
+
+		function NoResyncReset()
+			if maze ~= nil and maze ~= "" then
+				AddTimer("reset_timers", 0, 9, 0, "", timer_flag.Enabled + timer_flag.OneShot, "ResetTimers")		
+			end
+		end
+		
+		function ReportTime(reportChannel)				
+			local timeTilRepop = -1
+			if (repop ~= nil) then
+				timeTilRepop = 600 - ((os.time() - repop) % 600)
+				--Note(repop)
+				--Note(os.time() - repop)
+				--Note((os.time() - repop) % 600)
+				--Note(600 - ((os.time() - repop) % 600))
+			end
+		
+			if (maze ~= "" and timeTilRepop > 0) then
+				SendNoEcho(settings.channel .. " " .. dispLbl("[") .. dispBlbl("MAZE REPOP") .. dispLbl("|") .. SecondsToMinutes(timeTilRepop) .. dispLbl("]"))
+			elseif (maze == "") then
+				ColourNote("orange", "", "MAZE REPOP: ", "red", "", "No maze has bet set")
+			else
+				ColourNote("orange", "", "MAZE REPOP: ", "red", "", "No repop data for ", "cyan", "", maze)
+			end
+		end
+		
+		function SecondsToMinutes(seconds)
+			local secondsStr = tostring(seconds % 60)
+			local minutesStr = tostring(math.floor(seconds / 60))
+			return dispVal(minutesStr) .. dispLbl("m ") .. dispVal(secondsStr) .. dispLbl("s")
+		end			
+		
+		function dispVal(val) return "@W" .. (val or "") end
+		function dispLbl(val) return "@D" .. (val or "") end
+		function dispBlbl(val) return "@x208" .. (val or "") end
+
+		function SetChannel(name, line, wildcards)
+			settings.channel = wildcards[1]
+			SaveSettings()
+
+			ColourNote("orange", "", "Channel set to: ", "cyan", "", wildcards[1])
+		end
+
+		function SaveSettings()
+			SetVariable("settings", serialize.save_simple(settings))
+		end
+	]]>
+	</script>
+</muclient>

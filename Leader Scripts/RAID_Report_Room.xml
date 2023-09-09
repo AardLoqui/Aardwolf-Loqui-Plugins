@@ -1,0 +1,559 @@
+<muclient>
+	<plugin
+		name="RAID_Report_Room"
+		author="Nokfah"
+		id="d9b646a12ca12f4016acdafd"
+		language="Lua"
+		save_state="y"
+		purpose="Reports room information to a channel"		
+	>
+	<description trim="n">
+		<![CDATA[
+==================== RAID Report Room Help====================	
+	rd rr     -- Count the guards, portals, exits and survey, then report to the set channel
+	rd rr channel <channel> -- set the channel to report to
+]]>
+		</description>
+	</plugin>
+	
+	<!--  Get our standard constants -->
+	<include name="constants.lua"/>		
+
+	<aliases>
+		<alias enabled="y" script="Help"
+			regexp="y" match="^rd help$" 			
+			sequence="1"
+		></alias>
+
+		<alias enabled="y" script="StartRoom"
+			regexp="y" match="^rd rr( .*)?$" 			
+		></alias>	
+
+		<alias enabled="y" script="SetChannel"
+			 regexp="y" match="^rd rr channel (.*)?$" 					
+		></alias>				
+	</aliases>	
+	
+	<triggers>	
+		<!-- objs -->
+		<trigger group="objs" script="StartObjCapture" enabled="n" keep_evaluating="y"				
+			match="^\{roomobjs\}$"  regexp="y"></trigger>
+		<trigger group="objs" script="EndObjCapture" enabled="n" keep_evaluating="n"				
+			match="^\{/roomobjs\}$"  regexp="y" sequence="100"></trigger>
+		<trigger name="log_obj" script="LogObj" enabled="n" keep_evaluating="y"
+			match=".*" regexp="y" sequence="200"></trigger>
+
+		<!-- roomchars -->
+		<trigger group="roomchars" script="StartRoomcharCapture" enabled="n" keep_evaluating="y"				
+			match="^\{roomchars\}$"  regexp="y"></trigger>
+		<trigger group="roomchars" script="EndRoomcharCapture" enabled="n" keep_evaluating="n"				
+			match="^\{/roomchars\}$"  regexp="y" sequence="100"></trigger>
+		<trigger name="log_roomchar" script="LogRoomchar" enabled="n" keep_evaluating="y"
+			match=".*" regexp="y" sequence="200" ></trigger>
+			
+		<!-- doors -->
+		<trigger group="doors" script="NoDoor" enabled="n" keep_evaluating="y"				
+			match="^There is no door(:? to the)? (.*) (?:of|from) here\.$"  regexp="y" sequence="100"></trigger>
+		<trigger group="doors" script="NoKey" enabled="n" keep_evaluating="y"				
+			match="^You do not have a key for .*\.$"  regexp="y" sequence="100"></trigger>
+		<trigger group="doors" script="Opened" enabled="n" keep_evaluating="y"				
+			match="^You open .*\.$"  regexp="y" sequence="100"></trigger>
+		<trigger group="doors" script="Unlocked" enabled="n" keep_evaluating="y"				
+			match="^You unlock .* with .*\.$"  regexp="y" sequence="100"></trigger>
+		<trigger group="doors" script="AlreadyOpen" enabled="n" keep_evaluating="y"				
+			match="^.* is already open\.$"  regexp="y" sequence="100"></trigger>
+		<trigger group="doors" script="NextDoor" enabled="n" keep_evaluating="y"				
+			match="^There is no door(:? to the)? (.*) (?:of|from) here\.|You do not have a key for .*\.|You open .*\.|.* is already open\.$"  
+			regexp="y" sequence="200"></trigger>	
+
+		<!-- exits -->
+		<trigger group="exits" script="StartExitCapture" enabled="n" keep_evaluating="y"				
+			match="^Obvious exits from \[ .* \]:$"  regexp="y"></trigger>
+		<trigger group="exits" script="LogExit" enabled="n" keep_evaluating="y"
+			match="^ (\w+)\s+: .*$" regexp="y"></trigger>
+
+		<!-- scan -->
+		<trigger group="scan" script="SurveyFail" enabled="n" keep_evaluating="y"
+			match="^You fail to see much of anything!$" regexp="y"></trigger>
+
+		<trigger group="scan" script="StartScanCapture" enabled="n"			
+			match="^\{scan\}$" regexp="y"></trigger>
+
+		<trigger group="scan" script="StopScanCapture" enabled="n"			
+			match="^\{/scan\}$" regexp="y"></trigger>
+
+		<trigger group="log_scan" name="gag_scan_extra" enabled="n"
+			match="^(2|3) (North|East|South|West|Up|Down) from here you see:$" regexp="y"			 								
+		></trigger>
+
+		<trigger group="log_scan" script="ScanDirection" enabled="n"
+			match="^(North|East|South|West|Up|Down) from here you see:$" regexp="y"	
+		></trigger>
+
+		<trigger group="log_scan" script="ScanDirection" enabled="n"
+			match="^(Right here) you see:$" regexp="y"	
+		></trigger>
+
+		<trigger group="log_scan" script="LogScanNothing" enabled="n"
+			match="^Nothing to see around here, might as well move on.$" regexp="y"	
+		></trigger>		
+
+		<trigger group="log_scan" script="LogScan" enabled="n"
+			match="^     \- (.*)$" regexp="y"	
+		></trigger>		
+
+		<!-- gags -->
+		<trigger enabled="y" keep_evaluating="y" omit_from_output="y"				
+			match="^\{roomobjs\}$"  regexp="y"></trigger>
+		<trigger enabled="y" keep_evaluating="y" omit_from_output="y"				
+			match="^\{/roomobjs\}$"  regexp="y"></trigger>	
+
+		<trigger enabled="y" keep_evaluating="y" omit_from_output="y" 			
+			match="^\{roomchars\}$"  regexp="y"></trigger>
+		<trigger enabled="y" keep_evaluating="y" omit_from_output="y"			
+			match="^\{/roomchars\}$"  regexp="y" ></trigger>
+	</triggers>
+	
+	<script>
+	<![CDATA[				
+
+		require "serialize"			
+
+		local clrSep = "@w"
+		local clrLbl = "@x208"
+		local clrVal = "@W"	
+	
+		local objs = {}			
+		local exits = {}
+		local doors = {}
+		local chars = {}
+		local scan = {}
+		currentDirection = ""
+		
+		local doorOrder = { "North", "East", "South", "West", "Up", "Down" }
+		local currentDoor = 0
+		
+		local settings = {
+			channel = "gtell"
+		}
+		if (GetVariable("settings") ~= nil) then			
+			luastmt = "obj = " .. GetVariable("settings")
+			assert (loadstring (luastmt or "")) ()		
+			settings = obj
+		end		
+
+		local reportTo = ""
+
+		function OnPluginInstall()
+			SendNoEcho("tags roomobjs on")
+			SendNoEcho("tags roomchars on")
+			SendNoEcho("tags scan on")
+
+			Help()
+		end
+
+		function Help()
+			ColourNote("orange", "black", GetPluginInfo (GetPluginID (), 3))
+		end
+
+		function StartRoom(name, line, wildcards)		
+			if (wildcards[1] ~= nil and wildcards[1] ~= "") then
+				reportTo = Trim(wildcards[1])
+			end
+						
+			objs = {}			
+			exits = {}			
+			chars = {}
+			doors = {}
+						
+			-- look for objects
+			StartObjs("look")
+
+			-- open all directions 
+			StartDoors()
+			
+			-- exits		
+			StartExits()				
+		end		
+
+		function EndRoom()			
+			ColourNote("orange", "", "end of room")
+			ReportRoom()	
+			StartScan()		
+		end
+		
+		function ReportRoom()
+			local reportTbl = {}			
+
+			-- chars
+			local charTbl = {}
+			local totalChars = 0			
+			for char, count in spairs(chars, function(t,a,b) return t[a] > t[b] end) do								
+				if count > 1 then 
+					totalChars = totalChars + 1
+					table.insert(charTbl, { typ="val", val=tostring(count) })
+					table.insert(charTbl, { typ="sep", val=" + " })
+				end
+			end	
+
+			ConcatTables(reportTbl, StartLabel("G"))
+			if totalChars > 0 then				
+				ConcatTables(reportTbl, charTbl)
+				table.remove(reportTbl) -- remove last comma				
+			else
+				table.insert(reportTbl, { typ="val", val="0" })
+			end
+			table.insert(reportTbl, EndLabel())	
+
+			-- objs
+			local objTbl = {}
+			local totalObjs = 0			
+			for obj, count in spairs(objs, function(t,a,b) return t[a] > t[b] end) do
+				ExtractCount(obj)				
+				if count > 1 then 
+					totalObjs = totalObjs + 1
+					table.insert(objTbl, { typ="val", val=tostring(count) })
+					table.insert(objTbl, { typ="sep", val=" + " })
+				end								
+			end			
+						
+			ConcatTables(reportTbl, StartLabel("CP"))
+			if totalObjs > 0 then
+				ConcatTables(reportTbl, objTbl)
+				table.remove(reportTbl) -- remove last comma
+			else
+				table.insert(reportTbl, { typ="val", val="0" })
+			end				
+			table.insert(reportTbl, EndLabel())				
+			
+			-- exits			
+			local exitTbl = {}
+			local totalExits = 0
+			for i, ex in ipairs(exits) do
+				totalExits = totalExits + 1
+				table.insert(exitTbl, { typ="val", val=string.sub(ex, 1, 1) })
+				table.insert(exitTbl, { typ="sep", val="," })
+			end
+				
+			ConcatTables(reportTbl, StartLabel("EX"))
+			if totalExits > 0 then		
+				ConcatTables(reportTbl, exitTbl)
+				table.remove(reportTbl) -- remove last comma
+			else
+				table.insert(reportTbl, { typ="val", val="NONE" })
+			end
+			table.insert(reportTbl, EndLabel())	
+					
+			
+			-- doors			
+			local doorTbl = {}
+			local totalDoors = 0
+			for state, dirs in pairs(doors) do				
+				if (#dirs > 0 and state ~= "no door") then									
+					local doorString = "(" .. state .. ":"
+					for i, dir in ipairs(dirs) do
+						totalDoors = totalDoors + 1
+						doorString = doorString .. string.sub(dir, 1, 1) .. ","
+					end
+					doorString = string.sub(doorString, 1, -2) .. ")"
+
+					table.insert(doorTbl, { typ="val", val=doorString })
+				end
+			end	
+			
+			ConcatTables(reportTbl, StartLabel("DOORS"))
+			if totalDoors > 0 then				
+				ConcatTables(reportTbl, doorTbl)
+			else
+				table.insert(reportTbl, { typ="val", val="NONE" })
+			end
+			table.insert(reportTbl, EndLabel())	
+						
+
+			ReportChannel(reportTbl)
+		end
+
+		function ReportScan()
+			local reportTbl = {}			
+
+			-- chars
+			local charTbl = {}
+			local totalChars = 0			
+			for dir, chars in spairs(scan, function(t,a,b) return #t[a] < #t[b] end) do					
+				ConcatTables(reportTbl, StartLabel(dir))
+				for i, char in ipairs(chars) do											
+					table.insert(reportTbl, { typ="val", val=string.sub(char, 1, 5) })
+					table.insert(reportTbl, { typ="sep", val="," })				
+				end
+				table.remove(reportTbl) -- remove last comma
+				table.insert(reportTbl, EndLabel())
+			end	
+
+			ReportChannel(reportTbl)
+
+			-- done reporting...
+			reportTo = ""
+		end
+		
+		function StartObjs()
+			objs = {}			
+			EnableTriggerGroup("roomchars", true)
+			EnableTriggerGroup("objs", true)
+			SendNoEcho("look")
+		end
+		
+		function StartObjCapture()
+			EnableTrigger("log_obj", true)			
+		end
+		
+		function LogObj(name, line, wildcards)	
+			local trimmed = Trim(RemoveAuras(line))
+			local count = tonumber(ExtractCount(trimmed)) or 1
+			trimmed = string.sub(RemoveCount(trimmed), 1, 10)		
+			
+			if objs[trimmed] == nil then objs[trimmed] = 0 end
+			objs[trimmed] = objs[trimmed] + count
+		end
+		
+		function EndObjCapture()
+			EnableTrigger("log_obj", false)
+			EnableTriggerGroup("objs", false)
+		end
+
+		function StartExits()
+			EnableTriggerGroup("exits", true)
+			SendNoEcho("exits")
+		end
+		
+		function StartRoomcharCapture()
+			EnableTrigger("log_roomchar", true)
+		end
+
+		function EndRoomcharCapture()
+			EnableTrigger("log_roomchar", false)
+			EnableTriggerGroup("roomchars", false)
+		end
+
+		function LogRoomchar(name, line, wildcards)
+			local trimmed = string.sub(Trim(RemoveAuras(line)), 1, 6)
+			
+			if chars[trimmed] == nil then chars[trimmed] = 0 end
+			chars[trimmed] = chars[trimmed] + 1
+		end
+
+		function StartExitCapture()
+			exits = {}
+			AddTimer("end_exits", 0, 0, .1, "", timer_flag.Enabled + timer_flag.OneShot, "EndExits")
+		end
+		
+		function LogExit(name, line, wildcards)
+			table.insert(exits, wildcards[1])
+			ResetTimer("end_exits")
+		end
+		
+		function EndExits()
+			EnableTriggerGroup("exits", false)
+		end
+		
+		function StartDoors()
+			doors = {
+				-- ["no door"] = {},
+				["no key"] = {},
+				["unlocked"] = {},
+				["opened"] = {},
+				["already open"] = {},
+			}
+		
+			EnableTriggerGroup("doors", true)
+			currentDoor = 0
+			NextDoor()
+		end
+
+		function NextDoor()
+			if (currentDoor == 6) then
+				EnableTriggerGroup("doors", false)
+				EndRoom()
+			else
+				currentDoor = currentDoor + 1
+				SendNoEcho("open " .. doorOrder[currentDoor])
+			end
+		end	
+		
+		function NoDoor(name, line, wildcards) --[[table.insert(doors["no door"], doorOrder[currentDoor])]] end
+		function NoKey(name, line, wildcards) table.insert(doors["no key"], doorOrder[currentDoor]) end
+		function Unlocked(name, line, wildcards) table.insert(doors["unlocked"], doorOrder[currentDoor]) end
+		function Opened(name, line, wildcards) table.insert(doors["opened"], doorOrder[currentDoor]) end
+		function AlreadyOpen(name, line, wildcards) table.insert(doors["already open"], doorOrder[currentDoor]) end
+
+
+		function StartScan()
+			EnableTriggerGroup("scan", true)
+			scan = {}
+			currentDirection = ""
+			SendNoEcho("survey")			
+		end
+
+		function SurveyFail()
+			Note("survey fail")
+			SendNoEcho("survey")
+		end
+
+		function StartScanCapture()
+			EnableTriggerGroup("log_scan", true)
+					
+		end
+
+		function ScanDirection(name, line, wildcards)
+			currentDirection = wildcards[1]
+		end
+
+		function LogScan(name, line, wildcards)
+			if currentDirection ~= "" then
+				if scan[currentDirection] == nil then scan[currentDirection] = {} end
+				
+				table.insert(scan[currentDirection], RemoveAuras(wildcards[1]))
+			end
+		end
+
+		function LogScanNothing(name, line, wildcards)			
+			scan["SCAN"] = { [1] = "NONE" }		
+		end
+
+		function StopScanCapture()
+			Note("scan stop")
+			EnableTriggerGroup("log_scan", false)
+			EnableTriggerGroup("scan", false)
+
+			ReportScan()			
+		end
+
+		function Trim(str)
+			return str:gsub("^%s*(.-)%s*$", "%1")
+		end
+		
+		function ExtractCount(str)			
+			local count = string.match(str, "%(%s*%d+%)")
+
+			if count ~= nil then
+				count = string.match(count, "%d+")	
+			end
+
+			return count
+		end
+
+		function RemoveCount(str)
+			str = string.gsub(str, "%(%s*%d+%)", "")
+			str = string.gsub(str, "^%s*", "")
+			
+			return str
+		end
+
+		function RemoveAuras(str)					
+			return tostring(str		
+				:gsub("%(Invis%)", "")
+				:gsub("%(I%)", "")
+				:gsub("%(Glow%)", "")
+				:gsub("%(G%)", "")
+				:gsub("%(Hum%)", "")
+				:gsub("%(H%)", "")
+				:gsub("%(Magic%)", "")
+				:gsub("%(M%)", "")
+				:gsub("%(Red Aura%)", "")
+				:gsub("%(R%)", "")
+				:gsub("%(White Aura%)", "")
+				:gsub("%(W%)", "")
+				:gsub("%(Translucent%)", "")			
+				:gsub("%(T%)", "")
+				:gsub("%(Marked%)", "")			
+				:gsub("%(X%)", "")													
+				:gsub("%[C%]", "")
+				:gsub("%[Q%]", "")
+				:gsub("%(Linkdead%)", "")
+				:gsub("%(HARDCORE%)", "")
+				:gsub("%(RAIDER%)", "")
+				:gsub("%(OPK%)", "")				
+				:gsub("%(WANTED%)", "")
+				:gsub("%(TRAITOR%)", "")
+				:gsub("%(Note%)", "")
+				:gsub("%(DUEL%)", "")
+				:gsub("%[Advisor%]", "")
+				:gsub("%[Helper%]", "")
+				:gsub("%*AFK%*", "")
+				:gsub("^%s*", ""))
+		end
+
+		--------------------------------
+		-- Reporting
+		--------------------------------
+		function ReportChannel(reportTbl)
+			if reportTo == "" then reportTo = settings.channel end
+			local reportStr = reportTo .. " "						
+		
+			for i, style in pairs(reportTbl) do
+				local color = "@w"
+				if style.typ == "sep" then color = clrSep 
+				elseif style.typ == "lbl" then color = clrLbl 
+				elseif style.typ == "val" then color = clrVal end
+				
+				reportStr = reportStr .. color .. style.val
+			end
+			
+			Send(reportStr)		
+		end
+
+		function StartLabel(label)
+		return {
+			{ typ="sep", val="[" },
+			{ typ="lbl", val=label },
+			{ typ="sep", val="|" }
+		}
+		end
+		
+		function EndLabel()
+			return { typ="sep", val="] " }
+		end
+
+		function ConcatTables(firstTbl, secondTbl)
+			for i, val in ipairs(secondTbl) do
+				table.insert(firstTbl, val)
+			end
+		end
+
+		function SetChannel(name, line, wildcards)
+			settings.channel = wildcards[1]
+			reportTo = settings.channel
+			SaveSettings()
+
+			ColourNote("orange", "", "Channel set to: ", "cyan", "", wildcards[1])
+		end
+
+		function SaveSettings()
+			SetVariable("settings", serialize.save_simple(settings))
+		end
+
+		function spairs(t, order)
+			-- collect the keys
+			local keys = {}
+			for k in pairs(t) do keys[#keys+1] = k end
+
+			-- if order function given, sort by it by passing the table and keys a, b,
+			-- otherwise just sort the keys 
+			if order then
+				table.sort(keys, function(a,b) return order(t, a, b) end)
+			else
+				table.sort(keys)
+			end
+
+			-- return the iterator function
+			local i = 0
+			return function()
+				i = i + 1
+				if keys[i] then
+					return keys[i], t[keys[i]]
+				end
+			end
+		end
+	]]>
+	</script>
+</muclient>
+

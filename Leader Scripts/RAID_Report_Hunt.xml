@@ -1,0 +1,509 @@
+<muclient>
+	<plugin
+		name="RAID_Report_Hunt"
+		author="Nokfah"
+		id="a5f646a02db14b4016acdaad"
+		language="Lua"
+		save_state="y"
+		purpose="Reports hunt results to a channel"		
+	>
+	<description trim="n">
+		<![CDATA[
+==================== RAID Report Hunt Help====================	
+	rd h <start #>(optional) <end #>(optional) <guard keyword> -- hunt the guards from start to end using the keyword, then report the results to the set channel
+	rd h pause/resume        -- pause or resume the hunt
+	rd hh <#>                -- hunt here, try find the guard numbers for the current room
+
+	rd g <guard keyword>     -- set the default guard keyword
+
+	rd g <start #>-<end #>   -- create a grouping of guards e.g. 1-7
+	rd g rem <#>             -- remove a grouping of guards. the # is the first guard # in the group.
+	rd g clear               -- clear all guard groups
+	rd g                     -- show the guard groups
+	
+	rd d <#>        -- set a group of guards as dead. the # is the first guard in the group.                  
+	rd d rem <#>    -- unset a group of guards as dead. the # is the first guard in the group.
+	rd d clear      -- clear all dead guard groups
+	rd d            -- show all dead guard groups
+
+	rd h channel <channel>   -- set the channel to report to
+]]>
+		</description>
+	</plugin>
+	
+	<!--  Get our standard constants -->
+	<include name="constants.lua"/>		
+
+	<aliases>		
+		<alias enabled="y" script="Help"
+			regexp="y" match="^rd help$" 			
+			sequence="1"
+		></alias>
+
+		<alias enabled="y" script="Pause"		
+			regexp="y" match="^rd h pause$" 					
+		></alias>
+
+		<alias enabled="y" script="Resume"		
+			regexp="y" match="^rd h resume$" 					
+		></alias>
+
+		<alias enabled="y" script="StartHunt"		
+			regexp="y" match="^rd h(?: (?<start>[0-9]+))?(?: (?<finish>[0-9]+))?(?: (?<mob>\w*))?$" 					
+		></alias>	
+
+		<alias enabled="y" script="StartHunt"		
+			regexp="y" match="^rd h (?<multiplier>[0-9]+)n(?: (?<mob>\w*))?$" 					
+		></alias>		
+
+		<alias enabled="y" script="StartHuntHere"		
+			regexp="y" match="^rd hh (?<multiplier>[0-9]+)(?: (?<mob>\w*))?$" 					
+		></alias>		
+
+		<alias enabled="y" script="SetGuardName"
+			regexp="y" match="^rd g (?<mob>.*)$" 	
+			sequence="200"				
+		></alias>
+
+		<alias enabled="y" script="AddGroup"
+			regexp="y" match="^rd g (?<first>[0-9]+)-(?<last>[0-9]+)$" 					
+			sequence="100"
+		></alias>
+
+		<alias enabled="y" script="RemGroup"		
+			regexp="y" match="^rd g rem ([0-9]+)$"
+			sequence="100" 					
+		></alias>
+
+		<alias enabled="y" script="ClearGroup"		
+			regexp="y" match="^rd g clear$"
+			sequence="100" 					
+		></alias>
+
+		<alias enabled="y" script="ShowGroups"		
+			regexp="y" match="^rd g$" 	
+			sequence="100"				
+		></alias>
+
+		<alias enabled="y" script="AddDead"		
+			regexp="y" match="^rd d ([0-9]+)$" 					
+		></alias>
+
+		<alias enabled="y" script="RemDead"		
+			regexp="y" match="^rd d rem ([0-9]+)$" 					
+		></alias>
+
+		<alias enabled="y" script="ClearDead"		
+			regexp="y" match="^rd d clear$" 					
+		></alias>
+
+		<alias enabled="y" script="ShowDead"		
+			regexp="y" match="^rd d$" 					
+		></alias>
+
+		<alias enabled="y" script="SetChannel"		
+			regexp="y" match="^rd h channel (.*)$" 					
+		></alias>	
+	</aliases>	
+	
+	<triggers>			
+		<!-- hunt res -->		
+			You are confident that a centaur child passed through here and went through the Light side.
+		<trigger group="hunt" script="LogHunt" enabled="n" keep_evaluating="y"				
+			match="^You are certain that .* is through the (.*)\.$"  regexp="y"></trigger>	
+		<trigger group="hunt" script="LogHunt" enabled="n" keep_evaluating="y"				
+			match="^You are almost certain that .* is through the (.*)\.$"  regexp="y"></trigger>	
+		<trigger group="hunt" script="LogHunt" enabled="n" keep_evaluating="y"				
+			match="^You are confident that .* passed through here and went through the (.*)\.$"  regexp="y"></trigger>
+		<trigger group="hunt" script="LogHunt" enabled="n" keep_evaluating="y"				
+			match="^You are certain that .* is (.*) from here\.$"  regexp="y"></trigger>
+		<trigger group="hunt" script="LogHunt" enabled="n" keep_evaluating="y"				
+			match="^You are almost certain that .+ is (.+) from here\.$"  regexp="y"></trigger>
+		<trigger group="hunt" script="LogHunt" enabled="n" keep_evaluating="y"				
+			match="^You are confident that .+ passed through here, heading (.+)\.$"  regexp="y"></trigger>
+		<trigger group="hunt" script="LogHunt" enabled="n" keep_evaluating="y"				
+			match="^You (couldn't find) a path to .* from here\.$"  regexp="y"></trigger>			
+		<trigger group="hunt" script="LogHunt" enabled="n" keep_evaluating="y"				
+			match="^.* is (here)!$"  regexp="y"></trigger>
+		<trigger group="hunt" script="EndHunt" enabled="n" keep_evaluating="y"				
+			match="^No one in this area by the name .*\.$"  regexp="y"></trigger>		
+	</triggers>
+	
+	<script>
+	<![CDATA[		
+		require "serialize"
+
+		local mobNumber = 1
+		local mobNumberEnd = nil
+		local mob = ""		
+		local grouped = {}
+		local dead = {}		
+		local guardName = nil
+		local guardCount = 0
+		local multiplier = 1
+
+		local huntResults = {}
+		local alreadyHunted = {}
+		local numberDead = 0
+		local mob = ""	
+
+		local huntHere = false
+		local firstHere = nil
+		
+		local hunting = false
+		local pause = false
+		local canHunt = true
+
+		local settings = {
+			channel = "gtell"
+		}
+		if (GetVariable("settings") ~= nil) then			
+			luastmt = "obj = " .. GetVariable("settings")
+			assert (loadstring (luastmt or "")) ()		
+			settings = obj
+		end
+		
+
+		function OnPluginInstall()		
+			Help()
+		end
+
+		function Help()
+			ColourNote("orange", "black", GetPluginInfo (GetPluginID (), 3))
+		end
+
+		function OnPluginBroadcast (msg, id, name, text)
+		   -- Look for GMCP handler.
+			if id == 'a5f636f02ec21a4016acdaad' then
+				if msg == 1 then
+					ClearDead()
+				end
+			elseif (id == '3e7dedbe37e44942dd46d264') then
+				if (text == "char.status") then
+					res, gmcparg = CallPlugin("3e7dedbe37e44942dd46d264","gmcpval","char.status")				 
+					luastmt = "gmcpdata = " .. gmcparg --- Convert the serialized string back into a lua table.
+
+					assert (loadstring (luastmt or "")) ()																						
+
+					if gmcpdata ~= nil then								
+						canHunt = gmcpdata.state == "3"	
+
+						if hunting and not canHunt then							
+							EndHunt()
+						end										
+					end				
+				end
+			end		   
+		end
+
+		function Pause() 
+			pause = true 
+			EnableTriggerGroup("hunt", false)
+		end
+
+		function Resume()
+			pause = false
+			hunting = true
+			EnableTriggerGroup("hunt", true)
+			Hunt()
+		end
+
+		function StartHunt(name, line, wildcards)		
+			hunting = true
+			pause = false
+			huntResults = {}
+			alreadyHunted = {}	
+			numberDead = 0
+
+			if wildcards.multiplier ~= nil and wildcards.multiplier ~= "" then
+				multiplier = tonumber(wildcards.multiplier)
+			else
+				multiplier = 1
+			end			
+				
+			mobNumber = 1 * multiplier
+			if wildcards.start ~= nil and wildcards.start ~= "" then
+				mobNumber = tonumber(wildcards.start)
+			end
+
+			mobNumberEnd = nil
+			if wildcards.finish ~= nil and wildcards.finish ~= "" then
+				mobNumberEnd = tonumber(wildcards.finish)
+			end
+
+			if wildcards.mob ~= nil and wildcards.mob ~= "" then
+				mob = wildcards.mob		
+			elseif guardName ~= nil and guardName ~= "" then
+				mob = guardName
+			else
+				ColourNote("orange", "", "Hunt: ", "red", "", "no guard name set")
+				hunting = false
+				return
+			end
+
+			EnableTriggerGroup("hunt", true)
+			Hunt()
+		end	
+
+		function StartHuntHere(name, line, wildcards)
+			huntHere = true		
+			firstHere = nil	
+			StartHunt(name, line, wildcards)
+		end
+
+		function Hunt()
+			if not pause then
+				if canHunt then
+					-- check for dead
+					local deadGroup = GetDead(mobNumber)
+					if deadGroup ~= nil then
+						numberDead = numberDead + (deadGroup.last - deadGroup.first + 1)
+
+						LogHunt(nil, nil, { [1] = "dead" })
+					else
+						if guardCount == 0 or mobNumber <= guardCount then
+							ColourTell("orange", "", "Hunting " .. mobNumber .. "(-" .. numberDead .. "): ")
+							Send("hunt " .. mobNumber - numberDead .. "." .. mob)					
+						else
+							ColourTell("orange", "", "")
+							EndHunt()
+						end
+					end	
+				else							
+					EndHunt()
+				end	
+			else
+				hunting = false
+			end
+		end
+		
+		function LogHunt(name, line, wildcards)							
+			if (huntResults[wildcards[1]] == nil) then huntResults[wildcards[1]] = {} end
+
+			if huntHere then
+				if wildcards[1] == "here" then					
+					if firstHere == nil then
+						firstHere = mobNumber
+						multiplier = -1
+					end				
+				else					
+					if firstHere ~= nil then						
+						if mobNumber < firstHere then							
+							mobNumber = firstHere + 1
+							multiplier = 1
+							Hunt()
+							return
+						else
+							EndHunt()
+							return
+						end					
+					end
+				end
+			end
+
+			-- check for grouping skip beyond the group
+			local mobGroup = GetGroup(mobNumber)
+			if mobGroup ~= nil then
+				while mobNumber >= mobGroup.first and mobNumber <= mobGroup.last do
+					table.insert(huntResults[wildcards[1]], mobNumber)
+					mobNumber = mobNumber + (1 * multiplier)
+				end	
+			else
+				table.insert(huntResults[wildcards[1]], mobNumber)	
+				mobNumber = mobNumber + (1 * multiplier)			
+			end		
+
+			if mobNumberEnd ~= nil and mobNumber > mobNumberEnd then
+				EndHunt()
+			else
+				Hunt()			
+			end
+		end			
+
+		function EndHunt()	
+			hunting = false						
+			EnableTriggerGroup("hunt", false)
+			
+			local output = ""			
+			for direction, mobs in pairs(huntResults) do							
+				output = output .. "@D[" .. (direction == "dead" and "@R" or "@x208") .. direction .. "@D|@W"
+				
+				local lastNum = nil
+				local sequenced = false
+				table.sort(mobs)
+				for i, mob in ipairs(mobs) do
+					if lastNum == nil then
+						output = output .. mob
+					elseif tonumber(lastNum) + 1 == tonumber(mob) then
+						sequenced = true
+					else
+						if sequenced then
+							output = output .. "-" .. lastNum
+							sequenced = false
+						end						
+							
+						output = output .. "," .. mob						
+					end
+
+					lastNum = mob
+				end				
+
+				-- if we ended on a sequence
+				if sequenced then
+					output = output .. "-" .. lastNum
+				end
+
+				output = output .. "@D] "
+			end
+			
+			if not canHunt then
+				output = output .. "@WINTERRUPTED "
+			end
+
+			if output ~= "" then
+				SendNoEcho(settings.channel .. " " .. string.sub(output, 1, -2))
+			end
+
+			if not huntHere and canHunt and multiplier == 1 and (mobNumber - numberDead - 1) > guardCount then
+				guardCount = mobNumber - numberDead - 1
+				SendNoEcho(settings.channel .. " @D[@x208guard count@D|@W" .. guardCount .. "@D]")
+			end
+
+			huntHere = false
+		end
+
+		function SetGuardName(name, line, wildcards)
+			guardName = wildcards[1]
+			ColourNote("orange", "", "Guard name set to: ", "cyan", "", guardName)
+		end
+
+		function AddGroup(name, line, wildcards)
+			grouped[tonumber(wildcards.first)] = { first = tonumber(wildcards.first), last = tonumber(wildcards.last) }
+			ShowGroups()
+		end
+
+		function RemGroup(name, line, wildcards)
+			grouped[tonumber(wildcards[1])] = nil
+			ShowGroups()		
+
+			RemDead(name, line, wildcards)
+		end
+
+		function ClearGroup()
+			for groupNumber, mobs in pairs(grouped) do
+				grouped[groupNumber] = nil
+			end
+
+			ShowGroups()
+			ClearDead()
+		end
+
+		function GetGroup(num)
+			-- check the quick case first, it's the first in the group
+			local foundGroup = nil
+			if grouped[num] ~= nil then
+				foundGroup = grouped[num]
+			else
+				-- search the groups for the number
+				for groupNum, numbers in pairs(grouped) do
+					if num >= numbers.first and num <= numbers.last then
+						foundGroup = grouped[groupNum]
+						break
+					end
+				end
+			end
+
+			return foundGroup
+		end
+
+		function ShowGroups()			
+			ColourNote("orange", "", "Grouped Guards:")
+			for first, numbers in spairs(grouped) do
+				ColourNote("cyan", "", "    " .. numbers.first .. " - " .. numbers.last)
+			end
+
+			ShowDead()
+		end
+
+		function AddDead(name, line, wildcards)
+			local groupNum = tonumber(wildcards[1])
+			if grouped[groupNum] ~= nil	then				
+				dead[groupNum] = true
+				ShowDead()
+			else
+				ColourNote("orange", "", "Add Dead: ", "red", "", "group not found")
+			end
+		end
+
+		function RemDead(name, line, wildcards)					
+			dead[tonumber(wildcards[1])] = false			
+			ShowDead()
+		end
+
+		function ClearDead()
+			for groupNum, val in pairs(dead) do
+				dead[groupNum] = false
+			end
+
+			ShowDead()
+		end
+
+		function GetDead(num)
+			-- check the quick case first, it's the first in the group
+			local foundDead = nil
+			
+			local foundGroup = GetGroup(num)
+			if foundGroup ~= nil then
+				if dead[foundGroup.first] then
+					foundDead = foundGroup
+				end
+			end
+
+			return foundDead
+		end
+
+		function ShowDead()			
+			ColourNote("orange", "", "Dead Guards:")
+			for deadGroup, isDead in pairs(dead) do
+				if isDead and grouped[deadGroup] ~= nil then
+					ColourNote("red", "", "    " .. grouped[deadGroup].first .. " - " .. grouped[deadGroup].last)					
+				end
+			end
+		end
+		
+		function SetChannel(name, line, wildcards)
+			settings.channel = wildcards[1]
+			SaveSettings()
+
+			ColourNote("orange", "", "Channel set to: ", "cyan", "", wildcards[1])
+		end
+
+		function SaveSettings()
+			SetVariable("settings", serialize.save_simple(settings))
+		end
+		
+		function spairs(t, order)
+			-- collect the keys
+			local keys = {}
+			for k in pairs(t) do keys[#keys+1] = k end
+
+			-- if order function given, sort by it by passing the table and keys a, b,
+			-- otherwise just sort the keys 
+			if order then
+				table.sort(keys, function(a,b) return order(t, a, b) end)
+			else
+				table.sort(keys)
+			end
+
+			-- return the iterator function
+			local i = 0
+			return function()
+				i = i + 1
+				if keys[i] then
+					return keys[i], t[keys[i]]
+				end
+			end
+		end		
+	]]>
+	</script>
+</muclient>
